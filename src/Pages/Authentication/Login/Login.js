@@ -26,7 +26,7 @@ const Login = () => {
               <hr />
               <div className="ca-form-group login-link">
                 <p>New here? Create an Account Now!</p>
-                <Link to="/create-an-account">Create Your Account Now</Link>
+                <Link to="#">Create Your Account Now</Link>
               </div>
             </form>
           </div>
