@@ -115,3 +115,24 @@ p.red-info {
   line-height: 43.57px;
   text-align: center;
 }
+
+@media (max-width: 1024px) {
+  .create-account-ui .ca-container,
+  .ca-form form .ca-form-group {
+    flex-direction: column;
+  }
+
+  .create-account-ui .ca-container .ca-form {
+    max-width: 100%;
+  }
+
+  .ca-container .ca-form {
+    padding: 50px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ca-container .ca-form {
+    padding: 50px 20px;
+  }
+}
