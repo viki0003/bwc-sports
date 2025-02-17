@@ -1,0 +1,48 @@
+.create-account-ui .ca-container {
+  display: flex;
+  align-items: stretch;
+  background: #b79527;
+}
+
+.ca-container .ca-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 54px 74px;
+  background: var(--white-color);
+  max-width: 789px;
+  width: 100%;
+}
+
+.ca-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  height: 100%;
+}
+
+.ca-form form .ca-form-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.ca-form-group .p-password,
+.p-icon-field.p-icon-field-right,
+.ca-form form .ca-form-group .ca-form-group-item {
+  width: 100%;
+}
+
+.ca-radio-group {
+    display: flex;
+    align-items: center;
+    gap: 104px;
+}
+
+.ca-radio-group .radio-group-item {
+    display: flex;
+    align-items: center;
+    gap: 19px;
+}
