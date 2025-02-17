@@ -12,7 +12,7 @@ const CreateAccount = () => {
       <div className="create-account-ui">
         <div className="ca-container">
           <div className="ca-form">
-            <h1>Create Account</h1>
+            <h1>Create Your Account</h1>
             <form>
               <div className="ca-form-group">
                 <div className="ca-form-group-item">
