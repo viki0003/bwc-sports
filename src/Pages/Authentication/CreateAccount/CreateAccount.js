@@ -53,7 +53,7 @@ const CreateAccount = () => {
               <hr />
               <div className="ca-form-group login-link">
                 <p>Already have an account? Login</p>
-                <Link to="/login">Log in to Your Account</Link>
+                <Link to="/">Log in to Your Account</Link>
               </div>
             </form>
           </div>

@@ -1,4 +1,8 @@
 import React from "react";
+import { InputText } from "primereact/inputtext";
+import { Password } from "primereact/password";
+import { Link } from "react-router-dom";
+import LoginImg from "../../../Assets/Images/login-img.png";
 import "./login.css";
 import Navbar from "../../../Components/Navbar";
 import CoverPhoto from "../../../Images/cover_photo.png";
@@ -38,4 +42,4 @@ const Login = () => {
     );
 };
 
-export default Login
+export default Login;
