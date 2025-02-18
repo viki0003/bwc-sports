@@ -45,6 +45,12 @@
 
 .p-menubar .p-menuitem-text{
     color:white;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24.2px;
+    letter-spacing: 0%;
+
 }
 
 .p-menubar .p-menuitem-text:hover{
