@@ -116,6 +116,10 @@ p.red-info {
   text-align: center;
 }
 
+.p-inputtext{
+  width:100%;
+}
+
 @media (max-width: 1024px) {
   .create-account-ui .ca-container,
   .ca-form form .ca-form-group {

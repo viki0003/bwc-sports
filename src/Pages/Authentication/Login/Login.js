@@ -5,12 +5,13 @@ import { Link } from "react-router-dom";
 import LoginImg from "../../../Assets/Images/login-img.png";
 import "./login.css";
 import Navbar from "../../../Components/Navbar";
-import CoverPhoto from "../../../Images/cover_photo.png";
+import CoverPhoto from "../../../Assets/Images/login-img.png";
+import NavbarCustom from "../../../Components/Navbar-custom";
 const Login = () => {
     return(
         <>
-        <Navbar/>
-        <div className="container">
+        <NavbarCustom/>
+        <div className="login-container">
             <div className="cover-photo-banner">
                 <img src={CoverPhoto} alt="Cover" className="cover-photo" />
             </div>
