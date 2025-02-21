@@ -3,11 +3,14 @@ import backIcon from '../../Assets/Icons/back_icon.svg';
 import './style.css';
 import NavbarCustom from '../../Components/Navbar-custom';
 import { InputText } from 'primereact/inputtext';
+import { Calendar } from 'primereact/calendar';
+import { useEffect, useRef } from 'react';
 
 const MOUForm = () => {
     // const handleBack = () => {
     //     window.history.back();
     // };
+ 
 
     return (
         <>
@@ -76,6 +79,7 @@ const MOUForm = () => {
                             <div className="form-player-item">
                                 <label for="player-dob">Date of Birth of Player</label>
                                 <InputText type="date" id="player-dob" />
+                   
                             </div>
                         </div>
                         <div className="renewal-month">

@@ -47,6 +47,10 @@
     
 }
 
+.p-inputtext{
+    width:80% !important;
+}
+
 
 .form-package h2{
     font-family: Inter;
@@ -79,6 +83,8 @@ letter-spacing: 0%;
 .form-package-input input[type="checkbox"]{
     height:20px;
     width:20px;
+    min-width: 20px;
+  min-height: 20px;
 }
 
 .form-package-input label{
@@ -114,14 +120,14 @@ letter-spacing: 0%;
 } 
 
 #player-fullname{
-    width: 50%;
+    width: 50% !important;
 }
 #player-address{
-    width:80%;
+    width:80% !important;
 }
 
 #player-dob{
-    width:50%;
+    width:50% !important;
 }
 .form-container form{
     display:flex;
@@ -142,14 +148,15 @@ letter-spacing: 0%;
     font-size: 32px;
     line-height: 38.73px;
     letter-spacing: 0%;
+    margin-bottom: 10px;
 
 }
 
 .month-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 500px; /* Adjust width as needed */
+    gap: 30px;
+    width: 1200px; /* Adjust width as needed */
 }
 input[type="date"] {
     appearance: none;  /* Removes default styling */
@@ -164,14 +171,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 input[type="date"]::-webkit-input-placeholder {
     color: transparent;
 }
+input[type="date"]::-webkit-datetime-edit {
+    color: transparent;
+  }
+  input[type="date"]:focus::-webkit-datetime-edit {
+    color: black; /* Show text when user types */
+  }
 
 
 input[type="date"] {
-    background: url('../../Assets/Icons/calender_icon.svg') no-repeat right 10px center;
+    background: url('../../Assets/Icons/calender_icon.svg') no-repeat left 10px center;
     background-size: 20px;
     border: 1px solid #ccc;
     padding: 8px;
+    padding-right:10px !important;
 }
+
 
 .row1, .row2 {
     display: flex;
@@ -181,10 +196,18 @@ input[type="date"] {
 
 .month-label {
     display: flex;
-    align-items: center;
-    gap: 5px;
-    flex: 1; /* Ensures equal width distribution */
-    white-space: nowrap;
+        align-items: center;
+        gap: 5px;
+        /* flex: 1 1; */
+        white-space: nowrap;
+        max-width: 75px;
+        width: 100%;
+        font-family: Inter;
+font-weight: 600;
+font-size: 24px;
+line-height: 29.05px;
+letter-spacing: 0%;
+
 }
 
 .form-agency-details{
@@ -207,7 +230,7 @@ input[type="date"] {
 }
 
 .agency-details input{
-    width: 100%;
+    width: 80% !important;
     padding-left: 20px;
     font-family: Inter;
     font-weight: 600;
@@ -236,6 +259,8 @@ letter-spacing: 0%;
 
 }
 
+
+
 @media screen and (max-width: 1300px) {
     .container {
         width: 95%;
@@ -251,11 +276,21 @@ letter-spacing: 0%;
     }
 
     .form-player-details .form-player-item label {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .form-player-details .form-player-item input {
         width: 100%;
+    }
+    .agency-details label{
+        font-size:24px;
+    }
+    .p-inputtext{
+        padding:10px 10px !important;
+    }
+    .month-label{
+        font-weight: 600;
+        font-size: 18px;
     }
 }
 
@@ -273,11 +308,12 @@ letter-spacing: 0%;
     }
 
     .backIcon {
-        position: relative;
+        
         left: 0;
         margin-bottom: 10px;
-        width: 40px;
-        height: 40px;
+        width: 20px;
+        height: 20px;
+        display:none;
     }
 
     .heading {
@@ -299,15 +335,20 @@ letter-spacing: 0%;
 .form-package-input input[type="checkbox"] {
     height: 20px;
     width: 20px;
+    min-height:20px;
+    min-width: 20px;
 }
 
     .form-package h2,
-    .renewal-month h2 {
+    .renewal-month h2, .form-package-input label {
         font-size: 22px;
     }
 
     .form-package-input label {
         font-size: 18px;
+    }
+    .form-player-details input{
+        width:100%;
     }
 
     .form-player-details {
@@ -320,10 +361,14 @@ letter-spacing: 0%;
         padding: 10px;
     }
 
+    .form-player-details .form-player-item label{
+        font-size:22px;
+    }
+
     #player-fullname,
     #player-address,
     #player-dob {
-        width: 100%;
+        width: 100% !important;
     }
 
     .renewal-month {
@@ -331,13 +376,17 @@ letter-spacing: 0%;
     }
 
     .month-container {
+        display:flex;
         flex-direction: column;
         width: 100%;
+        gap:0px;
+        
     }
-    .row1,row2 {
+    .row1,.row2 {
         display:flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 5px;
+
     }
 
 
@@ -357,11 +406,30 @@ letter-spacing: 0%;
     .agency-details {
         width: 100%;
     }
+    .agency-details label{
+        font-family: Inter;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 38.73px;
+        letter-spacing: 0%;
+    }
 
     #submit-button {
         width: 100%;
         padding: 15px;
         font-size: 20px;
     }
+
+    .row-agency .p-inputtext
+    {
+        padding: 10px 10px !important;
+    }
+    .row-agency input{
+        width: 100% !important;
+    }
+    .month-label{
+        font-weight: 600px;
+    }
+    
 }
 

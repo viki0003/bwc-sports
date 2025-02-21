@@ -5,10 +5,12 @@ import { Password } from "primereact/password";
 import { Link } from "react-router-dom";
 import LoginImg from "../../../Assets/Images/login-img.png";
 import "./createaccount.css";
+import NavbarCustom from "../../../Components/Navbar-custom";
 
 const CreateAccount = () => {
   return (
     <>
+    <NavbarCustom/>
       <div className="create-account-ui">
         <div className="ca-container">
           <div className="ca-form">
