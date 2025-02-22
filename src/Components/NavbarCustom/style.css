@@ -61,6 +61,9 @@
     display: none;
 }
 
+.nav-menu li a:hover {
+    color: #fff;
+}
 
 @media (max-width: 1310px) {
     .navbar-logo {
