@@ -13,6 +13,7 @@
 .navbar-logo {
     width: 155px;
     height: 140px;
+    margin-right:0;
 
 }
 
@@ -45,6 +46,7 @@
 .navbar-icons {
     display: flex;
     align-items: center;
+    gap:20px;
 }
 
 .nav-icon {
@@ -55,9 +57,10 @@
     cursor: pointer;
 }
 
-.hamburger-icon {
+.hamburger-icon{
     display: none;
 }
+
 
 @media (max-width: 1310px) {
     .navbar-logo {

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../Components/Layout";
 import Home from "../Pages/Home/Home";
-import Login from "../Pages/Authentication/Login/Login";
+import Login from "../Pages/Authentication/Login";
 import MOUForm from "../Pages/MOUForm";
 import CreateAccount from "../Pages/Authentication/CreateAccount/CreateAccount";
 import Preferences from "../Pages/Preferences";

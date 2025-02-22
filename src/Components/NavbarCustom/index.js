@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
-import CompanyLogo from '../../Images/company_logo.png';
+import CompanyLogo from '../../Assets/Images/company_logo.png';
 import CartIcon from '../../Assets/Icons/CartIcon';
 import UserIcon from '../../Assets/Icons/UserIcon';
 import HamburgerIcon from '../../Assets/Icons/HamburgerIcon';
@@ -31,7 +31,7 @@ const NavbarCustom = () => {
                 <div className="navbar-icons">
                     <CartIcon className="nav-icon" />
                     <UserIcon className="nav-icon" />
-                    <HamburgerIcon className="nav-icon hamburger-icon" onClick={toggleMenu} />
+                    <HamburgerIcon className="nav-icon hamburger-icon" toggleMenu={toggleMenu} />
                 </div>
             </div>
         </nav>

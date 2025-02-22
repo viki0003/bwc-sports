@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./login.css";
+import "./style.css";
 import CoverPhoto from "../../../Assets/Images/login-img.png";
 import NavbarCustom from "../../../Components/NavbarCustom";
 const Login = () => {
