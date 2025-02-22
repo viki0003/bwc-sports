@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 import CompanyLogo from '../../Images/company_logo.png';
-import { ReactComponent as CartIcon } from '../../Assets/Icons/cart_icon.svg';
-import { ReactComponent as UserIcon } from '../../Assets/Icons/user_icon.svg';
-import { ReactComponent as HamburgerIcon } from '../../Assets/Icons/hamburger_icon.svg';
+import CartIcon from '../../Assets/Icons/CartIcon';
+import UserIcon from '../../Assets/Icons/UserIcon';
+import HamburgerIcon from '../../Assets/Icons/HamburgerIcon';
 
 const NavbarCustom = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false);

@@ -4,8 +4,9 @@ import { RadioButton } from "primereact/radiobutton";
 import { Password } from "primereact/password";
 import { Link } from "react-router-dom";
 import LoginImg from "../../../Assets/Images/login-img.png";
+import NavbarCustom from "../../../Components/NavbarCustom";
 import "./createaccount.css";
-import NavbarCustom from "../../../Components/Navbar-custom";
+
 
 const CreateAccount = () => {
   return (
