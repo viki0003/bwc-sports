@@ -1,0 +1,438 @@
+
+ .container{
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    
+ }
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    position: relative; /* Allows absolute positioning of the back icon */
+    width: 100%;
+    padding: 20px;
+    margin-top:53px;
+}
+
+.backIcon {
+    position: absolute;
+    left: 0; /* Aligns to the left */
+    font-size: 24px; 
+    
+    padding: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+    background-color: aliceblue; 
+    border-radius: 50px;/* Add space from the edge */
+}
+
+.heading {
+    flex-grow: 1; /* Takes available space and stays centered */
+    text-align: center;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 0%;
+
+}
+.form-container{
+    display:flex;
+    flex-direction:column;
+    margin-top: 110px;
+    width:100%;
+    
+}
+
+.p-inputtext{
+    width:80% !important;
+}
+
+
+.form-package h2{
+    font-family: Inter;
+font-weight: 600;
+font-size: 32px;
+line-height: 38.73px;
+letter-spacing: 0%;
+}
+
+ .form-package-input{
+    display:flex;
+    flex-direction: row;
+    justify-content:left;
+    align-items: flex-start;
+
+}
+
+.form-package {
+    display:flex;
+    flex-direction: column;
+    text-align: left; /* Ensures text aligns to the left */
+    padding: 20px;
+    gap:38px;
+}
+
+.form-package h2 {
+    margin-bottom: 10px;
+}
+
+.form-package-input input[type="checkbox"]{
+    height:20px;
+    width:20px;
+    min-width: 20px;
+  min-height: 20px;
+}
+
+.form-package-input label{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29.05px;
+    letter-spacing: 0%;
+    padding-left:17px;
+}
+
+.form-player-details{
+    display:flex;
+    flex-direction:column;
+    padding-left: 17px;
+    
+}
+
+.form-player-details .form-player-item{
+    display:flex;
+    flex-direction: column;
+    padding-top: 10px;
+    gap: 17px;
+    padding-bottom: 20px;
+}
+.form-player-details .form-player-item label{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.73px;
+    letter-spacing: 0%;
+
+} 
+
+#player-fullname{
+    width: 50% !important;
+}
+#player-address{
+    width:80% !important;
+}
+
+#player-dob{
+    width:50% !important;
+}
+.form-container form{
+    display:flex;
+    flex-direction:column;
+    gap: 80px;
+}
+
+.renewal-month{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.renewal-month h2{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.73px;
+    letter-spacing: 0%;
+    margin-bottom: 10px;
+
+}
+
+.month-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 1200px; /* Adjust width as needed */
+}
+input[type="date"] {
+    appearance: none;  /* Removes default styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+} 
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+input[type="date"]::-webkit-input-placeholder {
+    color: transparent;
+}
+input[type="date"]::-webkit-datetime-edit {
+    color: transparent;
+  }
+  input[type="date"]:focus::-webkit-datetime-edit {
+    color: transparent; /* Show text when user types */
+  }
+
+
+input[type="date"] {
+    background: url('../../Assets/Icons/calender_icon.svg') no-repeat left 10px center;
+    background-size: 20px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    padding-right:10px !important;
+}
+
+
+.row1, .row2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.month-label {
+    display: flex;
+        align-items: center;
+        gap: 5px;
+        /* flex: 1 1; */
+        white-space: nowrap;
+        max-width: 75px;
+        width: 100%;
+        font-family: Inter;
+font-weight: 600;
+font-size: 24px;
+line-height: 29.05px;
+letter-spacing: 0%;
+
+}
+
+.form-agency-details{
+    display:flex;
+    flex-direction:column;
+    padding-left: 17px;
+    gap: 20px;
+    width:100%;
+}
+.form-agency-details .row-agency{
+    display:flex;
+    flex-direction: row;
+    gap: 60px;
+    width:100%;
+}
+.form-agency-details .row-agency .agency-details{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+}
+
+.agency-details input{
+    width: 80% !important;
+    padding-left: 20px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.73px;
+    letter-spacing: 0%;
+}
+
+.agency-details label{
+    font-family: Inter;
+font-weight: 600;
+font-size: 32px;
+line-height: 38.73px;
+letter-spacing: 0%;
+
+}
+
+#submit-button{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    font-size:36px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+
+
+@media screen and (max-width: 1300px) {
+    .container {
+        width: 95%;
+    }
+
+    .heading {
+        font-size: 36px;
+    }
+
+    .form-package h2,
+    .renewal-month h2 {
+        font-size: 28px;
+    }
+
+    .form-player-details .form-player-item label {
+        font-size: 24px;
+    }
+
+    .form-player-details .form-player-item input {
+        width: 100%;
+    }
+    .agency-details label{
+        font-size:24px;
+    }
+    .p-inputtext{
+        padding:10px 10px !important;
+    }
+    .month-label{
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+/* For devices with max-width 768px (Mobile Phones & Tablets) */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: row;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .backIcon {
+        
+        left: 0;
+        margin-bottom: 10px;
+        width: 20px;
+        height: 20px;
+        display:none;
+    }
+
+    .heading {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 10px;
+        margin-top: 50px;
+    }
+
+    .form-package {
+        padding: 10px;
+        gap: 20px;
+    }
+
+.form-package-input input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    min-height:20px;
+    min-width: 20px;
+}
+
+    .form-package h2,
+    .renewal-month h2, .form-package-input label {
+        font-size: 22px;
+    }
+
+    .form-package-input label {
+        font-size: 18px;
+    }
+    .form-player-details input{
+        width:100%;
+    }
+
+    .form-player-details {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .form-player-item {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form-player-details .form-player-item label{
+        font-size:22px;
+    }
+
+    #player-fullname,
+    #player-address,
+    #player-dob {
+        width: 100% !important;
+    }
+
+    .renewal-month {
+        padding-left: 0;
+    }
+
+    .month-container {
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        gap:0px;
+        
+    }
+    .row1,.row2 {
+        padding-top:5px;
+        display:flex;
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+
+
+    
+
+    .form-agency-details {
+        padding: 10px;
+    }
+
+    .form-agency-details .row-agency {
+        display:flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .agency-details {
+        width: 100%;
+    }
+    .agency-details label{
+        font-family: Inter;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 38.73px;
+        letter-spacing: 0%;
+    }
+
+    #submit-button {
+        width: 100%;
+        padding: 15px;
+        font-size: 20px;
+    }
+
+    .row-agency .p-inputtext
+    {
+        padding: 10px 10px !important;
+    }
+    .row-agency input{
+        width: 100% !important;
+    }
+    .month-label{
+        font-weight: 600px;
+    }
+    
+}
+

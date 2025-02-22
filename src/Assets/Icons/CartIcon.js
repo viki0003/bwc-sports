@@ -4,6 +4,7 @@ const CartIcon = () => {
   return (
     <>
       <svg
+      className="nav-icon"
         width="36"
         height="36"
         viewBox="0 0 36 36"

@@ -1,0 +1,169 @@
+.p-container{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    
+}
+
+.p-container h2{
+    padding-top: 70px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 43.57px;
+    letter-spacing: 0%;
+    padding-bottom: 40px;
+    padding-left: 40px;
+
+}
+
+.p-sports-container{
+    display:flex;
+    flex-direction:column;
+    gap: 20px;
+    
+}
+.p-sports-container h3{
+    padding-bottom: 20px;
+    font-family: Inter;
+font-weight: 600;
+font-size: 32px;
+line-height: 38.73px;
+letter-spacing: 0%;
+padding-left: 40px;
+
+}
+
+.p-sports-container .p-sport-item{
+    padding-left: 40px;
+    display:flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: left;
+
+}
+
+.p-sports-list{
+    display:flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.p-sports-list label{
+    font-family: Inter;
+font-weight: 600;
+font-size: 28px;
+line-height: 33.89px;
+letter-spacing: 0%;
+
+}
+
+.p-sports-list input{
+    width:20px;
+    height:20px;
+}
+
+input[type="checkbox"] {
+    accent-color: lightgreen; /* Change tick color */
+}
+
+.p-submit-button{
+    
+    margin-top: 200px;
+    bottom:0;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 19.36px;
+    letter-spacing: 0%;
+    padding:20px;
+    background-color: black;
+    color:white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 1px;
+
+}
+
+@media (max-width: 1300px) {
+    .p-container h2,
+    .p-sports-container h3 {
+        padding-left: 20px;
+        font-size: 30px;
+    }
+
+    .p-sports-list {
+        gap: 30px;
+    }
+
+    .p-sports-list label {
+        font-size: 24px;
+    }
+
+    .p-sports-container .p-sport-item {
+        padding-left: 20px;
+    }
+
+    .p-submit-button {
+        margin-top: 100px;
+    }
+}
+
+/* Mobile View: Adjust layout for screens ≤ 768px */
+@media (max-width: 768px) {
+    .p-container h2 {
+        display:flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items:flex-start;
+        font-size: 24px;
+        padding-left: 25px;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+
+    .p-sports-container{
+        display:flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items:flex-start;
+    }
+
+    .p-sports-container h3 {
+        font-size: 20px;
+        padding-left: 25px;
+        text-align: center;
+    }
+
+    .p-sports-list {
+        
+        flex-direction: column;
+        gap: 20px;
+    }
+    .p-sport-item{
+        padding-left:0px;
+    }
+
+    .p-sport-item {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .p-sports-list label {
+        font-size: 16px;
+    }
+
+    .p-sports-list input {
+        width: 16px;
+        height: 16px;
+    }
+
+    .p-submit-button {
+        width: 90%;
+        margin: 50px auto 20px auto;
+        font-size: 18px;
+        padding: 12px;
+        margin-top: 200px;
+    }
+}
