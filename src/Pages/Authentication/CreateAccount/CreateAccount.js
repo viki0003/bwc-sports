@@ -5,10 +5,12 @@ import { Password } from "primereact/password";
 import { Link } from "react-router-dom";
 import LoginImg from "../../../Assets/Images/login-img.png";
 import "./createaccount.css";
+import NavbarCustom from "../../../Components/Navbar-custom";
 
 const CreateAccount = () => {
   return (
     <>
+    <NavbarCustom/>
       <div className="create-account-ui">
         <div className="ca-container">
           <div className="ca-form">
@@ -53,7 +55,7 @@ const CreateAccount = () => {
               <hr />
               <div className="ca-form-group login-link">
                 <p>Already have an account? Login</p>
-                <Link to="/login">Log in to Your Account</Link>
+                <Link to="/">Log in to Your Account</Link>
               </div>
             </form>
           </div>
