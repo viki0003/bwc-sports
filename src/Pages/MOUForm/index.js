@@ -19,7 +19,7 @@ const MOUForm = () => {
             <div className="container">
                 <div className="header">
                     {/* <IoArrowBack className={styles.backIcon} onClick={handleBack} /> */}
-                    <BackIcon className="backIcon" alt='backIcon' />
+                    <span className="backIcon"><BackIcon /></span>
                     <h1 className="heading">BWC New Client / MOU Form</h1>
                 </div>
                 <div className="form-container">
