@@ -1,10 +1,11 @@
 import React from 'react';
-import backIcon from '../../Assets/Icons/back_icon.svg';
+import BackIcon from '../../Assets/Icons/BackIcon';
 import './style.css';
-import NavbarCustom from '../../Components/Navbar-custom';
+import NavbarCustom from "../../Components/NavbarCustom";
 import { InputText } from 'primereact/inputtext';
-import { Calendar } from 'primereact/calendar';
-import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+// import { Calendar } from 'primereact/calendar';
+// import { useEffect, useRef } from 'react';
 
 const MOUForm = () => {
     // const handleBack = () => {
@@ -18,7 +19,7 @@ const MOUForm = () => {
             <div className="container">
                 <div className="header">
                     {/* <IoArrowBack className={styles.backIcon} onClick={handleBack} /> */}
-                    <img src={backIcon} className="backIcon" />
+                    <BackIcon className="backIcon" alt='backIcon' />
                     <h1 className="heading">BWC New Client / MOU Form</h1>
                 </div>
                 <div className="form-container">

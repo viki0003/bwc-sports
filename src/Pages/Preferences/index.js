@@ -1,6 +1,7 @@
 import React from 'react'
-import NavbarCustom from '../../Components/Navbar-custom'
+import NavbarCustom from '../../Components/NavbarCustom'
 import './style.css'
+
 export default function Preferences() {
   return (
     <>
