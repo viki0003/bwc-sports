@@ -33,8 +33,8 @@ const Login = () => {
                 </form>
                 <hr />
                 <div className="new-account">
-                    <p>New here? Create an Account Now!</p>
-                    <button className="create-account-button">Create Your Account Now</button>
+                    <p>New here? Create an Account!</p>
+                    <button className="create-account-button">Create Your Account</button>
                 </div>
             </div>
         </div>

@@ -167,17 +167,17 @@ hr {
 
     .login-form {
         width: 100%;
-        padding: 30px;
+        padding: 20px !important;
         display: flex;
         flex-direction: column;
         justify-content:center;
     }
 
     .form-group input {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         width: 100%;
         font-weight: 600;
-        padding: 15px 20px;
+        padding: 15px 20px !important;
         border: 2px solid #ccc;
         border-radius: 17px;
         margin-left: 0;
@@ -193,6 +193,9 @@ hr {
     .create-account-button {
         width: 100%;
         padding: 15px 20px;
+    }
+    .cover-photo-banner{
+        display:none;
     }
 }
 

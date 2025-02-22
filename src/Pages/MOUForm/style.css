@@ -162,7 +162,7 @@ input[type="date"] {
     appearance: none;  /* Removes default styling */
     -webkit-appearance: none;
     -moz-appearance: none;
-}
+} 
 
 input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
@@ -175,7 +175,7 @@ input[type="date"]::-webkit-datetime-edit {
     color: transparent;
   }
   input[type="date"]:focus::-webkit-datetime-edit {
-    color: black; /* Show text when user types */
+    color: transparent; /* Show text when user types */
   }
 
 
@@ -383,9 +383,10 @@ letter-spacing: 0%;
         
     }
     .row1,.row2 {
+        padding-top:5px;
         display:flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 10px;
 
     }
 

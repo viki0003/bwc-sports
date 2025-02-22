@@ -164,9 +164,7 @@ p.red-info {
         padding-bottom:0px;
   }
   .ca-image {
-    height: auto;
-    margin-bottom: 20px;
-    padding-bottom:20px;
+    display:none;
 }
 
 .ca-image img {
