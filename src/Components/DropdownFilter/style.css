@@ -1,0 +1,219 @@
+/* Dropdown Filter Container */
+
+.dropdown-filter-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.dropdown-filter-container input[type="checkbox"] {
+    accent-color: #5095ff; /* Change tick color */
+    width: 16px;
+    height: 16px;
+}
+
+/* Filter By Dropdown */
+.filter-dropdown {
+    position: relative;
+    width: 100%;
+    height: 58px;
+    border-radius: 11px;
+    background-color: #e1edff;
+    color: #003a90;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 33.89px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    cursor: pointer;
+}
+
+/* Filter Options */
+.filter-options {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background-color: #e1edff;
+    color: #003a90;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.filter-header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 0 30px;
+    
+}
+.filter-header span{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 33.89px;
+    letter-spacing: 0%;
+    
+
+}
+
+.filter-option {
+    padding: 10px 15px;
+    font-size: 16px;
+    
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e1edff;
+    color: #003a90;
+}
+
+.filter-option span{
+    font-family: Inter;
+font-weight: 600;
+font-size: 28px;
+line-height: 33.89px;
+letter-spacing: 0%;
+padding: 23px;
+
+}
+
+.time-period{
+    display:flex;
+    flex-direction: row;
+    gap:10px;
+}
+.time-period button{
+    padding: 10px;
+    font-size: large;
+    background-color:#e1edff;
+    color: #003a90;
+    border: 1px solid #003a90;
+}
+.time-period button .btn-selected{
+    background-color: #003a90;
+    color: #e1edff;
+    border: 1px solid #e1edff;
+}
+
+
+
+/* Individual Dropdown */
+.dropdown-content {
+    position: absolute;
+    top: 0;
+    left: -220px; /* Moves it to the left */
+    width: 200px;
+    background-color: #e1edff;
+    color: #003a90;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 20;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 0;
+    font-size: 14px;
+    background-color: #e1edff;
+    color: #003a90;
+    justify-content: space-between;
+}
+
+/* Time Dropdown */
+.time-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #e1edff;
+    color: #003a90;
+}
+
+.time-dropdown select {
+    padding: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    background-color: #e1edff;
+    color: #003a90;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1300px) {
+    .dropdown-filter-container {
+        max-width: 200px;
+    }
+
+    .dropdown-content {
+        left: -180px;
+    }
+
+    .filter-header span {
+        font-size: 0.9rem;
+    }
+    .filter-option span{
+        
+    padding: 10px;
+    
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .filter-dropdown {
+        width: 140px;
+        height: 40px;
+        font-size: 14px;
+        padding: 0 5px;
+    }
+
+    .dropdown-content {
+        left: -150px;
+        width: 160px;
+    }
+
+    .dropdown-item {
+        font-size: 13px;
+    }
+    .filter-header{
+        gap:10px;
+        padding: 0 5px;
+    }
+
+    .filter-header span {
+        font-size: 1rem;
+    }
+
+    .time-dropdown select {
+        font-size: 13px;
+    }
+
+    .dropdown-filter-container input[type="checkbox"] {
+        width: 14px;
+        height: 14px;
+    }
+
+    .filter-option{
+        padding: 0px;
+    }
+
+    .filter-option span {
+        font-size: 0.9rem;
+    }
+}

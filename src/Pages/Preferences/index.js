@@ -32,7 +32,7 @@ export default function Preferences() {
                     <label for="Volleyball">Volleyball</label>
                 </div>
                 </div>
-                <button type="submit" className="p-submit-button">Proceed</button>
+                <button type="submit" className="preference-p-submit-button">Proceed</button>
             </form>
         </div>
     </>
