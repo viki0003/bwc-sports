@@ -4,6 +4,7 @@ const BackIcon = () => {
       <svg
         width="30"
         height="23"
+        viewBox="0 0 30 23"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
