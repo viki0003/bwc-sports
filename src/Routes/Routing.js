@@ -5,6 +5,10 @@ import Login from "../Pages/Authentication/Login";
 import MOUForm from "../Pages/MOUForm";
 import CreateAccount from "../Pages/Authentication/CreateAccount/CreateAccount";
 import Preferences from "../Pages/Preferences";
+import {BuyPackages}  from "../Pages/BuyPackages";
+import {ListOfSports} from "../Pages/ListOfSports";
+import {TimeSlot} from "../Pages/TimeSlot";
+import { ConfirmationPopup } from "../Components/ConfirmationPopup";
 
 const Routing = () => {
   return (
@@ -17,6 +21,10 @@ const Routing = () => {
         </Route>
         <Route path="/mou-form" element={<MOUForm />} />
         <Route path="/preferences" element={<Preferences/>}/>
+        <Route path="/list-of-sports" element={<ListOfSports/>}/>
+        <Route path="/time-slot" element={<TimeSlot/>}/>
+        <Route path="/buy-packages" element={<BuyPackages/>}/>
+        <Route path="/confirmation-popup" element={<ConfirmationPopup/>}/>
       </Routes>
     </BrowserRouter>
   );
