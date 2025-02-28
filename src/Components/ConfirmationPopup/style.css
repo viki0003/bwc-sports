@@ -1,0 +1,145 @@
+.popup-container{
+    max-width: 1069px;
+    max-height: 668px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:25px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px #888888;
+    padding: 60px;
+
+}
+.popup-header{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-header h2{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 38.73px;
+    letter-spacing: 0%;
+}
+
+.popup-item-container{
+    display:flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    width: 100%;
+    border-radius:20px;
+    background-color: #ECECEC;
+}
+
+.popup-item-header{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29.05px;
+    letter-spacing: 0%;
+    padding-bottom:20px;
+}
+.popup-item-content{
+    display:flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.popup-item-row{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.popup-item-row p{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29.05px;
+    letter-spacing: 0%;
+
+}
+
+.popup-button-container{
+    display:flex;
+    justify-content: space-around;
+    width:100%;
+    height: 70px;
+    gap: 19px;
+
+}
+
+.popup-button-container button{
+    width: 100%;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 33.89px;
+    letter-spacing: 0%;
+    border-radius: 10px;
+}
+
+.popup-confirm-button{
+    background-color: black;
+    color: white;
+}
+
+.popup-back-button{
+    background-color: white;
+    color: black;
+}
+
+@media (max-width: 1300px) {
+    .popup-container {
+        max-width: 900px;
+        padding: 40px;
+    }
+
+    .popup-item-container {
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .popup-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    .popup-header h2 {
+        font-size: 24px;
+    }
+
+    .popup-item-header {
+        font-size: 20px;
+    }
+
+    .popup-item-row {
+        
+    }
+
+    .popup-item-row p {
+        font-size: 16px;
+    }
+
+    .popup-button-container {
+        
+        height: auto;
+    }
+
+    .popup-button-container button {
+        width: 100%;
+        font-size: 22px;
+    }
+}
+
+
+
+
