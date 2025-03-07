@@ -81,6 +81,21 @@
     overflow: visible;
 }
 
+.services-list {
+    background-image: url('../../Assets/Images/grou-img.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+/* .service-cards{
+    background-image: url('../../Assets/Images/home_menu_image.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
 .circle-1 { top: 80px; left: 0; }
 .circle-2 { top: 40px; left: 80px; }
 .circle-3 { top: 10px; left: 160px; }
