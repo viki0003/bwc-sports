@@ -9,6 +9,7 @@ import ellipse5 from '../../Assets/Images/ellipse5.png'
 import ellipse6 from '../../Assets/Images/ellipse6.png'
 import './style.css'
 import HomeMenuIcon from "../../Assets/Icons/HomeMenuIcon";
+import OurServices from "../../Components/Home/OurServices/OurServices";
 
 const Home = () => {
   return (
@@ -22,15 +23,15 @@ const Home = () => {
             <button>View All Packages</button>
           </div>
         </div>
-        <div className="home-menu-container">
-          {/* <div className="home-menu-items">
+        {/* <div className="home-menu-container">
+          <div className="home-menu-items">
             <div className="home-menu-child circle-1"><EllipseCard imageSrc={ellipse1} text={"Field Days Carnivals"} /></div>
             <div className="home-menu-child circle-2"><EllipseCard imageSrc={ellipse2} text={"Instructional Classes"} /></div>
             <div className="home-menu-child circle-3"><EllipseCard imageSrc={ellipse3} text={"Summer Camp"} /></div>
             <div className="home-menu-child circle-4"><EllipseCard imageSrc={ellipse4} text={"School Program"} /></div>
             <div className="home-menu-child circle-5"><EllipseCard imageSrc={ellipse5} text={"After School Programs"} /></div>
             <div className="home-menu-child circle-6"><EllipseCard imageSrc={ellipse6} text={"Funding Program"} /></div>
-          </div> */}
+          </div>
           <div className="home-menu-box">
             <div className="home-menu-header"><h1>What we offer</h1></div>
             <div className="home-menu-box-description">
@@ -53,7 +54,8 @@ const Home = () => {
             <button className="home-menu-button">See Upcoming Events</button>
           </div>
 
-        </div>
+        </div> */}
+        <OurServices/>
         <div className="home-mission-container">
           <div className="home-mission-card">
             <div className="home-mission-left">
