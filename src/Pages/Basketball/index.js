@@ -108,6 +108,27 @@ export default function Basketball() {
                         </div>
                     </div>
                 </div>
+                <div className="basketball-locations">
+                    <h3>Locations</h3>
+                    <div className="basketball-location-container">
+                        <div class="card">
+                            <img src="https://todocodigo.net/img/626.jpg" alt="Image"/>
+                                <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
+                        </div>
+                        <div class="card">
+                            <img src="https://todocodigo.net/img/626.jpg" alt="Image"/>
+                                <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
+                        </div>
+                        <div class="card">
+                            <img src="https://todocodigo.net/img/626.jpg" alt="Image"/>
+                                <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
+                        </div>
+                        <div class="card">
+                            <img src="https://todocodigo.net/img/626.jpg" alt="Image"/>
+                                <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </>

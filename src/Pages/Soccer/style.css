@@ -1,4 +1,4 @@
-.basketball-container{
+.soccer-container{
     display:flex;
     flex-direction: column;
     padding-bottom: 20px;
@@ -6,7 +6,7 @@
 }
 
 
-.basketball-backIcon {
+.soccer-backIcon {
     position: relative;
     left: 0;
     /* Aligns to the left */
@@ -23,18 +23,18 @@
 }
 
 
-.basketball-header{
+.soccer-header{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    background-image: url('../../Assets/Images/basketball-banner-image.png');  /* Set your image path */
+    background-image: url('../../Assets/Images/soccer_header_image.png');  /* Set your image path */
     background-repeat: no-repeat;   /* Prevent repetition */
     background-position: top right;  /* Align to the top-left corner */
-    background-size: 60% 70%; 
+    background-size: 60% auto; 
 }
 
-.basketball-header-content{
+.soccer-header-content{
     margin-top: 80px;
     display:flex;
     flex-direction:column;
@@ -44,23 +44,23 @@
     
 }
 
-.basketball-header-content h1{
+.soccer-header-content h1{
     font-size: 56px;
     font-weight: bold;
     padding-bottom: 60px;
 }
 
-.basketball-header-content h3{
+.soccer-header-content h3{
     font-size: 36px;
     font-weight: bold;
     max-width: 50%;
 }
-.basketball-header-content p{
+.soccer-header-content p{
     font-size:  28px;
     font-weight: 300;
 }
 
-.basketball-booking-container{
+.soccer-booking-container{
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -70,18 +70,18 @@
     padding-bottom: 40px;
 }
 
-.basketball-booking-container button{
+.soccer-booking-container button{
     padding: 20px 30px;
     font-size: 28px;
     font-weight: 600;
     width:100%;
     border-radius: 20px;
-    border: 1px solid #ffb04f;
-    background-color: #ffeed9;
+    border: 1px solid #4f7040;
+    background-color: #bdddae;
 
 }
 
-.basketball-image-container{
+.soccer-image-container{
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -93,7 +93,7 @@
     padding-bottom: 40px;
 }
 
-.basketball-image-container img{
+.soccer-image-container img{
     height: 379px;
     max-width: 360px;
     width: 100%;
@@ -101,7 +101,7 @@
 
 }
 
-.basketball-section2{
+.soccer-section2{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -110,18 +110,18 @@
     padding: 0 40px;
 }
 
-.basketball-section2 h3{
+.soccer-section2 h3{
     font-size: 36px;
     font-size: bold;
 }
 
-.basketball-section2 p{
+.soccer-section2 p{
     font-size: 28px;
     font-weight: 300;
     padding-bottom: 17px;
 }
 
-.basketball-section2-image-container{
+.soccer-section2-image-container{
     display:flex;
     flex-direction:row;
     justify-content: center;
@@ -131,7 +131,7 @@
 
 }
 
-.basketball-section2-image-container img {
+.soccer-section2-image-container img {
     width: 100%; /* Adjust width as needed */
      /* Set a max width */
     height: auto; /* Maintain aspect ratio */
@@ -139,7 +139,7 @@
      /* Optional: Rounded corners */
 }
 
-.basketball-overlay-text {
+.soccer-overlay-text {
     position: absolute;
     color: white;
     font-size: 40px;
@@ -162,7 +162,7 @@
 
 
 
-.basketball-group {
+.soccer-group {
     position: absolute;
     top: 10px; /* Position at bottom of image */
     left: 90%;
@@ -176,7 +176,7 @@
     white-space: nowrap;
 }
 
-.basketball-section3{
+.soccer-section3{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -185,18 +185,18 @@
     padding: 0 40px;
 }
 
-.basketball-section3 h3{
+.soccer-section3 h3{
     font-size: 36px;
     font-size: bold;
 }
 
-.basketball-section3 p{
+.soccer-section3 p{
     font-size: 28px;
     font-weight: 300;
     padding-bottom: 17px;
 }
 
-.basketball-section3-image-container{
+.soccer-section3-image-container{
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -205,7 +205,7 @@
     white-space: nowrap;
     gap: 20px;
 }
-.basketball-section3-image-container div{
+.soccer-section3-image-container div{
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -218,13 +218,13 @@
 }
 
 
-.basketball-section3-image-container img {
+.soccer-section3-image-container img {
      /* Responsive image */
     border-radius: 20px; /* Optional rounded corners */
 }
 .skill-text-overlay {
     position: absolute;
-    bottom: 20px; /* Position at the bottom */
+    bottom: 10px; /* Position at the bottom */
     left: 50%;
     transform: translateX(-50%); /* Center horizontally */
     color: white;
@@ -242,7 +242,7 @@
 }
 
 
-.basketball-section4{
+.soccer-section4{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -251,19 +251,19 @@
     padding: 0 40px;
 }
 
-.basketball-section4 h3{
+.soccer-section4 h3{
     font-size: 36px;
     font-size: bold;
 }
 
-.basketball-section4 p{
+.soccer-section4 p{
     font-size: 28px;
     font-weight: 300;
     padding-bottom: 17px;
 }
 
-.basketball-booking-container2{
-    background-image: url('../../Assets//Images/section5_banner.png');
+.soccer-booking-container2{
+    background-image: url('../../Assets//Images/soccer_banner_image2.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -275,7 +275,7 @@
     justify-content: space-between;
 }
 
-.basketball-booking-container-details{
+.soccer-booking-container-details{
     display:flex;
     flex-direction: column;
     padding: 50px 40px;
@@ -285,28 +285,28 @@
 
 }
 
-.basketball-booking-container-details h3{
+.soccer-booking-container-details h3{
     font-size:40px;
     font-weight: bold;
 }
-.basketball-booking-container-details p{
+.soccer-booking-container-details p{
     font-size:28px;
     font-weight:300;
 }
 
-.basketball-trainers{
+.soccer-trainers{
     display:flex;
     flex-direction: column;
     align-items:center;
     gap:42px;
 }
 
-.basketball-trainers h3{
+.soccer-trainers h3{
     font-size: 40px;
     font-weight: bold;
 }
 
-.basketball-trainer-image-container{
+.soccer-trainer-image-container{
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -317,7 +317,7 @@
     
 }
 
-.basketball-trainer-image{
+.soccer-trainer-image{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -329,7 +329,7 @@
     width: 100%;
 }
 
-.basketball-trainer-image div{
+.soccer-trainer-image div{
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -338,7 +338,7 @@
     
 }
 
-.basketball-trainer-image img{
+.soccer-trainer-image img{
     
     /* Adjust as needed */
     width:100%;
@@ -347,7 +347,7 @@
 
 .skill-text-overlay {
     position: absolute;
-    bottom: 20%; /* Position at the bottom */
+    bottom: 10%; /* Position at the bottom */
     left: 50%;
     transform: translateX(-50%); /* Center horizontally */
     color: white;
@@ -359,7 +359,7 @@
     
 }
 
-.basketball-locations{
+.soccer-locations{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -369,12 +369,12 @@
 
 }
 
-.basketball-locations h3{
+.soccer-locations h3{
     font-size: 56px;
     font-weight: bold;
 }
 
-.basketball-location-container{
+.soccer-location-container{
     display:flex;
     flex-direction: row;
     gap: 40px;
@@ -418,77 +418,77 @@
 
 @media (max-width: 1300px) {
     
-    .basketball-backIcon{
+    .soccer-backIcon{
         display:none !important;
     }
 }
 /* Responsive Styles for 1300px */
 @media (max-width: 1300px) {
-    .basketball-header {
+    .soccer-header {
         background-size: 45% auto;
     }
-    .basketball-header-content h1 {
+    .soccer-header-content h1 {
         font-size: 48px;
         padding-top: 80px;
     }
 
-    .basketball-header-content h3 {
+    .soccer-header-content h3 {
         font-size: 30px;
     }
-    /* .basketball-header-content p{
+    /* .soccer-header-content p{
         width: 50%;
     }
-    .basketball-header-content h3{
+    .soccer-header-content h3{
         width: 40%;
     } */
 
-    .basketball-header-content p,
-    .basketball-section2 p,
-    .basketball-section4 p {
+    .soccer-header-content p,
+    .soccer-section2 p,
+    .soccer-section4 p {
         font-size: 24px;
     }
 
-    /* .basketball-image-container{
+    /* .soccer-image-container{
         gap:10px;
     } */
 
-    .basketball-booking-container2{
+    .soccer-booking-container2{
         height:auto;
     }
 
     
-    .basketball-booking-container button {
+    .soccer-booking-container button {
         font-size: 24px;
         padding: 16px 24px;
     }
 
-    /* .basketball-image-container img {
+    /* .soccer-image-container img {
         height: 280px;
         max-width: 220px;
     } */
 
-    .basketball-trainer-image-container{
+    .soccer-trainer-image-container{
         gap: 20px;
     }
-    .basketball-trainer-image img{
+    .soccer-trainer-image img{
         height: 350px;
         max-width: 350px;
     }
 
-    .basketball-section2-image-container img {
+    .soccer-section2-image-container img {
         max-width: 100%;
         height:auto;
     }
 
-    .basketball-overlay-text{
+    .soccer-overlay-text{
         font-size: 24px;
     }
 
-    .basketball-booking-container-details h3{
+    .soccer-booking-container-details h3{
         font-size: 30px;
     }
 
-    .basketball-booking-container-details p{
+    .soccer-booking-container-details p{
         font-size: 22px;
     }
 
@@ -505,7 +505,7 @@
     }
 
 
-    .basketball-location-container{
+    .soccer-location-container{
         display:flex;
         flex-direction:row;
         gap: 10px;
@@ -516,7 +516,7 @@
     }
     
 
-    .basketball-location-container .card img {
+    .soccer-location-container .card img {
         width: 100%;
         height: auto;
     }
@@ -524,37 +524,37 @@
 
 /* Responsive Styles for 768px */
 @media (max-width: 768px) {
-    .basketball-container{
+    .soccer-container{
         gap:25px;
     }
-    .basketball-header {
+    .soccer-header {
         background-size: 50% auto;
     }
 
-    .basketball-header-content {
+    .soccer-header-content {
         padding: 0 20px;
         margin-top: 80px;
         padding-bottom: 20px;
     }
 
-    .basketball-header-content h1 {
+    .soccer-header-content h1 {
         padding-top: 100px;
         padding-bottom: 20px;
         font-size: 36px;
     }
 
-    .basketball-header-content h3 {
+    .soccer-header-content h3 {
         font-size: 18px;
         max-width: 100%;
     }
 
-    .basketball-header-content p,
-    .basketball-section2 p,
-    .basketball-section4 p {
+    .soccer-header-content p,
+    .soccer-section2 p,
+    .soccer-section4 p {
         font-size: 18px;
     }
 
-    .basketball-booking-container {
+    .soccer-booking-container {
         flex-direction: row;
         align-items: center;
         padding: 0 20px;
@@ -563,68 +563,68 @@
         padding-bottom:30px;
     }
 
-    .basketball-booking-container button {
+    .soccer-booking-container button {
         font-size: 16px;
         padding: 12px 20px;
         width: 40%;
         border-radius: 10px;
     }
 
-    .basketball-image-container {
+    .soccer-image-container {
         gap: 10px;
         padding: 0 20px;
         display:flex;
         flex-direction:row;
     }
 
-    .basketball-image-container img {
+    .soccer-image-container img {
         height: 200px;
         max-width: 170px;
     }
 
-    .basketball-section2,.basketball-section3, .basketball-section4 {
+    .soccer-section2,.soccer-section3, .soccer-section4 {
         padding: 0 20px;
     }
 
-    .basketball-section2 h3 {
+    .soccer-section2 h3 {
         font-size: 28px;
     }
-    .basketball-section3 h3{
+    .soccer-section3 h3{
         font-size: 28px;
     }
-    .basketball-section3 p{
+    .soccer-section3 p{
         font-size: 18px;
     }
 
-    .basketball-locations{
+    .soccer-locations{
         gap:20px;
     }
-    .basketball-locations h3{
+    .soccer-locations h3{
         font-size: 28px;
     }
 
-    .basketball-section2-image-container img {
+    .soccer-section2-image-container img {
         max-width: 100%;
     }
 
-    .basketball-section3-image-container {
+    .soccer-section3-image-container {
         gap: 10px;
     }
 
-    .basketball-section3-image-container img {
+    .soccer-section3-image-container img {
         width: 100%;
     }
-    .basketball-booking-container-details{
+    .soccer-booking-container-details{
         padding: 50px 20px;
     }
 
-    .basketball-booking-container-details h3{
+    .soccer-booking-container-details h3{
         font-size: 28px;
     }
-    .basketball-booking-container-details p{
+    .soccer-booking-container-details p{
         font-size: 18px;
     }
-    .basketball-trainer-image-container{
+    .soccer-trainer-image-container{
         gap: 10px;
     }
 
@@ -635,12 +635,12 @@
         font-size:12px;
     }
 
-    .basketball-trainer-image img {
+    .soccer-trainer-image img {
         height: 270px;
         width: 100%;
     }
 
-    .basketball-location-container {
+    .soccer-location-container {
         flex-wrap: wrap;
     }
     .card{
@@ -648,7 +648,7 @@
         width: 100%;
     }
 
-    .basketball-location-container .card img {
+    .soccer-location-container .card img {
         width: 100%;
         height: auto;
     }
@@ -657,7 +657,7 @@
     }
 
     @media (max-width:600px) {
-        .basketball-overlay-text{
+        .soccer-overlay-text{
             font-size: 20px;
         }
 
@@ -667,7 +667,7 @@
         .top-right{
             top:5px;
         }
-        .basketball-section2-image-container{
+        .soccer-section2-image-container{
             padding-bottom: 20px;
         }
     }
