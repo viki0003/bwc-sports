@@ -1,6 +1,6 @@
 import React from "react";
 import "./ourservices.css";
-import ImgB from "../../../Assets/Images/home_menu_image.png";
+import ImgB from "../../../Assets/Images/grou-img.png";
 import IC from "../../../Assets/Images/IC.png";
 import FD from "../../../Assets/Images/FD.png";
 import SC from "../../../Assets/Images/SC.png";
@@ -57,7 +57,9 @@ const OurServices = () => {
             <img src={ImgB} alt="background" />
           </div> */}
         </div>
-
+        <div className="img-b-sm">
+          <img src={ImgB} alt="background" />
+        </div>
         <div className="offer-sec">
           <h2>WHAT WE OFFER</h2>
           <div className="offer-list">
@@ -106,42 +108,42 @@ const OurServices = () => {
                 <img src={ICSM} alt="IC" />
               </div>
               <p>Instructional Classes</p>
-              <ArrowIcon/>
+              <ArrowIcon />
             </div>
             <div className="service-card-sm-item">
               <div className="service-card-sm-IMG">
                 <img src={FDSM} alt="IC" />
               </div>
               <p>Field days & Carnivals</p>
-              <ArrowIcon/>
+              <ArrowIcon />
             </div>
             <div className="service-card-sm-item">
               <div className="service-card-sm-IMG">
                 <img src={SCSM} alt="IC" />
               </div>
               <p>Summer Camp</p>
-              <ArrowIcon/>
+              <ArrowIcon />
             </div>
             <div className="service-card-sm-item">
               <div className="service-card-sm-IMG">
                 <img src={SPSM} alt="IC" />
               </div>
               <p>School Programs</p>
-              <ArrowIcon/>
+              <ArrowIcon />
             </div>
             <div className="service-card-sm-item">
               <div className="service-card-sm-IMG">
                 <img src={ASPSM} alt="IC" />
               </div>
               <p>After School Programs</p>
-              <ArrowIcon/>
+              <ArrowIcon />
             </div>
             <div className="service-card-sm-item">
               <div className="service-card-sm-IMG">
                 <img src={FPSM} alt="IC" />
               </div>
               <p>Fundraising Program</p>
-              <ArrowIcon/>
+              <ArrowIcon />
             </div>
           </div>
         </div>

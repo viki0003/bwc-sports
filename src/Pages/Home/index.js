@@ -9,7 +9,8 @@ import ellipse5 from '../../Assets/Images/ellipse5.png'
 import ellipse6 from '../../Assets/Images/ellipse6.png'
 import './style.css'
 import HomeMenuIcon from "../../Assets/Icons/HomeMenuIcon";
-import OurServices from '../../Components/Home/OurServices/OurServices'
+import OurServices from "../../Components/Home/OurServices/OurServices";
+import MissionStatement from "../../Components/Home/MissionStatement/MissionStatement";
 
 const Home = () => {
   return (
@@ -56,7 +57,8 @@ const Home = () => {
 
         </div> */}
         <OurServices/>
-        <div className="home-mission-container">
+        <MissionStatement />
+        {/* <div className="home-mission-container">
           <div className="home-mission-card">
             <div className="home-mission-left">
               <h1>Mission Statement</h1>
@@ -69,7 +71,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="upcoming-event-container">
           <div className="upcoming-event-header">
             <h1>Upcoming Events</h1>
