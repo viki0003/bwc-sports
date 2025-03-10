@@ -76,8 +76,8 @@
     font-weight: 600;
     width:100%;
     border-radius: 20px;
-    border: 1px solid #4f7040;
-    background-color: #bdddae;
+    border: 1px solid #684a0b;
+    background-color: #fff0d4;
 
 }
 
@@ -201,9 +201,11 @@
     flex-direction: row;
     align-items: left;
     justify-content: left;
-    overflow-x: auto;
-    white-space: nowrap;
     gap: 20px;
+    
+    overflow-x: auto;
+    white-space:nowrap;
+    padding-bottom: 40px;
 }
 .soccer-section3-image-container div{
     display:flex;
@@ -211,16 +213,19 @@
     align-items: center;
     justify-content: center;
     position:relative;
-    max-width: 271px;
+    height: auto;
+    min-width: 360px;
     width:100%;
-    height: 340px;
+    
+    /* height: 379px; */
     
 }
 
 
 .soccer-section3-image-container img {
      /* Responsive image */
-    border-radius: 20px; /* Optional rounded corners */
+     width:100%;
+     border-radius: 20px; /* Optional rounded corners */
 }
 .skill-text-overlay {
     position: absolute;
@@ -281,7 +286,8 @@
     padding: 50px 40px;
     align-items:left;
     gap:20px;
-    width:60%;
+    width:40%;
+    
 
 }
 
@@ -462,17 +468,18 @@
         padding: 16px 24px;
     }
 
-    /* .soccer-image-container img {
-        height: 280px;
-        max-width: 220px;
-    } */
+    .soccer-image-container img{
+        
+    }
 
     .soccer-trainer-image-container{
         gap: 20px;
     }
-    .soccer-trainer-image img{
-        height: 350px;
-        max-width: 350px;
+    .soccer-trainer-image{
+        /* height: 350px;
+        max-width: 350px; */
+        height: auto;
+        max-width: 280px;
     }
 
     .soccer-section2-image-container img {
@@ -493,9 +500,9 @@
     }
 
     
-    .skill-text-overlay{
+    /* .skill-text-overlay{
         font-size: 20px;
-    }
+    } */
 
     .skill-text-overlay h4{
         font-size: 20px;
@@ -612,7 +619,20 @@
     }
 
     .soccer-section3-image-container img {
+        height: 200px;
+        max-width: 170px;
         width: 100%;
+    }
+    .soccer-section3-image-container {
+        gap: 10px;
+        
+        display:flex;
+        flex-direction:row;
+    }
+
+    .soccer-section3-image-container div {
+        height: 200px;
+        min-width: 170px;
     }
     .soccer-booking-container-details{
         padding: 50px 20px;
@@ -626,6 +646,7 @@
     }
     .soccer-trainer-image-container{
         gap: 10px;
+        padding:0 20px;
     }
 
     .skill-text-overlay h4{
@@ -636,7 +657,7 @@
     }
 
     .soccer-trainer-image img {
-        height: 270px;
+        height: auto;
         width: 100%;
     }
 

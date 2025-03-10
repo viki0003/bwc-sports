@@ -9,7 +9,7 @@ import ellipse5 from '../../Assets/Images/ellipse5.png'
 import ellipse6 from '../../Assets/Images/ellipse6.png'
 import './style.css'
 import HomeMenuIcon from "../../Assets/Icons/HomeMenuIcon";
-import OurServices from "../../Components/Home/OurServices/OurServices";
+import OurServices from '../../Components/Home/OurServices/OurServices'
 
 const Home = () => {
   return (

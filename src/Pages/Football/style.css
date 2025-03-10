@@ -201,9 +201,11 @@
     flex-direction: row;
     align-items: left;
     justify-content: left;
-    overflow-x: auto;
-    white-space: nowrap;
     gap: 20px;
+    
+    overflow-x: auto;
+    white-space:nowrap;
+    padding-bottom: 40px;
 }
 .football-section3-image-container div{
     display:flex;
@@ -211,16 +213,19 @@
     align-items: center;
     justify-content: center;
     position:relative;
-    max-width: 271px;
+    height: auto;
+    min-width: 360px;
     width:100%;
-    height: 340px;
+    
+    /* height: 379px; */
     
 }
 
 
 .football-section3-image-container img {
      /* Responsive image */
-    border-radius: 20px; /* Optional rounded corners */
+     width:100%;
+     border-radius: 20px; /* Optional rounded corners */
 }
 .skill-text-overlay {
     position: absolute;
@@ -462,17 +467,18 @@
         padding: 16px 24px;
     }
 
-    /* .football-image-container img {
-        height: 280px;
-        max-width: 220px;
-    } */
+    .football-image-container img{
+        
+    }
 
     .football-trainer-image-container{
         gap: 20px;
     }
-    .football-trainer-image img{
-        height: 350px;
-        max-width: 350px;
+    .football-trainer-image{
+        /* height: 350px;
+        max-width: 350px; */
+        height: auto;
+        max-width: 280px;
     }
 
     .football-section2-image-container img {
@@ -493,9 +499,9 @@
     }
 
     
-    .skill-text-overlay{
+    /* .skill-text-overlay{
         font-size: 20px;
-    }
+    } */
 
     .skill-text-overlay h4{
         font-size: 20px;
@@ -612,7 +618,20 @@
     }
 
     .football-section3-image-container img {
+        height: 200px;
+        max-width: 170px;
         width: 100%;
+    }
+    .football-section3-image-container {
+        gap: 10px;
+        
+        display:flex;
+        flex-direction:row;
+    }
+
+    .football-section3-image-container div {
+        height: 200px;
+        min-width: 170px;
     }
     .football-booking-container-details{
         padding: 50px 20px;
@@ -626,6 +645,7 @@
     }
     .football-trainer-image-container{
         gap: 10px;
+        padding:0 20px;
     }
 
     .skill-text-overlay h4{
@@ -636,7 +656,7 @@
     }
 
     .football-trainer-image img {
-        height: 270px;
+        height: auto;
         width: 100%;
     }
 
