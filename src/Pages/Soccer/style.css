@@ -1,0 +1,709 @@
+.soccer-container{
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    gap:55px;
+}
+
+
+.soccer-backIcon {
+    position: relative;
+    left: 0;
+    /* Aligns to the left */
+    font-size: 20px;
+    width: 75px;
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    margin-left: 40px;
+    margin-top: 64px;
+    background-color: aliceblue;
+    border-radius: 50px;
+    /* Add space from the edge */
+}
+
+
+.soccer-header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-image: url('../../Assets/Images/soccer_header_image.png');  /* Set your image path */
+    background-repeat: no-repeat;   /* Prevent repetition */
+    background-position: top right;  /* Align to the top-left corner */
+    background-size: 60% auto; 
+}
+
+.soccer-header-content{
+    margin-top: 80px;
+    display:flex;
+    flex-direction:column;
+    align-items: left;
+    gap:18px;
+    padding:0 40px;
+    
+}
+
+.soccer-header-content h1{
+    font-size: 56px;
+    font-weight: bold;
+    padding-bottom: 60px;
+}
+
+.soccer-header-content h3{
+    font-size: 36px;
+    font-weight: bold;
+    max-width: 50%;
+}
+.soccer-header-content p{
+    font-size:  28px;
+    font-weight: 300;
+}
+
+.soccer-booking-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 40px;
+    padding-bottom: 40px;
+}
+
+.soccer-booking-container button{
+    padding: 20px 30px;
+    font-size: 28px;
+    font-weight: 600;
+    width:100%;
+    border-radius: 20px;
+    border: 1px solid #4f7040;
+    background-color: #bdddae;
+
+}
+.soccer-booking-selected{
+    background-color: #4f7040 !important;
+    color: white;
+}
+
+.soccer-image-container{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    gap: 20px;
+    padding: 0 40px;
+    overflow-x: auto;
+    white-space:nowrap;
+    padding-bottom: 40px;
+}
+
+.soccer-image-container img{
+    height: 379px;
+    max-width: 360px;
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.soccer-section2{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.soccer-section2 h3{
+    font-size: 36px;
+    font-size: bold;
+}
+
+.soccer-section2 p{
+    font-size: 28px;
+    font-weight: 300;
+    padding-bottom: 17px;
+}
+
+.soccer-section2-image-container{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    padding-bottom:41px;
+
+}
+
+.soccer-section2-image-container img {
+    width: 100%; /* Adjust width as needed */
+     /* Set a max width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+     /* Optional: Rounded corners */
+}
+
+.soccer-overlay-text {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+    
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.bottom-left {
+    bottom: 60px;
+    left: 20px;
+}
+
+.top-right {
+    top: 40px;
+    right: 20px;
+}
+
+
+
+.soccer-group {
+    position: absolute;
+    top: 10px; /* Position at bottom of image */
+    left: 90%;
+    transform: translateX(-50%); /* Center text horizontally */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.soccer-section3{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.soccer-section3 h3{
+    font-size: 36px;
+    font-size: bold;
+}
+
+.soccer-section3 p{
+    font-size: 28px;
+    font-weight: 300;
+    padding-bottom: 17px;
+}
+
+.soccer-section3-image-container{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    gap: 20px;
+    
+    overflow-x: auto;
+    white-space:nowrap;
+    padding-bottom: 40px;
+}
+.soccer-section3-image-container div{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    height: auto;
+    min-width: 360px;
+    width:100%;
+    
+    /* height: 379px; */
+    
+}
+
+
+.soccer-section3-image-container img {
+     /* Responsive image */
+     width:100%;
+     border-radius: 20px; /* Optional rounded corners */
+}
+.skill-text-overlay {
+    position: absolute;
+    bottom: 10px; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:8px;
+    justify-content: center;
+    
+}
+
+
+.soccer-section4{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.soccer-section4 h3{
+    font-size: 36px;
+    font-size: bold;
+}
+
+.soccer-section4 p{
+    font-size: 28px;
+    font-weight: 300;
+    padding-bottom: 17px;
+}
+
+.soccer-booking-container2{
+    background-image: url('../../Assets//Images/soccer_banner_image2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    align-items:left;
+    justify-content: space-between;
+}
+
+.soccer-booking-container-details{
+    display:flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    align-items:left;
+    gap:20px;
+    width:40%;
+    
+
+}
+
+.soccer-booking-container-details h3{
+    font-size:40px;
+    font-weight: bold;
+}
+.soccer-booking-container-details p{
+    font-size:28px;
+    font-weight:300;
+}
+
+.soccer-trainers{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:42px;
+}
+
+.soccer-trainers h3{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.soccer-trainer-image-container{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 20px;
+    
+}
+
+.soccer-trainer-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    height: 520px;
+    max-width: 400px; 
+    width: 100%;
+}
+
+.soccer-trainer-image div{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.soccer-trainer-image img{
+    
+    /* Adjust as needed */
+    width:100%;
+    border-radius: 20px; 
+}
+
+.skill-text-overlay {
+    position: absolute;
+    bottom: 10%; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    
+}
+
+.soccer-locations{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:58px;
+    padding-bottom: 64px;
+
+}
+
+.soccer-locations h3{
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.soccer-location-container{
+    display:flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    
+}
+
+.card {
+    width: 585px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background-color: #f1fff2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.card img {
+    max-width: 541px;
+    max-height: 364px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: white;
+}
+.card-description {
+    display:flex;
+    flex-direction: row;
+    align-items:left;
+    justify-content: left;
+    width:100%;
+    margin-top: 16px;
+    font-size: 18px;
+    color: #555;
+}
+
+.outside-booking-container{
+    display:none;
+}
+
+
+@media (max-width: 1300px) {
+    
+    .soccer-backIcon{
+        display:none !important;
+    }
+}
+/* Responsive Styles for 1300px */
+@media (max-width: 1300px) {
+    .soccer-header {
+        background-size: 45% auto;
+    }
+    .soccer-header-content h1 {
+        font-size: 48px;
+        padding-top: 80px;
+    }
+
+    .soccer-header-content h3 {
+        font-size: 30px;
+    }
+    /* .soccer-header-content p{
+        width: 50%;
+    }
+    .soccer-header-content h3{
+        width: 40%;
+    } */
+
+    .soccer-header-content p,
+    .soccer-section2 p,
+    .soccer-section4 p {
+        font-size: 24px;
+    }
+
+    /* .soccer-image-container{
+        gap:10px;
+    } */
+
+    .soccer-booking-container2{
+        height:auto;
+    }
+
+    
+    .soccer-booking-container button {
+        font-size: 24px;
+        padding: 16px 24px;
+    }
+
+    .soccer-image-container img{
+        
+    }
+
+    .soccer-trainer-image-container{
+        gap: 20px;
+    }
+    .soccer-trainer-image{
+        /* height: 350px;
+        max-width: 350px; */
+        height: auto;
+        max-width: 280px;
+    }
+
+    .soccer-section2-image-container img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    .soccer-overlay-text{
+        font-size: 24px;
+    }
+
+    .soccer-booking-container-details h3{
+        font-size: 30px;
+    }
+
+    .soccer-booking-container-details p{
+        font-size: 22px;
+    }
+
+    
+    /* .skill-text-overlay{
+        font-size: 20px;
+    } */
+
+    .skill-text-overlay h4{
+        font-size: 20px;
+    }
+    .skill-text-overlay p{
+        font-size:18px;
+    }
+
+
+    .soccer-location-container{
+        display:flex;
+        flex-direction:row;
+        gap: 10px;
+    }
+
+    .card{
+        max-width: 440px;
+    }
+    
+
+    .soccer-location-container .card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Responsive Styles for 768px */
+@media (max-width: 768px) {
+    .soccer-container{
+        gap:25px;
+    }
+    .soccer-header {
+        background-size: 50% auto;
+    }
+
+    .soccer-header-content {
+        padding: 0 20px;
+        margin-top: 80px;
+        padding-bottom: 20px;
+    }
+
+    .soccer-header-content h1 {
+        padding-top: 100px;
+        padding-bottom: 20px;
+        font-size: 36px;
+    }
+
+    .soccer-header-content h3 {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .soccer-header-content p,
+    .soccer-section2 p,
+    .soccer-section4 p {
+        font-size: 18px;
+    }
+
+    .soccer-booking-container {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 20px;
+        flex-wrap:wrap;
+        gap:10px;
+        padding-bottom:30px;
+    }
+
+    .soccer-booking-container button {
+        font-size: 16px;
+        padding: 12px 20px;
+        width: 40%;
+        border-radius: 10px;
+    }
+
+    .soccer-image-container {
+        gap: 10px;
+        padding: 0 20px;
+        display:flex;
+        flex-direction:row;
+    }
+
+    .soccer-image-container img {
+        height: 200px;
+        max-width: 170px;
+    }
+
+    .soccer-section2,.soccer-section3, .soccer-section4 {
+        padding: 0 20px;
+    }
+
+    .soccer-section2 h3 {
+        font-size: 28px;
+    }
+    .soccer-section3 h3{
+        font-size: 28px;
+    }
+    .soccer-section3 p{
+        font-size: 18px;
+    }
+
+    .soccer-locations{
+        gap:20px;
+    }
+    .soccer-locations h3{
+        font-size: 28px;
+    }
+
+    .soccer-section2-image-container img {
+        max-width: 100%;
+    }
+
+    .soccer-section3-image-container {
+        gap: 10px;
+    }
+
+    .soccer-section3-image-container img {
+        height: 200px;
+        max-width: 170px;
+        width: 100%;
+    }
+    .soccer-section3-image-container {
+        gap: 10px;
+        
+        display:flex;
+        flex-direction:row;
+    }
+
+    .soccer-section3-image-container div {
+        height: 200px;
+        min-width: 170px;
+    }
+    .soccer-booking-container-details{
+        padding: 50px 20px;
+    }
+
+    .soccer-booking-container-details h3{
+        font-size: 28px;
+    }
+    .soccer-booking-container-details p{
+        font-size: 18px;
+    }
+    .soccer-trainer-image-container{
+        gap: 10px;
+        padding:0 20px;
+    }
+
+    .skill-text-overlay h4{
+        font-size: 16px;
+    }
+    .skill-text-overlay p{
+        font-size:12px;
+    }
+
+    .soccer-trainer-image img {
+        height: auto;
+        width: 100%;
+    }
+
+    .soccer-location-container {
+        flex-wrap: wrap;
+    }
+    .card{
+        max-width: 340px;
+        width: 100%;
+    }
+
+    .soccer-location-container .card img {
+        width: 100%;
+        height: auto;
+    }
+    .card-description p{
+        font-size: 16px;
+    }
+    .outside-booking-container{
+        display:none;
+    }
+    .inside-booking-container{
+        display:flex;
+    }
+
+    @media (max-width:600px) {
+        .soccer-overlay-text{
+            font-size: 20px;
+        }
+
+        .bottom-left{
+            bottom: 35px;
+        }
+        .top-right{
+            top:5px;
+        }
+        .soccer-section2-image-container{
+            padding-bottom: 20px;
+        }
+    }
+}

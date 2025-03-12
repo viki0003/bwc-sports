@@ -1,0 +1,144 @@
+.testimonial-slider {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.testimonial-wrapper {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: left;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-direction: row !important;
+    align-items: left;
+    justify-content: left;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+
+.testimonial {
+    width: 464px;
+    height: 259px;
+    padding: 20px;
+    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+
+
+.testimonial-author {
+    
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    font-weight: bold;
+    color: black;
+}
+
+.testimonial-location {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+.testimonial-feedback{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Navigation Buttons */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 1300px) {
+    .testimonial-slider {
+        max-width: 90%;
+    }
+    .testimonial {
+        width: 350px;
+    }
+    .testimonial-author {
+        font-size: 20px;
+    }
+    
+    .testimonial-location {
+        font-size: 13px;
+        
+    }
+    .testimonial-feedback{
+        font-size: 16px;
+        
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial {
+        width: 280px;
+    }
+    .testimonial-slider {
+        max-width: 100%;
+    }
+    .testimonial-feedback{
+        font-size: 12px;
+        
+    }
+}

@@ -1,0 +1,694 @@
+.football-container{
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    gap:55px;
+}
+
+
+.football-backIcon {
+    position: relative;
+    left: 0;
+    /* Aligns to the left */
+    font-size: 20px;
+    width: 75px;
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    margin-left: 40px;
+    margin-top: 64px;
+    background-color: aliceblue;
+    border-radius: 50px;
+    /* Add space from the edge */
+}
+
+
+.football-header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-image: url('../../Assets/Images/Mask\ group.png');  /* Set your image path */
+    background-repeat: no-repeat;   /* Prevent repetition */
+    background-position: top right;  /* Align to the top-left corner */
+    background-size: 60% auto; 
+}
+
+.football-header-content{
+    margin-top: 80px;
+    display:flex;
+    flex-direction:column;
+    align-items: left;
+    gap:18px;
+    padding:0 40px;
+    
+}
+
+.football-header-content h1{
+    font-size: 56px;
+    font-weight: bold;
+    padding-bottom: 60px;
+}
+
+.football-header-content h3{
+    font-size: 36px;
+    font-weight: bold;
+    max-width: 50%;
+}
+.football-header-content p{
+    font-size:  28px;
+    font-weight: 300;
+}
+
+.football-booking-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 40px;
+    padding-bottom: 40px;
+}
+
+.football-booking-container button{
+    padding: 20px 30px;
+    font-size: 28px;
+    font-weight: 600;
+    width:100%;
+    border-radius: 20px;
+    border: 1px solid #684a0b;
+    background-color: #fff0d4;
+
+}
+.football-booking-selected{
+    background-color: #684a0b !important;
+    color: #fff0d4;
+}
+
+.football-image-container{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    gap: 20px;
+    padding: 0 40px;
+    overflow-x: auto;
+    white-space:nowrap;
+    padding-bottom: 40px;
+}
+
+.football-image-container img{
+    height: 379px;
+    max-width: 360px;
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.football-section2{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.football-section2 h3{
+    font-size: 36px;
+    font-size: bold;
+}
+
+.football-section2 p{
+    font-size: 28px;
+    font-weight: 300;
+    padding-bottom: 17px;
+}
+
+.football-section2-image-container{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    padding-bottom:41px;
+
+}
+
+.football-section2-image-container img {
+    width: 100%; /* Adjust width as needed */
+     /* Set a max width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+     /* Optional: Rounded corners */
+}
+
+.football-overlay-text {
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+    
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.bottom-left {
+    bottom: 60px;
+    left: 20px;
+}
+
+.top-right {
+    top: 40px;
+    right: 20px;
+}
+
+
+
+.football-group {
+    position: absolute;
+    top: 10px; /* Position at bottom of image */
+    left: 90%;
+    transform: translateX(-50%); /* Center text horizontally */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.football-section3{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.football-section3 h3{
+    font-size: 36px;
+    font-size: bold;
+}
+
+.football-section3 p{
+    font-size: 28px;
+    font-weight: 300;
+    padding-bottom: 17px;
+}
+
+.football-section3-image-container{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    gap: 20px;
+    
+    overflow-x: auto;
+    white-space:nowrap;
+    padding-bottom: 40px;
+}
+.football-section3-image-container div{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    height: auto;
+    min-width: 360px;
+    width:100%;
+    
+    /* height: 379px; */
+    
+}
+
+
+.football-section3-image-container img {
+     /* Responsive image */
+     width:100%;
+     border-radius: 20px; /* Optional rounded corners */
+}
+.skill-text-overlay {
+    position: absolute;
+    bottom: 10px; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:8px;
+    justify-content: center;
+    
+}
+
+
+.football-section4{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.football-section4 h3{
+    font-size: 36px;
+    font-size: bold;
+}
+
+.football-section4 p{
+    font-size: 28px;
+    font-weight: 300;
+    padding-bottom: 17px;
+}
+
+.football-booking-container2{
+    background-image: url('../../Assets//Images/football_banner_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    align-items:left;
+    justify-content: space-between;
+}
+
+.football-booking-container-details{
+    display:flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    align-items:left;
+    gap:20px;
+    width:60%;
+
+}
+
+.football-booking-container-details h3{
+    font-size:40px;
+    font-weight: bold;
+}
+.football-booking-container-details p{
+    font-size:28px;
+    font-weight:300;
+}
+
+.football-trainers{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:42px;
+}
+
+.football-trainers h3{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.football-trainer-image-container{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 20px;
+    
+}
+
+.football-trainer-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    height: 520px;
+    max-width: 400px; 
+    width: 100%;
+}
+
+.football-trainer-image div{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.football-trainer-image img{
+    
+    /* Adjust as needed */
+    width:100%;
+    border-radius: 20px; 
+}
+
+.skill-text-overlay {
+    position: absolute;
+    bottom: 10%; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    
+}
+
+.football-locations{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:58px;
+    padding-bottom: 64px;
+
+}
+
+.football-locations h3{
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.football-location-container{
+    display:flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    
+}
+
+.card {
+    width: 585px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background-color: #f1fff2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.card img {
+    max-width: 541px;
+    max-height: 364px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: white;
+}
+.card-description {
+    display:flex;
+    flex-direction: row;
+    align-items:left;
+    justify-content: left;
+    width:100%;
+    margin-top: 16px;
+    font-size: 18px;
+    color: #555;
+}
+
+.outside-booking-container{
+    display:none;
+}
+
+
+@media (max-width: 1300px) {
+    
+    .football-backIcon{
+        display:none !important;
+    }
+}
+/* Responsive Styles for 1300px */
+@media (max-width: 1300px) {
+    .football-header {
+        background-size: 45% auto;
+    }
+    .football-header-content h1 {
+        font-size: 48px;
+        padding-top: 80px;
+    }
+
+    .football-header-content h3 {
+        font-size: 30px;
+    }
+    /* .football-header-content p{
+        width: 50%;
+    }
+    .football-header-content h3{
+        width: 40%;
+    } */
+
+    .football-header-content p,
+    .football-section2 p,
+    .football-section4 p {
+        font-size: 24px;
+    }
+
+    /* .football-image-container{
+        gap:10px;
+    } */
+
+    .football-booking-container2{
+        height:auto;
+    }
+
+    
+    .football-booking-container button {
+        font-size: 24px;
+        padding: 16px 24px;
+    }
+
+    .football-image-container img{
+        
+    }
+
+    .football-trainer-image-container{
+        gap: 20px;
+    }
+    .football-trainer-image{
+        /* height: 350px;
+        max-width: 350px; */
+        height: auto;
+        max-width: 280px;
+    }
+
+    .football-section2-image-container img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    .football-overlay-text{
+        font-size: 24px;
+    }
+
+    .football-booking-container-details h3{
+        font-size: 30px;
+    }
+
+    .football-booking-container-details p{
+        font-size: 22px;
+    }
+
+    
+    /* .skill-text-overlay{
+        font-size: 20px;
+    } */
+
+    .skill-text-overlay h4{
+        font-size: 20px;
+    }
+    .skill-text-overlay p{
+        font-size:18px;
+    }
+
+
+    .football-location-container{
+        display:flex;
+        flex-direction:row;
+        gap: 10px;
+    }
+
+    .card{
+        max-width: 440px;
+    }
+    
+
+    .football-location-container .card img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Responsive Styles for 768px */
+@media (max-width: 768px) {
+    .football-container{
+        gap:25px;
+    }
+    .football-header {
+        background-size: 50% auto;
+    }
+
+    .football-header-content {
+        padding: 0 20px;
+        margin-top: 80px;
+        padding-bottom: 20px;
+    }
+
+    .football-header-content h1 {
+        padding-top: 100px;
+        padding-bottom: 20px;
+        font-size: 36px;
+    }
+
+    .football-header-content h3 {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .football-header-content p,
+    .football-section2 p,
+    .football-section4 p {
+        font-size: 18px;
+    }
+
+    .football-booking-container {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 20px;
+        flex-wrap:wrap;
+        gap:10px;
+        padding-bottom:30px;
+    }
+
+    .football-booking-container button {
+        font-size: 16px;
+        padding: 12px 20px;
+        width: 40%;
+        border-radius: 10px;
+    }
+
+    .football-image-container {
+        gap: 10px;
+        padding: 0 20px;
+        display:flex;
+        flex-direction:row;
+    }
+
+    .football-image-container img {
+        height: 200px;
+        max-width: 170px;
+    }
+
+    .football-section2,.football-section3, .football-section4 {
+        padding: 0 20px;
+    }
+
+    .football-section2 h3 {
+        font-size: 28px;
+    }
+    .football-section3 h3{
+        font-size: 28px;
+    }
+    .football-section3 p{
+        font-size: 18px;
+    }
+
+    .football-locations{
+        gap:20px;
+    }
+    .football-locations h3{
+        font-size: 28px;
+    }
+
+    .football-section2-image-container img {
+        max-width: 100%;
+    }
+
+    .football-section3-image-container {
+        gap: 10px;
+    }
+
+    .football-section3-image-container img {
+        height: 200px;
+        max-width: 170px;
+        width: 100%;
+    }
+    .football-section3-image-container {
+        gap: 10px;
+        
+        display:flex;
+        flex-direction:row;
+    }
+
+    .football-section3-image-container div {
+        height: 200px;
+        min-width: 170px;
+    }
+    .football-booking-container-details{
+        padding: 50px 20px;
+    }
+
+    .football-booking-container-details h3{
+        font-size: 28px;
+    }
+    .football-booking-container-details p{
+        font-size: 18px;
+    }
+    .football-trainer-image-container{
+        gap: 10px;
+        padding:0 20px;
+    }
+
+    .skill-text-overlay h4{
+        font-size: 16px;
+    }
+    .skill-text-overlay p{
+        font-size:12px;
+    }
+
+    .football-trainer-image img {
+        height: auto;
+        width: 100%;
+    }
+
+    .football-location-container {
+        flex-wrap: wrap;
+    }
+    .card{
+        max-width: 340px;
+        width: 100%;
+    }
+
+    .football-location-container .card img {
+        width: 100%;
+        height: auto;
+    }
+    .card-description p{
+        font-size: 16px;
+    }
+    .inside-booking-container{
+        display:none;
+    }
+    .outside-booking-container{
+        display:flex;
+    }
+
+    
+}
