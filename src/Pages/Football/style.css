@@ -80,6 +80,10 @@
     background-color: #fff0d4;
 
 }
+.football-booking-selected{
+    background-color: #684a0b !important;
+    color: #fff0d4;
+}
 
 .football-image-container{
     display: flex;
@@ -420,6 +424,10 @@
     color: #555;
 }
 
+.outside-booking-container{
+    display:none;
+}
+
 
 @media (max-width: 1300px) {
     
@@ -675,20 +683,12 @@
     .card-description p{
         font-size: 16px;
     }
-
-    @media (max-width:600px) {
-        .football-overlay-text{
-            font-size: 20px;
-        }
-
-        .bottom-left{
-            bottom: 35px;
-        }
-        .top-right{
-            top:5px;
-        }
-        .football-section2-image-container{
-            padding-bottom: 20px;
-        }
+    .inside-booking-container{
+        display:none;
     }
+    .outside-booking-container{
+        display:flex;
+    }
+
+    
 }

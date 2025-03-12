@@ -10,6 +10,9 @@ import { ListOfSports } from "../Pages/ListOfSports";
 import Basketball from "../Pages/Basketball";
 import Football from '../Pages/Football'
 import Soccer from "../Pages/Soccer";
+import Baseball from "../Pages/Baseball";
+import TrackAndField from "../Pages/TrackAndField";
+import Golf from "../Pages/Golf";
 import { TimeSlot } from "../Pages/TimeSlot";
 import { ConfirmationPopup } from "../Components/ConfirmationPopup";
 
@@ -36,6 +39,15 @@ const Routing = () => {
         </Route>
         <Route element={<Layout />}>
           <Route path="/football" element={<Football />} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/baseball" element={<Baseball />} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/track-and-field" element={<TrackAndField />} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/golf" element={<Golf />} />
         </Route>
       </Routes>
     </BrowserRouter>

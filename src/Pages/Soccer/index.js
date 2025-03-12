@@ -35,7 +35,7 @@ export default function Soccer() {
                 <div className="soccer-booking-container">
                     <button className="one-on-one">Schedule 1-on-1 Class Here</button>
                     <button className="one-on-one">Schedule Group Class Here</button>
-                    <button className="one-on-one">Sign Up for Classes Here</button>
+                    <button className="one-on-one soccer-booking-selected">Sign Up for Classes Here</button>
                 </div>
                 <div className="soccer-image-container">
                     <img src={soccer_image} alt="soccer-image" />
@@ -74,12 +74,17 @@ export default function Soccer() {
                         <p>Don’t miss out on this incredible opportunity to give your child the best start in soccer. Our spots fill up fast—secure your place today!</p>
                         <p><strong>Sign Up Now</strong> – Empower your child to succeed on and off the court.</p>
                     </div>
-                    <div className="soccer-booking-container">
+                    <div className="soccer-booking-container inside-booking-container">
                         <button className="one-on-one">Schedule 1-on-1 Class Here</button>
                         <button className="one-on-one">Schedule Group Class Here</button>
-                        <button className="one-on-one">Sign Up for Classes Here</button>
+                        <button className="one-on-one soccer-booking-selected">Sign Up for Classes Here</button>
                     </div>
                 </div>
+                <div className="soccer-booking-container outside-booking-container">
+                        <button className="one-on-one">Schedule 1-on-1 Class Here</button>
+                        <button className="one-on-one">Schedule Group Class Here</button>
+                        <button className="one-on-one soccer-booking-selected">Sign Up for Classes Here</button>
+                    </div>
 
                 <div className="soccer-trainers">
                     <h3>Our Trainers</h3>

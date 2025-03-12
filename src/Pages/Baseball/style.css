@@ -1,4 +1,4 @@
-.basketball-container{
+.baseball-container{
     display:flex;
     flex-direction: column;
     padding-bottom: 20px;
@@ -6,7 +6,7 @@
 }
 
 
-.basketball-backIcon {
+.baseball-backIcon {
     position: relative;
     left: 0;
     /* Aligns to the left */
@@ -23,18 +23,18 @@
 }
 
 
-.basketball-header{
+.baseball-header{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    background-image: url('../../Assets/Images/basketball-banner-image.png');  /* Set your image path */
+    background-image: url('../../Assets/Images/baseball_header_image.png');  /* Set your image path */
     background-repeat: no-repeat;   /* Prevent repetition */
     background-position: top right;  /* Align to the top-left corner */
-    background-size: 40% auto; 
+    background-size: 60% auto; 
 }
 
-.basketball-header-content{
+.baseball-header-content{
     margin-top: 80px;
     display:flex;
     flex-direction:column;
@@ -44,23 +44,23 @@
     
 }
 
-.basketball-header-content h1{
+.baseball-header-content h1{
     font-size: 56px;
     font-weight: bold;
     padding-bottom: 60px;
 }
 
-.basketball-header-content h3{
+.baseball-header-content h3{
     font-size: 36px;
     font-weight: bold;
     max-width: 50%;
 }
-.basketball-header-content p{
+.baseball-header-content p{
     font-size:  28px;
     font-weight: 300;
 }
 
-.basketball-booking-container{
+.baseball-booking-container{
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -70,22 +70,22 @@
     padding-bottom: 40px;
 }
 
-.basketball-booking-container button{
+.baseball-booking-container button{
     padding: 20px 30px;
     font-size: 28px;
     font-weight: 600;
     width:100%;
     border-radius: 20px;
-    border: 1px solid #ffb04e;
-    background-color: #ffeeda;
+    border: 1px solid #003a90;
+    background-color: #dbe9ff;
 
 }
-.basketball-booking-selected{
-    background-color: #ffb04e !important;
-    color: black;
+.baseball-booking-selected{
+    background-color: #003a90 !important;
+    color: #dbe9ff;
 }
 
-.basketball-image-container{
+.baseball-image-container{
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -97,7 +97,7 @@
     padding-bottom: 40px;
 }
 
-.basketball-image-container img{
+.baseball-image-container img{
     height: 379px;
     max-width: 360px;
     width: 100%;
@@ -105,7 +105,7 @@
 
 }
 
-.basketball-section2{
+.baseball-section2{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -114,18 +114,18 @@
     padding: 0 40px;
 }
 
-.basketball-section2 h3{
+.baseball-section2 h3{
     font-size: 36px;
     font-size: bold;
 }
 
-.basketball-section2 p{
+.baseball-section2 p{
     font-size: 28px;
     font-weight: 300;
     padding-bottom: 17px;
 }
 
-.basketball-section2-image-container{
+.baseball-section2-image-container{
     display:flex;
     flex-direction:row;
     justify-content: center;
@@ -135,7 +135,7 @@
 
 }
 
-.basketball-section2-image-container img {
+.baseball-section2-image-container img {
     width: 100%; /* Adjust width as needed */
      /* Set a max width */
     height: auto; /* Maintain aspect ratio */
@@ -143,7 +143,7 @@
      /* Optional: Rounded corners */
 }
 
-.basketball-overlay-text {
+.baseball-overlay-text {
     position: absolute;
     color: white;
     font-size: 40px;
@@ -166,7 +166,7 @@
 
 
 
-.basketball-group {
+.baseball-group {
     position: absolute;
     top: 10px; /* Position at bottom of image */
     left: 90%;
@@ -180,7 +180,7 @@
     white-space: nowrap;
 }
 
-.basketball-section3{
+.baseball-section3{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -189,18 +189,18 @@
     padding: 0 40px;
 }
 
-.basketball-section3 h3{
+.baseball-section3 h3{
     font-size: 36px;
     font-size: bold;
 }
 
-.basketball-section3 p{
+.baseball-section3 p{
     font-size: 28px;
     font-weight: 300;
     padding-bottom: 17px;
 }
 
-.basketball-section3-image-container{
+.baseball-section3-image-container{
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -211,7 +211,7 @@
     white-space:nowrap;
     padding-bottom: 40px;
 }
-.basketball-section3-image-container div{
+.baseball-section3-image-container div{
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -226,7 +226,7 @@
 }
 
 
-.basketball-section3-image-container img {
+.baseball-section3-image-container img {
      /* Responsive image */
      width:100%;
      border-radius: 20px; /* Optional rounded corners */
@@ -251,7 +251,7 @@
 }
 
 
-.basketball-section4{
+.baseball-section4{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -260,19 +260,19 @@
     padding: 0 40px;
 }
 
-.basketball-section4 h3{
+.baseball-section4 h3{
     font-size: 36px;
     font-size: bold;
 }
 
-.basketball-section4 p{
+.baseball-section4 p{
     font-size: 28px;
     font-weight: 300;
     padding-bottom: 17px;
 }
 
-.basketball-booking-container2{
-    background-image: url('../../Assets/Images/section5_banner.png');
+.baseball-booking-container2{
+    background-image: url('../../Assets/Images/baseball_banner_image.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -284,7 +284,7 @@
     justify-content: space-between;
 }
 
-.basketball-booking-container-details{
+.baseball-booking-container-details{
     display:flex;
     flex-direction: column;
     padding: 50px 40px;
@@ -294,28 +294,28 @@
 
 }
 
-.basketball-booking-container-details h3{
+.baseball-booking-container-details h3{
     font-size:40px;
     font-weight: bold;
 }
-.basketball-booking-container-details p{
+.baseball-booking-container-details p{
     font-size:28px;
     font-weight:300;
 }
 
-.basketball-trainers{
+.baseball-trainers{
     display:flex;
     flex-direction: column;
     align-items:center;
     gap:42px;
 }
 
-.basketball-trainers h3{
+.baseball-trainers h3{
     font-size: 40px;
     font-weight: bold;
 }
 
-.basketball-trainer-image-container{
+.baseball-trainer-image-container{
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -326,7 +326,7 @@
     
 }
 
-.basketball-trainer-image{
+.baseball-trainer-image{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -338,7 +338,7 @@
     width: 100%;
 }
 
-.basketball-trainer-image div{
+.baseball-trainer-image div{
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -347,7 +347,7 @@
     
 }
 
-.basketball-trainer-image img{
+.baseball-trainer-image img{
     
     /* Adjust as needed */
     width:100%;
@@ -368,7 +368,7 @@
     
 }
 
-.basketball-locations{
+.baseball-locations{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -378,12 +378,12 @@
 
 }
 
-.basketball-locations h3{
+.baseball-locations h3{
     font-size: 56px;
     font-weight: bold;
 }
 
-.basketball-location-container{
+.baseball-location-container{
     display:flex;
     flex-direction: row;
     gap: 40px;
@@ -430,78 +430,78 @@
 
 @media (max-width: 1300px) {
     
-    .basketball-backIcon{
+    .baseball-backIcon{
         display:none !important;
     }
 }
 /* Responsive Styles for 1300px */
 @media (max-width: 1300px) {
-    .basketball-header {
+    .baseball-header {
         background-size: 45% auto;
     }
-    .basketball-header-content h1 {
+    .baseball-header-content h1 {
         font-size: 48px;
         padding-top: 80px;
     }
 
-    .basketball-header-content h3 {
+    .baseball-header-content h3 {
         font-size: 30px;
     }
-    /* .basketball-header-content p{
+    /* .baseball-header-content p{
         width: 50%;
     }
-    .basketball-header-content h3{
+    .baseball-header-content h3{
         width: 40%;
     } */
 
-    .basketball-header-content p,
-    .basketball-section2 p,
-    .basketball-section4 p {
+    .baseball-header-content p,
+    .baseball-section2 p,
+    .baseball-section4 p {
         font-size: 24px;
     }
 
-    /* .basketball-image-container{
+    /* .baseball-image-container{
         gap:10px;
     } */
 
-    .basketball-booking-container2{
+    .baseball-booking-container2{
         height:auto;
     }
 
     
-    .basketball-booking-container button {
+    .baseball-booking-container button {
         font-size: 24px;
         padding: 16px 24px;
     }
 
-    .basketball-image-container img{
+    .baseball-image-container img{
         
     }
 
-    .basketball-trainer-image-container{
+    .baseball-trainer-image-container{
         gap: 20px;
     }
-    .basketball-trainer-image{
+    .baseball-trainer-image{
         /* height: 350px;
         max-width: 350px; */
         height: auto;
         max-width: 280px;
     }
 
-    .basketball-section2-image-container img {
+    .baseball-section2-image-container img {
         max-width: 100%;
         height:auto;
     }
 
-    .basketball-overlay-text{
+    .baseball-overlay-text{
         font-size: 24px;
     }
 
-    .basketball-booking-container-details h3{
+    .baseball-booking-container-details h3{
         font-size: 30px;
     }
 
-    .basketball-booking-container-details p{
+    .baseball-booking-container-details p{
         font-size: 22px;
     }
 
@@ -518,7 +518,7 @@
     }
 
 
-    .basketball-location-container{
+    .baseball-location-container{
         display:flex;
         flex-direction:row;
         gap: 10px;
@@ -529,7 +529,7 @@
     }
     
 
-    .basketball-location-container .card img {
+    .baseball-location-container .card img {
         width: 100%;
         height: auto;
     }
@@ -537,37 +537,37 @@
 
 /* Responsive Styles for 768px */
 @media (max-width: 768px) {
-    .basketball-container{
+    .baseball-container{
         gap:25px;
     }
-    .basketball-header {
+    .baseball-header {
         background-size: 50% auto;
     }
 
-    .basketball-header-content {
+    .baseball-header-content {
         padding: 0 20px;
         margin-top: 80px;
         padding-bottom: 20px;
     }
 
-    .basketball-header-content h1 {
+    .baseball-header-content h1 {
         padding-top: 100px;
         padding-bottom: 20px;
         font-size: 36px;
     }
 
-    .basketball-header-content h3 {
+    .baseball-header-content h3 {
         font-size: 18px;
         max-width: 100%;
     }
 
-    .basketball-header-content p,
-    .basketball-section2 p,
-    .basketball-section4 p {
+    .baseball-header-content p,
+    .baseball-section2 p,
+    .baseball-section4 p {
         font-size: 18px;
     }
 
-    .basketball-booking-container {
+    .baseball-booking-container {
         flex-direction: row;
         align-items: center;
         padding: 0 20px;
@@ -576,81 +576,81 @@
         padding-bottom:30px;
     }
 
-    .basketball-booking-container button {
+    .baseball-booking-container button {
         font-size: 16px;
         padding: 12px 20px;
         width: 40%;
         border-radius: 10px;
     }
 
-    .basketball-image-container {
+    .baseball-image-container {
         gap: 10px;
         padding: 0 20px;
         display:flex;
         flex-direction:row;
     }
 
-    .basketball-image-container img {
+    .baseball-image-container img {
         height: 200px;
         max-width: 170px;
     }
 
-    .basketball-section2,.basketball-section3, .basketball-section4 {
+    .baseball-section2,.baseball-section3, .baseball-section4 {
         padding: 0 20px;
     }
 
-    .basketball-section2 h3 {
+    .baseball-section2 h3 {
         font-size: 28px;
     }
-    .basketball-section3 h3{
+    .baseball-section3 h3{
         font-size: 28px;
     }
-    .basketball-section3 p{
+    .baseball-section3 p{
         font-size: 18px;
     }
 
-    .basketball-locations{
+    .baseball-locations{
         gap:20px;
     }
-    .basketball-locations h3{
+    .baseball-locations h3{
         font-size: 28px;
     }
 
-    .basketball-section2-image-container img {
+    .baseball-section2-image-container img {
         max-width: 100%;
     }
 
-    .basketball-section3-image-container {
+    .baseball-section3-image-container {
         gap: 10px;
     }
 
-    .basketball-section3-image-container img {
+    .baseball-section3-image-container img {
         height: 200px;
         max-width: 170px;
         width: 100%;
     }
-    .basketball-section3-image-container {
+    .baseball-section3-image-container {
         gap: 10px;
         
         display:flex;
         flex-direction:row;
     }
 
-    .basketball-section3-image-container div {
+    .baseball-section3-image-container div {
         height: 200px;
         min-width: 170px;
     }
-    .basketball-booking-container-details{
+    .baseball-booking-container-details{
         padding: 50px 20px;
     }
 
-    .basketball-booking-container-details h3{
+    .baseball-booking-container-details h3{
         font-size: 28px;
     }
-    .basketball-booking-container-details p{
+    .baseball-booking-container-details p{
         font-size: 18px;
     }
-    .basketball-trainer-image-container{
+    .baseball-trainer-image-container{
         gap: 10px;
         padding:0 20px;
     }
@@ -662,12 +662,12 @@
         font-size:12px;
     }
 
-    .basketball-trainer-image img {
+    .baseball-trainer-image img {
         height: auto;
         width: 100%;
     }
 
-    .basketball-location-container {
+    .baseball-location-container {
         flex-wrap: wrap;
     }
     .card{
@@ -675,7 +675,7 @@
         width: 100%;
     }
 
-    .basketball-location-container .card img {
+    .baseball-location-container .card img {
         width: 100%;
         height: auto;
     }
@@ -689,5 +689,22 @@
 
     .inside-booking-container{
         display:none;
+    }
+    
+
+    @media (max-width:600px) {
+        .baseball-overlay-text{
+            font-size: 20px;
+        }
+
+        .bottom-left{
+            bottom: 35px;
+        }
+        .top-right{
+            top:5px;
+        }
+        .baseball-section2-image-container{
+            padding-bottom: 20px;
+        }
     }
 }

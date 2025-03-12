@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import EventCard from "../../Components/EventCard";
 import EllipseCard from "../../Components/EllipseCard";
 import ellipse1 from '../../Assets/Images/ellipse1.png'
@@ -7,17 +7,32 @@ import ellipse3 from '../../Assets/Images/ellipse3.png'
 import ellipse4 from '../../Assets/Images/ellipse4.png'
 import ellipse5 from '../../Assets/Images/ellipse5.png'
 import ellipse6 from '../../Assets/Images/ellipse6.png'
+import home_background1 from '../../Assets/Images/home_background1.jpg';
+import home_background2 from '../../Assets/Images/home_background2.jpg';
+import home_background3 from '../../Assets/Images/home_background3.jpg';
 import './style.css'
 import HomeMenuIcon from "../../Assets/Icons/HomeMenuIcon";
 import OurServices from "../../Components/Home/OurServices/OurServices";
 import MissionStatement from "../../Components/Home/MissionStatement/MissionStatement";
 
 const Home = () => {
+  const images = [
+    home_background1,home_background2,home_background3
+    
+  ];
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [images.length]);
   return (
     <>
 
       <div className="home-container">
-        <div className="home-banner">
+        <div className="home-banner" style={{ backgroundImage: `url(${images[index]})` }}>
           <div className="home-left-banner">
             <h1>Unlock Your True Potential with <span>Judgment-Free</span> Sports</h1>
             <p>From beginners to advanced players, we foster growth in a supportive, judgment-free environment.</p>
