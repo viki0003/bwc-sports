@@ -1,19 +1,17 @@
 import React, { useState, useEffect } from "react";
 import EventCard from "../../Components/EventCard";
 import EllipseCard from "../../Components/EllipseCard";
-import ellipse1 from '../../Assets/Images/ellipse1.png'
-import ellipse2 from '../../Assets/Images/ellipse2.png'
-import ellipse3 from '../../Assets/Images/ellipse3.png'
-import ellipse4 from '../../Assets/Images/ellipse4.png'
-import ellipse5 from '../../Assets/Images/ellipse5.png'
-import ellipse6 from '../../Assets/Images/ellipse6.png'
-import home_background1 from '../../Assets/Images/home_background1.jpg';
-import home_background2 from '../../Assets/Images/home_background2.jpg';
-import home_background3 from '../../Assets/Images/home_background3.jpg';
-import './style.css'
+import ellipse1 from "../../Assets/Images/ellipse1.png";
+import ellipse2 from "../../Assets/Images/ellipse2.png";
+import ellipse3 from "../../Assets/Images/ellipse3.png";
+import ellipse4 from "../../Assets/Images/ellipse4.png";
+import ellipse5 from "../../Assets/Images/ellipse5.png";
+import ellipse6 from "../../Assets/Images/ellipse6.png";
+import "./style.css";
 import HomeMenuIcon from "../../Assets/Icons/HomeMenuIcon";
 import OurServices from "../../Components/Home/OurServices/OurServices";
 import MissionStatement from "../../Components/Home/MissionStatement/MissionStatement";
+import UpcomingEvents from "../../Components/Home/UpcomingEvents/UpcomingEvents";
 
 const Home = () => {
   const images = [
@@ -30,12 +28,16 @@ const Home = () => {
   }, [images.length]);
   return (
     <>
-
       <div className="home-container">
         <div className="home-banner" style={{ backgroundImage: `url(${images[index]})` }}>
           <div className="home-left-banner">
-            <h1>Unlock Your True Potential with <span>Judgment-Free</span> Sports</h1>
-            <p>From beginners to advanced players, we foster growth in a supportive, judgment-free environment.</p>
+            <h1>
+              Unlock Your True Potential with <span>Judgment-Free</span> Sports
+            </h1>
+            <p>
+              From beginners to advanced players, we foster growth in a
+              supportive, judgment-free environment.
+            </p>
             <button>View All Packages</button>
           </div>
         </div>
@@ -71,7 +73,7 @@ const Home = () => {
           </div>
 
         </div> */}
-        <OurServices/>
+        <OurServices />
         <MissionStatement />
         {/* <div className="home-mission-container">
           <div className="home-mission-card">
@@ -87,7 +89,7 @@ const Home = () => {
             </div>
           </div>
         </div> */}
-        <div className="upcoming-event-container">
+        {/* <div className="upcoming-event-container">
           <div className="upcoming-event-header">
             <h1>Upcoming Events</h1>
           </div>
@@ -97,8 +99,8 @@ const Home = () => {
             <EventCard />
             <EventCard />
           </div>
-        </div>
-
+        </div> */}
+        <UpcomingEvents />
       </div>
     </>
   );

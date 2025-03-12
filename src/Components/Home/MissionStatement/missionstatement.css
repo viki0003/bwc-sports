@@ -38,6 +38,15 @@
   margin: 20px;
 }
 
+.home-mission-content h1 {
+font-family: Anton;
+font-weight: 400;
+font-size: 40px;
+line-height: 100%;
+letter-spacing: 0%;
+}
+
+
 @media (max-width: 1024px) {
     .home-mission-card {
         flex-direction: column;

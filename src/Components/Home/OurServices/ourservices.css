@@ -5,6 +5,14 @@
   border-radius: 10px;
 }
 
+.our-services-ui h2 {
+  font-family: Anton;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
 .service-cards .sc {
   width: 240px;
   height: 240px;
@@ -59,13 +67,6 @@
   align-items: center;
 }
 
-.our-services-ui h1 {
-  margin-bottom: 10px;
-  font-weight: 600;
-  font-size: 56px;
-  line-height: 100%;
-}
-
 .b-img {
   position: absolute;
   left: -34%;
@@ -114,6 +115,7 @@
 }
 
 .offer-sec h2 {
+  font-family: Anton;
   font-weight: 400;
   font-size: 40px;
   line-height: 100%;
@@ -216,10 +218,11 @@
   }
 
   .service-card-sm h2 {
+    font-family: Anton;
     font-weight: 400;
     font-size: 24px;
     line-height: 100%;
-    margin-bottom: 25px;
+    letter-spacing: 0%;
   }
 
   .service-card-sm .service-card-sm-list {
@@ -297,6 +300,10 @@
   .offer-sec {
     margin-top: -185px;
   }
+
+  .our-services-ui h2 {
+    display: none;
+}
 }
 
 @media (max-width: 991px) {
