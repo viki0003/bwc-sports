@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 .home-container{
     display:flex;
     flex-direction: column;
@@ -9,7 +11,7 @@
     height: 705px; 
     /* Adjust height as needed */
      /* Parent container background color */
-    background-image: url('../../Assets/Images/home_background_right.jpg');
+    /* background-image: url('../../Assets/Images/home_background_right.jpg'); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -81,6 +83,25 @@
     overflow: visible;
 }
 
+.services-list {
+    background-image: url('../../Assets/Images/grou-img.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.img-b-sm img {
+    width: 100%;
+}
+
+/* .service-cards{
+    background-image: url('../../Assets/Images/home_menu_image.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+} */
+
 .circle-1 { top: 80px; left: 0; }
 .circle-2 { top: 40px; left: 80px; }
 .circle-3 { top: 10px; left: 160px; }
@@ -99,7 +120,6 @@
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-    height: 528px;
     max-width:1432px;
     width: 100%;
     border:2px solid #c48308;
@@ -109,20 +129,41 @@
 }
 
 .home-mission-left{
-    background-color: #fbc97b;
-    /* position: absolute; */
-    top:0;
-    left:0;
-    width: 50%;
+    background: linear-gradient(180deg, #FFD085 0%, #CC7F05 100%);
     height: 100%;
     clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
-    /* z-index:1; */
-    display:flex;
+    display: flex;
     flex-direction: column;
     gap: 27px;
-    padding:47px;
+    padding: 0px;
     border-radius: 40px 0px 0px 40px;
-    padding-right:120px;
+    padding-right: 120px;
+    justify-content: space-between;
+    max-width: 825px;
+    width: 100%;
+}
+
+.hm-img {
+    margin-bottom: -7px;
+}
+
+.hm-img {
+    width: 100%;
+    height: 100%;
+}
+
+.home-mission-content {
+    padding: 47px 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+.hm-img img {
+    width: 100%;
+    border-bottom-left-radius: 40px;
+    object-fit: cover;
+    margin-left: -1px;
 }
 
 .home-mission-left h1{
@@ -133,24 +174,6 @@
 .home-mission-left p{
     font-size: 22px;
     font-weight: 600;
-}
-.home-mission-right{
-    display: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */ /* Example background */
-    position: relative;
-}
-.video-container{
-    
-    background-image: url('../../Assets/Images/video_container.jpg');
-    background-size: cover; /* Ensures the container fits the image */
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 643px;  /* Adjust based on image size */
-    height: 374px;
-    position: absolute;
-    right:80px;
-    z-index: 1;
 }
 
 .upcoming-event-container{

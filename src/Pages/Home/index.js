@@ -1,36 +1,58 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import EventCard from "../../Components/EventCard";
 import EllipseCard from "../../Components/EllipseCard";
-import ellipse1 from '../../Assets/Images/ellipse1.png'
-import ellipse2 from '../../Assets/Images/ellipse2.png'
-import ellipse3 from '../../Assets/Images/ellipse3.png'
-import ellipse4 from '../../Assets/Images/ellipse4.png'
-import ellipse5 from '../../Assets/Images/ellipse5.png'
-import ellipse6 from '../../Assets/Images/ellipse6.png'
-import './style.css'
+import ellipse1 from "../../Assets/Images/ellipse1.png";
+import ellipse2 from "../../Assets/Images/ellipse2.png";
+import ellipse3 from "../../Assets/Images/ellipse3.png";
+import ellipse4 from "../../Assets/Images/ellipse4.png";
+import ellipse5 from "../../Assets/Images/ellipse5.png";
+import ellipse6 from "../../Assets/Images/ellipse6.png";
+import home_background1 from '../../Assets/Images/home_background1.jpg';
+import home_background2 from '../../Assets/Images/home_background2.jpg';
+import home_background3 from '../../Assets/Images/home_background3.jpg';
+import "./style.css";
 import HomeMenuIcon from "../../Assets/Icons/HomeMenuIcon";
+import OurServices from "../../Components/Home/OurServices/OurServices";
+import MissionStatement from "../../Components/Home/MissionStatement/MissionStatement";
+import UpcomingEvents from "../../Components/Home/UpcomingEvents/UpcomingEvents";
 
 const Home = () => {
+  const images = [
+    home_background1,home_background2,home_background3
+    
+  ];
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [images.length]);
   return (
     <>
-
       <div className="home-container">
-        <div className="home-banner">
+        <div className="home-banner" style={{ backgroundImage: `url(${images[index]})` }}>
           <div className="home-left-banner">
-            <h1>Unlock Your True Potential with <span>Judgment-Free</span> Sports</h1>
-            <p>From beginners to advanced players, we foster growth in a supportive, judgment-free environment.</p>
+            <h1>
+              Unlock Your True Potential with <span>Judgment-Free</span> Sports
+            </h1>
+            <p>
+              From beginners to advanced players, we foster growth in a
+              supportive, judgment-free environment.
+            </p>
             <button>View All Packages</button>
           </div>
         </div>
-        <div className="home-menu-container">
-          {/* <div className="home-menu-items">
+        {/* <div className="home-menu-container">
+          <div className="home-menu-items">
             <div className="home-menu-child circle-1"><EllipseCard imageSrc={ellipse1} text={"Field Days Carnivals"} /></div>
             <div className="home-menu-child circle-2"><EllipseCard imageSrc={ellipse2} text={"Instructional Classes"} /></div>
             <div className="home-menu-child circle-3"><EllipseCard imageSrc={ellipse3} text={"Summer Camp"} /></div>
             <div className="home-menu-child circle-4"><EllipseCard imageSrc={ellipse4} text={"School Program"} /></div>
             <div className="home-menu-child circle-5"><EllipseCard imageSrc={ellipse5} text={"After School Programs"} /></div>
             <div className="home-menu-child circle-6"><EllipseCard imageSrc={ellipse6} text={"Funding Program"} /></div>
-          </div> */}
+          </div>
           <div className="home-menu-box">
             <div className="home-menu-header"><h1>What we offer</h1></div>
             <div className="home-menu-box-description">
@@ -53,8 +75,10 @@ const Home = () => {
             <button className="home-menu-button">See Upcoming Events</button>
           </div>
 
-        </div>
-        <div className="home-mission-container">
+        </div> */}
+        <OurServices />
+        <MissionStatement />
+        {/* <div className="home-mission-container">
           <div className="home-mission-card">
             <div className="home-mission-left">
               <h1>Mission Statement</h1>
@@ -67,8 +91,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="upcoming-event-container">
+        </div> */}
+        {/* <div className="upcoming-event-container">
           <div className="upcoming-event-header">
             <h1>Upcoming Events</h1>
           </div>
@@ -78,8 +102,8 @@ const Home = () => {
             <EventCard />
             <EventCard />
           </div>
-        </div>
-
+        </div> */}
+        <UpcomingEvents />
       </div>
     </>
   );

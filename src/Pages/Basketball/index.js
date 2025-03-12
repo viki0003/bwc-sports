@@ -33,7 +33,7 @@ export default function Basketball() {
                 <div className="basketball-booking-container">
                     <button className="one-on-one">Schedule 1-on-1 Class Here</button>
                     <button className="one-on-one">Schedule Group Class Here</button>
-                    <button className="one-on-one">Sign Up for Classes Here</button>
+                    <button className="one-on-one basketball-booking-selected">Sign Up for Classes Here</button>
                 </div>
                 <div className="basketball-image-container">
                     <img src={basketball1} alt="basketball-image" />
@@ -72,11 +72,16 @@ export default function Basketball() {
                         <p>Don’t miss out on this incredible opportunity to give your child the best start in basketball. Our spots fill up fast—secure your place today!</p>
                         <p><strong>Sign Up Now</strong> – Empower your child to succeed on and off the court.</p>
                     </div>
-                    <div className="basketball-booking-container">
+                    <div className="basketball-booking-container inside-booking-container">
                         <button className="one-on-one">Schedule 1-on-1 Class Here</button>
                         <button className="one-on-one">Schedule Group Class Here</button>
                         <button className="one-on-one">Sign Up for Classes Here</button>
                     </div>
+                </div>
+                <div className="basketball-booking-container outside-booking-container">
+                        <button className="one-on-one">Schedule 1-on-1 Class Here</button>
+                        <button className="one-on-one">Schedule Group Class Here</button>
+                        <button className="one-on-one basketball-booking-selected">Sign Up for Classes Here</button>
                 </div>
 
                 <div className="basketball-trainers">
@@ -105,6 +110,27 @@ export default function Basketball() {
                             </div>
                             <img src={basketball_trainer3} alt="trainer-image" />
 
+                        </div>
+                    </div>
+                </div>
+                <div className="basketball-locations">
+                    <h3>Locations</h3>
+                    <div className="basketball-location-container">
+                        <div class="card">
+                            <img src="https://todocodigo.net/img/626.jpg" alt="Image"/>
+                                <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
+                        </div>
+                        <div class="card">
+                            <img src="https://todocodigo.net/img/626.jpg" alt="Image"/>
+                                <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
+                        </div>
+                        <div class="card">
+                            <img src="https://todocodigo.net/img/626.jpg" alt="Image"/>
+                                <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
+                        </div>
+                        <div class="card">
+                            <img src="https://todocodigo.net/img/626.jpg" alt="Image"/>
+                                <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
                         </div>
                     </div>
                 </div>
