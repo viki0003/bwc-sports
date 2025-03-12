@@ -20,7 +20,7 @@ import ArrowIcon from "../../../Assets/Icons/ArrowIcon";
 const OurServices = () => {
   return (
     <div className="our-services-ui">
-      <h1>Our Services</h1>
+      <h2>Our Services</h2>
       <div className="services-list">
         <div className="service-cards">
           <Link className="sc sc1">
