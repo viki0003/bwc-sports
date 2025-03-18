@@ -4,7 +4,6 @@ import './style.css'
 import soccer_image from '../../Assets/Images/soccer_image.png'
 
 import baseball_section_image from '../../Assets/Images/baseball_section_image.png'
-import soccer_banner_image2 from '../../Assets/Images/soccer_banner_image2.png'
 
 import dribbling from '../../Assets/Images/dribbling.png'
 import shooting from '../../Assets/Images/shooting.png'

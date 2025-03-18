@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-
 import home_background1 from '../../Assets/Images/home_background1.jpg';
 import home_background2 from '../../Assets/Images/home_background2.jpg';
 import home_background3 from '../../Assets/Images/home_background3.jpg';
 import "./style.css";
-import HomeMenuIcon from "../../Assets/Icons/HomeMenuIcon";
 import OurServices from "../../Components/Home/OurServices/OurServices";
 import MissionStatement from "../../Components/Home/MissionStatement/MissionStatement";
 import UpcomingEvents from "../../Components/Home/UpcomingEvents/UpcomingEvents";
