@@ -1,0 +1,31 @@
+.sp-banner{
+    background-image: url('/src/Assets/Images/sp-banner.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.sp-banner .sp-banner-content {
+    padding: 40px 40px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 62px;
+}
+
+.sp-banner .sp-banner-content a {
+    display: inline-flex;
+    background: #F4F4F4;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sp-banner .sp-banner-content h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    color: #fff;
+}

@@ -1,0 +1,80 @@
+.recess {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    margin-top: 50px;
+}
+
+.recess-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 3px solid #FF0000;
+    border-bottom: 3px solid #FF0000;
+    padding-left: 100px;
+}
+
+.recess-heading .recess-images {
+    display: flex;
+    align-items: center;
+    height: 150px;
+}
+
+.recess-heading .recess-images img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.recess .recess-video {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+    border: 4px solid #FF0000;
+    padding: 60px;
+    border-radius: 70px;
+    gap: 80px;
+}
+
+.recess-heading h2 {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.recess-video .recess-video-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.recess-video .recess-video-content p {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.recess-video .recess-video-content .prgrm-cmpt {
+    display: flex;
+    flex-direction: column;
+}
+
+.recess-video .recess-video-content .prgrm-cmpt ul {
+    margin: 0;
+    padding: 5px 20px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+    color: #000;
+}
+
+.recess .recess-video .video-container {
+    margin: 0;
+    width: 50%;
+}
+
+.recess .recess-video .video-container video.w-full {
+    height: 385px;
+    object-fit: cover;
+}
