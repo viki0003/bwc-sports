@@ -5,7 +5,7 @@ import soccer_image from '../../Assets/Images/soccer_image.png'
 
 import soccer_banner_image from '../../Assets/Images/soccer_banner_image.png'
 import soccer_banner_image2 from '../../Assets/Images/soccer_banner_image2.png'
-
+import stock_photo from '../../Assets/Images/stock_photo.png'
 import dribbling from '../../Assets/Images/dribbling.png'
 import shooting from '../../Assets/Images/shooting.png'
 import passing from '../../Assets/Images/passing.png'
@@ -57,11 +57,11 @@ export default function Soccer() {
                     <h3>Dive into Our Exciting Programs</h3>
                     <p>Our programs are packed with a variety of drills and games designed to sharpen your skills and boost your confidence:</p>
                     <div className="soccer-section3-image-container">
-                        <div><span className="skill-text-overlay">Ball Control</span><img src={dribbling} alt="Dribbling" /></div>
-                        <div><span className="skill-text-overlay">Passing</span><img src={shooting} alt="Shooting" /></div>
-                        <div><span className="skill-text-overlay">Shooting</span><img src={passing} alt="Passing" /></div>
-                        <div><span className="skill-text-overlay">Defending</span><img src={defense} alt="Defense" /></div>
-                        <div><span className="skill-text-overlay">Goal Keeping</span><img src={rebounding} alt="Rebounding" /></div>
+                        <div><span className="skill-text-overlay">Ball Control</span><img src={stock_photo} alt="Dribbling" /></div>
+                        <div><span className="skill-text-overlay">Passing</span><img src={stock_photo} alt="Shooting" /></div>
+                        <div><span className="skill-text-overlay">Shooting</span><img src={stock_photo} alt="Passing" /></div>
+                        <div><span className="skill-text-overlay">Defending</span><img src={stock_photo} alt="Defense" /></div>
+                        <div><span className="skill-text-overlay">Goal Keeping</span><img src={stock_photo} alt="Rebounding" /></div>
                     </div>
                 </div>
                 <div className="soccer-section4">

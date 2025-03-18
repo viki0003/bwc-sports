@@ -14,7 +14,7 @@ import rebounding from '../../Assets/Images/rebounding.png'
 import soccer_trainer1 from '../../Assets/Images/basketball_trainer1.png'
 import soccer_trainer2 from '../../Assets/Images/basketball_trainer2.png'
 import soccer_trainer3 from '../../Assets/Images/basketball_trainer3.png'
-
+import stock_photo from '../../Assets/Images/stock_photo.png'
 
 export default function Baseball() {
     return (
@@ -57,11 +57,11 @@ export default function Baseball() {
                     <h3>Dive into Our Exciting Programs</h3>
                     <p>Our programs are packed with a variety of drills and games designed to sharpen your skills and boost your confidence:</p>
                     <div className="baseball-section3-image-container">
-                        <div><span className="skill-text-overlay">Ball Control</span><img src={dribbling} alt="Dribbling" /></div>
-                        <div><span className="skill-text-overlay">Passing</span><img src={shooting} alt="Shooting" /></div>
-                        <div><span className="skill-text-overlay">Shooting</span><img src={passing} alt="Passing" /></div>
-                        <div><span className="skill-text-overlay">Defending</span><img src={defense} alt="Defense" /></div>
-                        <div><span className="skill-text-overlay">Goal Keeping</span><img src={rebounding} alt="Rebounding" /></div>
+                        <div><span className="skill-text-overlay">Ball Control</span><img src={stock_photo} alt="Dribbling" /></div>
+                        <div><span className="skill-text-overlay">Passing</span><img src={stock_photo} alt="Shooting" /></div>
+                        <div><span className="skill-text-overlay">Shooting</span><img src={stock_photo} alt="Passing" /></div>
+                        <div><span className="skill-text-overlay">Defending</span><img src={stock_photo} alt="Defense" /></div>
+                        <div><span className="skill-text-overlay">Goal Keeping</span><img src={stock_photo} alt="Rebounding" /></div>
                     </div>
                 </div>
                 <div className="baseball-section4">

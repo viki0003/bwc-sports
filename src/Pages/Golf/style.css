@@ -1,4 +1,4 @@
-.track-and-field-container{
+.golf-container{
     display:flex;
     flex-direction: column;
     padding-bottom: 20px;
@@ -6,7 +6,7 @@
 }
 
 
-.track-and-field-backIcon {
+.golf-backIcon {
     position: relative;
     left: 0;
     /* Aligns to the left */
@@ -23,18 +23,18 @@
 }
 
 
-.track-and-field-header{
+.golf-header{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    background-image: url('../../Assets/Images/track_and_field_header_image.png');  /* Set your image path */
+    background-image: url('../../Assets/Images/golf_header_image.png');  /* Set your image path */
     background-repeat: no-repeat;   /* Prevent repetition */
     background-position: top right;  /* Align to the top-left corner */
-    background-size: 70% auto; 
+    background-size: 60% auto; 
 }
 
-.track-and-field-header-content{
+.golf-header-content{
     margin-top: 80px;
     display:flex;
     flex-direction:column;
@@ -44,23 +44,23 @@
     
 }
 
-.track-and-field-header-content h1{
+.golf-header-content h1{
     font-size: 56px;
     font-weight: bold;
     padding-bottom: 60px;
 }
 
-.track-and-field-header-content h3{
+.golf-header-content h3{
     font-size: 36px;
     font-weight: bold;
     max-width: 50%;
 }
-.track-and-field-header-content p{
+.golf-header-content p{
     font-size:  28px;
     font-weight: 300;
 }
 
-.track-and-field-booking-container{
+.golf-booking-container{
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -70,22 +70,22 @@
     padding-bottom: 40px;
 }
 
-.track-and-field-booking-container button{
+.golf-booking-container button{
     padding: 20px 30px;
     font-size: 28px;
     font-weight: 600;
     width:100%;
     border-radius: 20px;
-    border: 1px solid #ff3d3c;
-    background-color: #ffd4d4;
+    border: 1px solid #407444;
+    background-color: #b4ffa5;
 
 }
-.track-and-field-booking-selected{
-    background-color: #ff3d3c !important;
-    color: #dbe9ff;
+.golf-booking-selected{
+    background-color: #407444 !important;
+    color: white;
 }
 
-.track-and-field-image-container{
+.golf-image-container{
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -97,7 +97,7 @@
     padding-bottom: 40px;
 }
 
-.track-and-field-image-container img{
+.golf-image-container img{
     height: 379px;
     max-width: 360px;
     width: 100%;
@@ -105,7 +105,7 @@
 
 }
 
-.track-and-field-section2{
+.golf-section2{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -114,18 +114,18 @@
     padding: 0 40px;
 }
 
-.track-and-field-section2 h3{
+.golf-section2 h3{
     font-size: 36px;
     font-size: bold;
 }
 
-.track-and-field-section2 p{
+.golf-section2 p{
     font-size: 28px;
     font-weight: 300;
     padding-bottom: 17px;
 }
 
-.track-and-field-section2-image-container{
+.golf-section2-image-container{
     display:flex;
     flex-direction:row;
     justify-content: center;
@@ -135,7 +135,7 @@
 
 }
 
-.track-and-field-section2-image-container img {
+.golf-section2-image-container img {
     width: 100%; /* Adjust width as needed */
      /* Set a max width */
     height: auto; /* Maintain aspect ratio */
@@ -143,7 +143,7 @@
      /* Optional: Rounded corners */
 }
 
-.track-and-field-overlay-text {
+.golf-overlay-text {
     position: absolute;
     color: black;
     font-size: 40px;
@@ -173,7 +173,7 @@
 
 
 
-.track-and-field-group {
+.golf-group {
     position: absolute;
     top: 10px; /* Position at bottom of image */
     left: 90%;
@@ -187,7 +187,7 @@
     white-space: nowrap;
 }
 
-.track-and-field-section3{
+.golf-section3{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -196,18 +196,18 @@
     padding: 0 40px;
 }
 
-.track-and-field-section3 h3{
+.golf-section3 h3{
     font-size: 36px;
     font-size: bold;
 }
 
-.track-and-field-section3 p{
+.golf-section3 p{
     font-size: 28px;
     font-weight: 300;
     padding-bottom: 17px;
 }
 
-.track-and-field-section3-image-container{
+.golf-section3-image-container{
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -218,7 +218,7 @@
     white-space:nowrap;
     padding-bottom: 40px;
 }
-.track-and-field-section3-image-container div{
+.golf-section3-image-container div{
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -233,7 +233,7 @@
 }
 
 
-.track-and-field-section3-image-container img {
+.golf-section3-image-container img {
      /* Responsive image */
      width:100%;
      border-radius: 20px; /* Optional rounded corners */
@@ -258,7 +258,7 @@
 }
 
 
-.track-and-field-section4{
+.golf-section4{
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -267,19 +267,19 @@
     padding: 0 40px;
 }
 
-.track-and-field-section4 h3{
+.golf-section4 h3{
     font-size: 36px;
     font-size: bold;
 }
 
-.track-and-field-section4 p{
+.golf-section4 p{
     font-size: 28px;
     font-weight: 300;
     padding-bottom: 17px;
 }
 
-.track-and-field-booking-container2{
-    background-image: url('../../Assets/Images/track_and_field_section_image.png');
+.golf-booking-container2{
+    background-image: url('../../Assets/Images/golf_banner_image.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -291,7 +291,7 @@
     justify-content: space-between;
 }
 
-.track-and-field-booking-container-details{
+.golf-booking-container-details{
     display:flex;
     flex-direction: column;
     padding: 50px 40px;
@@ -301,28 +301,28 @@
 
 }
 
-.track-and-field-booking-container-details h3{
+.golf-booking-container-details h3{
     font-size:40px;
     font-weight: bold;
 }
-.track-and-field-booking-container-details p{
+.golf-booking-container-details p{
     font-size:28px;
     font-weight:300;
 }
 
-.track-and-field-trainers{
+.golf-trainers{
     display:flex;
     flex-direction: column;
     align-items:center;
     gap:42px;
 }
 
-.track-and-field-trainers h3{
+.golf-trainers h3{
     font-size: 40px;
     font-weight: bold;
 }
 
-.track-and-field-trainer-image-container{
+.golf-trainer-image-container{
     display: flex;
     flex-direction: row;
     align-items: left;
@@ -333,7 +333,7 @@
     
 }
 
-.track-and-field-trainer-image{
+.golf-trainer-image{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -345,7 +345,7 @@
     width: 100%;
 }
 
-.track-and-field-trainer-image div{
+.golf-trainer-image div{
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -354,7 +354,7 @@
     
 }
 
-.track-and-field-trainer-image img{
+.golf-trainer-image img{
     
     /* Adjust as needed */
     width:100%;
@@ -375,7 +375,7 @@
     
 }
 
-.track-and-field-locations{
+.golf-locations{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -385,12 +385,12 @@
 
 }
 
-.track-and-field-locations h3{
+.golf-locations h3{
     font-size: 56px;
     font-weight: bold;
 }
 
-.track-and-field-location-container{
+.golf-location-container{
     display:flex;
     flex-direction: row;
     gap: 40px;
@@ -400,8 +400,8 @@
     
 }
 
-.card {
-    width: 585px;
+.ss-card {
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -411,16 +411,16 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
 }
-.card img {
-    max-width: 541px;
-    max-height: 364px;
+.ss-card img {
+    max-width: 100%;
+    max-height: auto;
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
     background-color: white;
 }
-.card-description {
+.ss-card-description {
     display:flex;
     flex-direction: row;
     align-items:left;
@@ -449,58 +449,58 @@
 
 @media (max-width: 1300px) {
     
-    .track-and-field-backIcon{
+    .golf-backIcon{
         display:none !important;
     }
 }
 /* Responsive Styles for 1300px */
 @media (max-width: 1300px) {
-    .track-and-field-header {
-        background-size: 70% auto;
+    .golf-header {
+        background-size: 60% auto;
     }
-    .track-and-field-header-content h1 {
+    .golf-header-content h1 {
         font-size: 48px;
         padding-top: 80px;
     }
 
-    .track-and-field-header-content h3 {
+    .golf-header-content h3 {
         font-size: 30px;
     }
-    /* .track-and-field-header-content p{
+    /* .golf-header-content p{
         width: 50%;
     }
-    .track-and-field-header-content h3{
+    .golf-header-content h3{
         width: 40%;
     } */
 
-    .track-and-field-header-content p,
-    .track-and-field-section2 p,
-    .track-and-field-section4 p {
+    .golf-header-content p,
+    .golf-section2 p,
+    .golf-section4 p {
         font-size: 24px;
     }
 
-    /* .track-and-field-image-container{
+    /* .golf-image-container{
         gap:10px;
     } */
 
-    .track-and-field-booking-container2{
+    .golf-booking-container2{
         height:auto;
     }
 
     
-    .track-and-field-booking-container button {
+    .golf-booking-container button {
         font-size: 24px;
         padding: 16px 24px;
     }
 
-    .track-and-field-image-container img{
+    .golf-image-container img{
         
     }
 
-    .track-and-field-trainer-image-container{
+    .golf-trainer-image-container{
         gap: 20px;
     }
-    .track-and-field-trainer-image{
+    .golf-trainer-image{
         /* height: 350px;
         max-width: 350px; */
         height: auto;
@@ -511,20 +511,20 @@
         bottom: 15%;
     }
 
-    .track-and-field-section2-image-container img {
+    .golf-section2-image-container img {
         max-width: 100%;
         height:auto;
     }
 
-    .track-and-field-overlay-text{
+    .golf-overlay-text{
         font-size: 18px;
     }
 
-    .track-and-field-booking-container-details h3{
+    .golf-booking-container-details h3{
         font-size: 30px;
     }
 
-    .track-and-field-booking-container-details p{
+    .golf-booking-container-details p{
         font-size: 22px;
     }
 
@@ -541,18 +541,18 @@
     }
 
 
-    .track-and-field-location-container{
+    .golf-location-container{
         display:flex;
         flex-direction:row;
         gap: 10px;
     }
 
-    .card{
+    .ss-card{
         max-width: 440px;
     }
     
 
-    .track-and-field-location-container .card img {
+    .golf-location-container .ss-card img {
         width: 100%;
         height: auto;
     }
@@ -564,37 +564,39 @@
 
 /* Responsive Styles for 768px */
 @media (max-width: 768px) {
-    .track-and-field-container{
+    .golf-container{
         gap:25px;
     }
-    .track-and-field-header {
+    .golf-header {
         background-size: 70% auto;
     }
 
-    .track-and-field-header-content {
+   
+
+    .golf-header-content {
         padding: 0 20px;
         margin-top: 80px;
         padding-bottom: 20px;
     }
 
-    .track-and-field-header-content h1 {
+    .golf-header-content h1 {
         padding-top: 100px;
         padding-bottom: 20px;
         font-size: 36px;
     }
 
-    .track-and-field-header-content h3 {
+    .golf-header-content h3 {
         font-size: 18px;
         max-width: 100%;
     }
 
-    .track-and-field-header-content p,
-    .track-and-field-section2 p,
-    .track-and-field-section4 p {
+    .golf-header-content p,
+    .golf-section2 p,
+    .golf-section4 p {
         font-size: 18px;
     }
 
-    .track-and-field-booking-container {
+    .golf-booking-container {
         flex-direction: row;
         align-items: center;
         padding: 0 20px;
@@ -603,86 +605,86 @@
         padding-bottom:30px;
     }
 
-    .track-and-field-booking-container button {
+    .golf-booking-container button {
         font-size: 16px;
         padding: 12px 20px;
         width: 40%;
         border-radius: 10px;
     }
 
-    .track-and-field-image-container {
+    .golf-image-container {
         gap: 10px;
         padding: 0 20px;
         display:flex;
         flex-direction:row;
     }
 
-    .track-and-field-image-container img {
+    .golf-image-container img {
         height: 200px;
         max-width: 170px;
     }
 
-    .track-and-field-section2,.track-and-field-section3, .track-and-field-section4 {
+    .golf-section2,.golf-section3, .golf-section4 {
         padding: 0 20px;
     }
 
-    .track-and-field-section2 h3 {
+    .golf-section2 h3 {
         font-size: 28px;
     }
-    .track-and-field-section3 h3{
+    .golf-section3 h3{
         font-size: 28px;
     }
-    .track-and-field-section3 p{
+    .golf-section3 p{
         font-size: 18px;
     }
 
-    .track-and-field-locations{
+    .golf-locations{
         gap:20px;
     }
-    .track-and-field-locations h3{
+    .golf-locations h3{
         font-size: 28px;
     }
 
-    .track-and-field-section2-image-container img {
+    .golf-section2-image-container img {
         max-width: 100%;
     }
 
-    .track-and-field-section3-image-container {
+    .golf-section3-image-container {
         gap: 10px;
     }
 
-    .track-and-field-section3-image-container img {
+    .golf-section3-image-container img {
         height: 200px;
         max-width: 170px;
         width: 100%;
     }
-    .track-and-field-section3-image-container {
+    .golf-section3-image-container {
         gap: 10px;
         
         display:flex;
         flex-direction:row;
     }
 
-    .track-and-field-section3-image-container div {
+    .golf-section3-image-container div {
         height: 200px;
         min-width: 170px;
     }
-    .track-and-field-booking-container-details{
+    .golf-booking-container-details{
         width: 50%;
         padding: 50px 20px;
     }
 
-    .track-and-field-booking-container-details h3{
-        font-size: 28px;
+    .golf-booking-container-details h3{
+        font-size: 20px;
     }
-    .track-and-field-booking-container-details p{
-        font-size: 18px;
+    .golf-booking-container-details p{
+        font-size: 12px;
     }
-    .track-and-field-trainer-image-container{
+    .golf-trainer-image-container{
         gap: 10px;
         padding:0 20px;
     }
-    .track-and-field-overlay-text{
+    .golf-overlay-text{
         font-size: 12px;
     }
     .bottom-left, .bottom-right, .bottom-middle{
@@ -696,20 +698,20 @@
         font-size:12px;
     }
 
-    .track-and-field-trainer-image img {
+    .golf-trainer-image img {
         height: auto;
         width: 100%;
     }
 
-    .track-and-field-location-container {
+    .golf-location-container {
         flex-wrap: wrap;
     }
-    .card{
+    .ss-card{
         max-width: 340px;
         width: 100%;
     }
 
-    .track-and-field-location-container .card img {
+    .golf-location-container .card img {
         width: 100%;
         height: auto;
     }
@@ -724,7 +726,16 @@
     .inside-booking-container{
         display:none;
     }
+    .testimonial-header{
+        padding: 0 20px;
+    }
     
 
     
+}
+
+@media (max-width: 500px) {
+    .golf-booking-container button{
+        font-size: 10px;
+    }
 }

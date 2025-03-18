@@ -1,0 +1,63 @@
+.add-child-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 40px;
+    padding-right: 40px;
+
+}
+.add-child-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center content horizontally */
+    position: relative;
+    /* Allows absolute positioning of the back icon */
+    width: 100%;
+    padding: 20px;
+    margin-top: 53px;
+}
+
+.add-child-backIcon {
+    position: absolute;
+    left: 0;
+    /* Aligns to the left */
+    font-size: 20px;
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+    background-color: aliceblue;
+    border-radius: 50px;
+    /* Add space from the edge */
+}
+
+.add-child-heading {
+    flex-grow: 1;
+    /* Takes available space and stays centered */
+    text-align: center;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 48px;
+    letter-spacing: 0%;
+
+}
+
+.add-child-header-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-child-header-content p {
+    margin-top: 14px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29.add-child-05px;
+    letter-spacing: 0%;
+    color:#545454;
+}

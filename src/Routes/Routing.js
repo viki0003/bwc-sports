@@ -13,6 +13,9 @@ import Soccer from "../Pages/Soccer";
 import Baseball from "../Pages/Baseball";
 import TrackAndField from "../Pages/TrackAndField";
 import Golf from "../Pages/Golf";
+import Fitness from "../Pages/Fitness";
+import AddAChild from "../Pages/AddAChild"
+import Bowling from "../Pages/Bowling"
 import { TimeSlot } from "../Pages/TimeSlot";
 import { ConfirmationPopup } from "../Components/ConfirmationPopup";
 
@@ -48,6 +51,15 @@ const Routing = () => {
         </Route>
         <Route element={<Layout />}>
           <Route path="/golf" element={<Golf />} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/fitness" element={<Fitness />} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/bowling" element={<Bowling />} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/add-a-child" element={<AddAChild />} />
         </Route>
       </Routes>
     </BrowserRouter>

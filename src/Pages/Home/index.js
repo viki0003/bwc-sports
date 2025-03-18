@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from "react";
-import EventCard from "../../Components/EventCard";
-import EllipseCard from "../../Components/EllipseCard";
-import ellipse1 from "../../Assets/Images/ellipse1.png";
-import ellipse2 from "../../Assets/Images/ellipse2.png";
-import ellipse3 from "../../Assets/Images/ellipse3.png";
-import ellipse4 from "../../Assets/Images/ellipse4.png";
-import ellipse5 from "../../Assets/Images/ellipse5.png";
-import ellipse6 from "../../Assets/Images/ellipse6.png";
+
 import home_background1 from '../../Assets/Images/home_background1.jpg';
 import home_background2 from '../../Assets/Images/home_background2.jpg';
 import home_background3 from '../../Assets/Images/home_background3.jpg';
