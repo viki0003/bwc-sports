@@ -1,0 +1,100 @@
+.sp-banner .sp-banner-content {
+    padding: 40px 40px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 62px;
+}
+
+.sp-banner .sp-banner-content a {
+    display: inline-flex;
+    background: #F4F4F4;
+    border-radius: 50px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sp-banner .sp-banner-content h1 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    color: #fff;
+}
+
+.sp-blurbs {
+    max-width: 1440px;
+    margin: auto;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 55px;
+}
+
+.sp-blurbs p {
+    text-align: center;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 40px;
+}
+
+.sp-blurbs .sp-blurbs-list {
+    display: flex;
+    gap: 20px;
+}
+
+.sp-blurbs .sp-blurbs-list .sp-blurb-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 89px;
+    padding-top: 45px;
+    border-radius: 20px;
+    width: 345px;
+}
+
+.sp-blurbs .sp-blurbs-list .sp-blurb-item:nth-child(1) {
+    box-shadow: 0px 0px 20.5px 1px #FF000040;
+}
+.sp-blurbs .sp-blurbs-list .sp-blurb-item:nth-child(2) {
+   box-shadow: 0px 0px 20.5px 1px #0900FF40;
+}
+.sp-blurbs .sp-blurbs-list .sp-blurb-item:nth-child(3) {
+    box-shadow: 0px 0px 20.5px 1px #FFF35F;
+}
+.sp-blurbs .sp-blurbs-list .sp-blurb-item:nth-child(4) {
+   box-shadow: 0px 0px 20.5px 1px #A6FFAC;
+}
+
+.sp-blurb-item span {
+    font-family: Inter;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #000;
+}
+
+.sp-blurbs .sp-blurbs-list .sp-blurb-item img {
+    width: 100%;
+    height: 145px;
+    object-fit:cover;
+    border-radius: 0px 0px 20px 20px;
+}
+
+
+button.sp-blurb-btn {
+    background: #000;
+    border: 0;
+    border-radius: 17px;
+    padding: 24px 45.5px;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}

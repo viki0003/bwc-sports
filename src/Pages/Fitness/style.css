@@ -1,0 +1,743 @@
+.fitness-container{
+    display:flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    gap:55px;
+}
+
+
+.fitness-backIcon {
+    position: relative;
+    left: 0;
+    /* Aligns to the left */
+    font-size: 20px;
+    width: 75px;
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    margin-left: 40px;
+    margin-top: 64px;
+    background-color: aliceblue;
+    border-radius: 50px;
+    /* Add space from the edge */
+}
+
+
+.fitness-header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    background-image: url('../../Assets/Images/fitness_header_image.png');  /* Set your image path */
+    background-repeat: no-repeat;   /* Prevent repetition */
+    background-position: top right;  /* Align to the top-left corner */
+    background-size: 50% auto; 
+}
+
+.fitness-header-content{
+    margin-top: 80px;
+    display:flex;
+    flex-direction:column;
+    align-items: left;
+    gap:18px;
+    padding:0 40px;
+    
+}
+
+.fitness-header-content h1{
+    font-size: 56px;
+    font-weight: bold;
+    padding-bottom: 60px;
+}
+
+.fitness-header-content h3{
+    font-size: 36px;
+    font-weight: bold;
+    max-width: 50%;
+}
+.fitness-header-content p{
+    font-size:  28px;
+    font-weight: 300;
+}
+
+.fitness-booking-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 40px;
+    padding-bottom: 40px;
+}
+
+.fitness-booking-container button{
+    padding: 20px 30px;
+    font-size: 28px;
+    font-weight: 600;
+    width:100%;
+    border-radius: 20px;
+    border: 1px solid #282828;
+    background-color: #c3c3c3;
+
+}
+.fitness-booking-selected{
+    background-color: #282828 !important;
+    color: white;
+}
+
+.fitness-image-container{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    gap: 20px;
+    padding: 0 40px;
+    overflow-x: auto;
+    white-space:nowrap;
+    padding-bottom: 40px;
+}
+
+.fitness-image-container img{
+    height: 379px;
+    max-width: 360px;
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+.fitness-section2{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.fitness-section2 h3{
+    font-size: 36px;
+    font-size: bold;
+}
+
+.fitness-section2 p{
+    font-size: 28px;
+    font-weight: 300;
+    padding-bottom: 17px;
+}
+
+.fitness-section2-image-container{
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+    padding-bottom:41px;
+
+}
+
+.fitness-section2-image-container img {
+    width: 100%; /* Adjust width as needed */
+     /* Set a max width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+     /* Optional: Rounded corners */
+}
+
+.fitness-overlay-text {
+    position: absolute;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+    
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.bottom-left {
+    bottom: 10%;
+    left: 5%;
+}
+
+.bottom-right {
+    bottom: 10%;
+    right: 5%;
+}
+
+.bottom-middle {
+    bottom: 10%;
+    left: 35%;
+}
+
+
+
+
+
+.fitness-group {
+    position: absolute;
+    top: 10px; /* Position at bottom of image */
+    left: 90%;
+    transform: translateX(-50%); /* Center text horizontally */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.fitness-section3{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.fitness-section3 h3{
+    font-size: 36px;
+    font-size: bold;
+}
+
+.fitness-section3 p{
+    font-size: 28px;
+    font-weight: 300;
+    padding-bottom: 17px;
+}
+
+.fitness-section3-image-container{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    gap: 20px;
+    
+    overflow-x: auto;
+    white-space:nowrap;
+    padding-bottom: 40px;
+}
+.fitness-section3-image-container div{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    height: auto;
+    min-width: 360px;
+    width:100%;
+    
+    /* height: 379px; */
+    
+}
+
+
+.fitness-section3-image-container img {
+     /* Responsive image */
+     width:100%;
+     border-radius: 20px; /* Optional rounded corners */
+}
+.skill-text-overlay {
+    position: absolute;
+    bottom: 10px; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:8px;
+    justify-content: center;
+    
+}
+
+
+.fitness-section4{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 20px;
+    padding: 0 40px;
+}
+
+.fitness-section4 h3{
+    font-size: 36px;
+    font-size: bold;
+}
+
+.fitness-section4 p{
+    font-size: 28px;
+    font-weight: 300;
+    padding-bottom: 17px;
+}
+
+.fitness-booking-container2{
+    background-image: url('../../Assets/Images/fitness_banner_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
+    display:flex;
+    flex-direction: column;
+    align-items:left;
+    justify-content: space-between;
+}
+
+.fitness-booking-container-details{
+    display:flex;
+    flex-direction: column;
+    padding: 50px 40px;
+    align-items:left;
+    gap:20px;
+    width:60%;
+
+}
+
+.fitness-booking-container-details h3{
+    font-size:40px;
+    font-weight: bold;
+    color: white;
+}
+.fitness-booking-container-details p{
+    font-size:28px;
+    font-weight:300;
+    color: white;
+}
+
+.fitness-trainers{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap:42px;
+}
+
+.fitness-trainers h3{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.fitness-trainer-image-container{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 20px;
+    
+}
+
+.fitness-trainer-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    height: 520px;
+    max-width: 400px; 
+    width: 100%;
+}
+
+.fitness-trainer-image div{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+
+.fitness-trainer-image img{
+    
+    /* Adjust as needed */
+    width:100%;
+    border-radius: 20px; 
+}
+
+.skill-text-overlay {
+    position: absolute;
+    bottom: 10%; /* Position at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    
+}
+
+.fitness-locations{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:58px;
+    padding-bottom: 64px;
+
+}
+
+.fitness-locations h3{
+    font-size: 56px;
+    font-weight: bold;
+}
+
+.fitness-location-container{
+    display:flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    
+}
+
+.ss-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    background-color: #f1fff2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.ss-card img {
+    max-width: 100%;
+    max-height: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: white;
+}
+.ss-card-description {
+    display:flex;
+    flex-direction: row;
+    align-items:left;
+    justify-content: left;
+    width:100%;
+    margin-top: 16px;
+    font-size: 18px;
+    color: #555;
+}
+.outside-booking-container{
+    display:none;
+}
+
+.testimonial-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center;
+    
+}
+.testimonial-container .testimonial-header{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+@media (max-width: 1300px) {
+    
+    .fitness-backIcon{
+        display:none !important;
+    }
+}
+/* Responsive Styles for 1300px */
+@media (max-width: 1300px) {
+    .fitness-header {
+        background-size: 50% auto;
+    }
+    .fitness-header-content h1 {
+        font-size: 48px;
+        padding-top: 80px;
+    }
+
+    .fitness-header-content h3 {
+        font-size: 30px;
+    }
+    /* .fitness-header-content p{
+        width: 50%;
+    }
+    .fitness-header-content h3{
+        width: 40%;
+    } */
+
+    .fitness-header-content p,
+    .fitness-section2 p,
+    .fitness-section4 p {
+        font-size: 24px;
+    }
+
+    /* .fitness-image-container{
+        gap:10px;
+    } */
+
+    .fitness-booking-container2{
+        height:auto;
+    }
+
+    
+    .fitness-booking-container button {
+        font-size: 24px;
+        padding: 16px 24px;
+    }
+
+    .fitness-image-container img{
+        
+    }
+
+    .fitness-trainer-image-container{
+        gap: 20px;
+    }
+    .fitness-trainer-image{
+        /* height: 350px;
+        max-width: 350px; */
+        height: auto;
+        max-width: 280px;
+    }
+    .bottom-left, .bottom-right, .bottom-middle{
+        
+        bottom: 15%;
+    }
+
+    .fitness-section2-image-container img {
+        max-width: 100%;
+        height:auto;
+    }
+
+    .fitness-overlay-text{
+        font-size: 18px;
+    }
+
+    .fitness-booking-container-details h3{
+        font-size: 30px;
+    }
+
+    .fitness-booking-container-details p{
+        font-size: 22px;
+    }
+
+    
+    /* .skill-text-overlay{
+        font-size: 20px;
+    } */
+
+    .skill-text-overlay h4{
+        font-size: 20px;
+    }
+    .skill-text-overlay p{
+        font-size:18px;
+    }
+
+
+    .fitness-location-container{
+        display:flex;
+        flex-direction:row;
+        gap: 10px;
+    }
+
+    .ss-card{
+        max-width: 440px;
+    }
+    
+
+    .fitness-location-container .ss-card img {
+        width: 100%;
+        height: auto;
+    }
+    .testimonial-container .testimonial-header{
+        font-size: 32px;
+        font-weight: bold;
+    }
+}
+
+/* Responsive Styles for 768px */
+@media (max-width: 768px) {
+    .fitness-container{
+        gap:25px;
+    }
+    .fitness-header {
+        background-size: 50% auto;
+    }
+
+   
+
+    .fitness-header-content {
+        padding: 0 20px;
+        margin-top: 80px;
+        padding-bottom: 20px;
+    }
+
+    .fitness-header-content h1 {
+        padding-top: 100px;
+        padding-bottom: 20px;
+        font-size: 36px;
+    }
+
+    .fitness-header-content h3 {
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .fitness-header-content p,
+    .fitness-section2 p,
+    .fitness-section4 p {
+        font-size: 18px;
+    }
+
+    .fitness-booking-container {
+        flex-direction: row;
+        align-items: center;
+        padding: 0 20px;
+        flex-wrap:wrap;
+        gap:10px;
+        padding-bottom:30px;
+    }
+
+    .fitness-booking-container button {
+        font-size: 16px;
+        padding: 12px 20px;
+        width: 40%;
+        border-radius: 10px;
+    }
+
+    .fitness-image-container {
+        gap: 10px;
+        padding: 0 20px;
+        display:flex;
+        flex-direction:row;
+    }
+
+    .fitness-image-container img {
+        height: 200px;
+        max-width: 170px;
+    }
+
+    .fitness-section2,.fitness-section3, .fitness-section4 {
+        padding: 0 20px;
+    }
+
+    .fitness-section2 h3 {
+        font-size: 28px;
+    }
+    .fitness-section3 h3{
+        font-size: 28px;
+    }
+    .fitness-section3 p{
+        font-size: 18px;
+    }
+
+    .fitness-locations{
+        gap:20px;
+    }
+    .fitness-locations h3{
+        font-size: 28px;
+    }
+
+    .fitness-section2-image-container img {
+        max-width: 100%;
+    }
+
+    .fitness-section3-image-container {
+        gap: 10px;
+    }
+
+    .fitness-section3-image-container img {
+        height: 200px;
+        max-width: 170px;
+        width: 100%;
+    }
+    .fitness-section3-image-container {
+        gap: 10px;
+        
+        display:flex;
+        flex-direction:row;
+    }
+
+    .fitness-section3-image-container div {
+        height: 200px;
+        min-width: 170px;
+    }
+    .fitness-booking-container-details{
+        width: 50%;
+        padding: 50px 20px;
+    }
+
+    .fitness-booking-container-details h3{
+        font-size: 20px;
+    }
+    .fitness-booking-container-details p{
+        font-size: 12px;
+    }
+    .fitness-trainer-image-container{
+        gap: 10px;
+        padding:0 20px;
+    }
+    .fitness-overlay-text{
+        font-size: 12px;
+    }
+    .bottom-left, .bottom-right, .bottom-middle{
+        bottom: 25%;
+    }
+
+    .skill-text-overlay h4{
+        font-size: 16px;
+    }
+    .skill-text-overlay p{
+        font-size:12px;
+    }
+
+    .fitness-trainer-image img {
+        height: auto;
+        width: 100%;
+    }
+
+    .fitness-location-container {
+        flex-wrap: wrap;
+    }
+    .ss-card{
+        max-width: 340px;
+        width: 100%;
+    }
+
+    .fitness-location-container .card img {
+        width: 100%;
+        height: auto;
+    }
+    .card-description p{
+        font-size: 16px;
+    }
+
+    .outside-booking-container{
+        display: flex;
+    }
+
+    .inside-booking-container{
+        display:none;
+    }
+    .testimonial-header{
+        padding: 0 20px;
+    }
+    
+
+    
+}
+
+@media (max-width: 500px) {
+    .fitness-booking-container button{
+        font-size: 10px;
+    }
+}

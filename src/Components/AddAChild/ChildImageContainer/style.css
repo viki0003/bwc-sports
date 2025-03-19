@@ -1,0 +1,126 @@
+
+.child-image-container {
+    position: relative; 
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.child-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.child-container-border{
+    border: 2px solid grey;
+    width: 320px;
+    height: 360px;
+    padding: 14px;
+    border-radius:10px;
+}
+
+.selected{
+    border: 2px solid #3cff4a;
+}
+.selected .image-container{
+    border: 2px solid #3cff4a;
+}
+
+
+.child-overlay-text {
+    position: absolute;
+     /* Centered horizontally */
+    /* Exact centering */
+     /* Semi-transparent black background */
+    color: white;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-align: center;
+    white-space: nowrap; 
+    font-family: Inter;
+font-weight: 600;
+font-size: 20px;
+line-height: 38.73px;
+letter-spacing: 0%;
+bottom: 38px;
+right: 37%;
+/* Prevents text from wrapping */
+}
+
+.age{
+    bottom: 15%;
+    right: 40%;
+    font-size: 14px;
+    
+}
+.child-overlay{
+    position: absolute;
+    width: 100%;
+    height: 30%; /* Covers 30% of the image */
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child-svg-overlay {
+    position: absolute;
+    
+    right: 0px;
+    width: 40px;  /* Adjust size */
+    
+}
+
+@media (max-width: 1300px) {
+    .child-container-border {
+        width: 240px;
+        height: 270px;
+    }
+
+    .child-overlay-text {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .age{
+        font-size: 12px;
+        bottom: 20%;
+    }
+
+    .child-svg-overlay {
+        width: 25px;
+        
+    }
+    .child-container-border{
+        padding:10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .child-container-border {
+        width: 160px;
+        height: 180px;
+    }
+
+    .child-overlay-text {
+        font-size: 16px;
+        line-height: 22px;
+        right: 30%;
+        bottom: 40%;
+    }
+    .age{
+        font-size: 10px;
+        right: 36%;
+        bottom: 10%;
+    }
+
+    .child-svg-overlay {
+        width: 25px;
+        
+    }
+    
+}
