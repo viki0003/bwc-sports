@@ -1,9 +1,9 @@
 
 .child-image-container {
     position: relative; 
-    width: 320px;
-    height: 360px;
-    border-radius: 17px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
     overflow: hidden;
 }
 
@@ -11,13 +11,14 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 17px;
+    border-radius: 10px;
 }
 .child-container-border{
     border: 2px solid grey;
-    
+    width: 320px;
+    height: 360px;
     padding: 14px;
-    border-radius:30px;
+    border-radius:10px;
 }
 
 .selected{
@@ -36,16 +37,24 @@
     color: white;
     width: 100%;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
     white-space: nowrap; 
     font-family: Inter;
 font-weight: 600;
-font-size: 32px;
+font-size: 20px;
 line-height: 38.73px;
 letter-spacing: 0%;
 bottom: 38px;
+right: 37%;
 /* Prevents text from wrapping */
+}
+
+.age{
+    bottom: 15%;
+    right: 40%;
+    font-size: 14px;
+    
 }
 .child-overlay{
     position: absolute;
@@ -68,7 +77,7 @@ bottom: 38px;
 }
 
 @media (max-width: 1300px) {
-    .child-image-container {
+    .child-container-border {
         width: 240px;
         height: 270px;
     }
@@ -76,6 +85,10 @@ bottom: 38px;
     .child-overlay-text {
         font-size: 18px;
         line-height: 22px;
+    }
+    .age{
+        font-size: 12px;
+        bottom: 20%;
     }
 
     .child-svg-overlay {
@@ -88,14 +101,21 @@ bottom: 38px;
 }
 
 @media (max-width: 768px) {
-    .child-image-container {
+    .child-container-border {
         width: 160px;
         height: 180px;
     }
 
     .child-overlay-text {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 22px;
+        right: 30%;
+        bottom: 40%;
+    }
+    .age{
+        font-size: 10px;
+        right: 36%;
+        bottom: 10%;
     }
 
     .child-svg-overlay {

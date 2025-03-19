@@ -1,10 +1,11 @@
 .add-child-container {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
+    align-items: center;
     padding-left: 40px;
     padding-right: 40px;
-
+    gap: 94px;
 }
 .add-child-header {
     display: flex;
@@ -61,3 +62,114 @@
     letter-spacing: 0%;
     color:#545454;
 }
+
+.add-child-image-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap:20px;
+    flex-wrap: wrap;
+}
+
+.adding-image-container{
+    position: relative; 
+    width: 320px;
+    height: 360px;
+    border-radius: 17px;
+    overflow: hidden;
+    background: #d9d9d9;
+}
+
+.adding-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.adding-child-text{
+    left: 50%;
+    transform: translate(-50%);
+    color: black;
+    font-size: 20px;
+}
+
+.add-child-submit-button{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    padding-top: 200px;
+}
+
+.add-child-btn{
+    width: 100%;
+    
+}
+
+@media screen and (max-width:1300px){
+    .add-child-container{
+        gap: 60px;
+    }
+    .adding-image-container{
+        width: 240px;
+        height: 270px;
+    }
+
+    .add-child-backIcon{
+        display:none;
+    }
+    .add-child-header-content{
+        gap:0px;
+    }
+
+    .add-child-header-content h1{
+        font-size: 30px;
+    }
+
+    .add-child-header-content p{
+        font-size: 22px;
+    }
+    .adding-child-text{
+        
+        font-size: 16px;
+    }
+    
+}
+
+@media screen and (max-width:768px){
+    .add-child-container{
+        gap: 40px;
+        padding-bottom: 0px;
+    }
+    .add-child-header-content h1{
+        font-size: 22px;
+    }
+
+    .add-child-header-content p{
+        font-size: 14px;
+    }
+
+    .adding-image-container{
+        width: 160px;
+        height: 180px;
+    }
+    .adding-child-text{
+        bottom: 5%;
+        font-size: 12px;
+    }
+    .add-child-submit-button{
+        padding-top: 100px;
+    }
+    .add-child-header{
+        margin-top:0;
+    }
+
+}
+
+
+
+

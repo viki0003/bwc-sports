@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import './style.css'
-import Selected from '../../Assets/Icons/Selected'
+import Selected from '../../../Assets/Icons/Selected'
 
-export const ChildImageContainer = (props) => {
+export const ChildImageContainer = ({image,name}) => {
+    
     const [isSelected, setIsSelected] = useState(false);
 
     function handleClick(){
@@ -17,8 +18,8 @@ export const ChildImageContainer = (props) => {
                             
                         </div>
                     )}
-                    <img src={props.image} alt="Sample Image" />
-                    <div className="child-overlay"><p className="child-overlay-text">{props.name}</p></div>
+                    <img src={image} alt="Sample Image" />
+                    <div className="child-overlay"><p className="child-overlay-text age">12 Yo</p><p className="child-overlay-text">{name}</p></div>
                 </div>
             </div>
         </>
