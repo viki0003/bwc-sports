@@ -4,21 +4,31 @@ import './style.css'
 import track_and_field_image1 from '../../Assets/Images/track_and_field_image1.png';
 import track_and_field_image2 from '../../Assets/Images/track_and_field_image2.png';
 import track_and_field_image3 from '../../Assets/Images/track_and_field_image3.png';
-
+import stock_photo from '../../Assets/Images/stock_photo.png'
 import track_and_field_banner_image from '../../Assets/Images/track_and_field_banner_image.png'
 import soccer_banner_image2 from '../../Assets/Images/soccer_banner_image2.png'
 import Testimonial from '../../Components/Testimonial';
+import Features from '../../Components/Features';
 import dribbling from '../../Assets/Images/dribbling.png'
 import shooting from '../../Assets/Images/shooting.png'
 import passing from '../../Assets/Images/passing.png'
 import defense from '../../Assets/Images/defense.png'
 import rebounding from '../../Assets/Images/rebounding.png'
+import SprintIcon from '../../Assets/Icons/SprintIcon';
+import ACIcon from '../../Assets/Icons/ACIcon';
+import ECIcon from '../../Assets/Icons/ECIcon';
 import soccer_trainer1 from '../../Assets/Images/basketball_trainer1.png'
 import soccer_trainer2 from '../../Assets/Images/basketball_trainer2.png'
 import soccer_trainer3 from '../../Assets/Images/basketball_trainer3.png'
 
 
 export default function TrackAndField() {
+    // const featuresData = {
+    //     color: 'red',
+    //     Icon1: SprintIcon,
+    //     Icon2: ACIcon,
+    //     Icon3: ECIcon
+    // }
     return (
         <>
             <div className="track-and-field-container">
@@ -60,17 +70,18 @@ export default function TrackAndField() {
                     <h3>Programs That Make Champions</h3>
                     <p>Our training programs are designed to cover all key aspects of track and field, ensuring that each athlete develops the skills needed for success:</p>
                     <div className="track-and-field-section3-image-container">
-                        <div><span className="skill-text-overlay">Sprinting</span><img src={dribbling} alt="Dribbling" /></div>
-                        <div><span className="skill-text-overlay">Distance Running</span><img src={shooting} alt="Shooting" /></div>
-                        <div><span className="skill-text-overlay">Jumping</span><img src={passing} alt="Passing" /></div>
-                        <div><span className="skill-text-overlay">Throwing</span><img src={defense} alt="Defense" /></div>
-                        <div><span className="skill-text-overlay">Agility and Speed</span><img src={rebounding} alt="Rebounding" /></div>
+                        <div><span className="skill-text-overlay">Sprinting</span><img src={stock_photo} alt="Dribbling" /></div>
+                        <div><span className="skill-text-overlay">Distance Running</span><img src={stock_photo} alt="Shooting" /></div>
+                        <div><span className="skill-text-overlay">Jumping</span><img src={stock_photo} alt="Passing" /></div>
+                        <div><span className="skill-text-overlay">Throwing</span><img src={stock_photo} alt="Defense" /></div>
+                        <div><span className="skill-text-overlay">Agility and Speed</span><img src={stock_photo} alt="Rebounding" /></div>
                     </div>
                 </div>
                 <div className="track-and-field-section4">
                     <h3>Fun and Competitive Games</h3>
                     <p>Our track & field program isn’t just about drills and technique—it’s about having fun while competing. We incorporate exciting challenges and games like:</p>
                 </div>
+                <Features color="red" Icon1={SprintIcon} Icon2={ACIcon} Icon3={ECIcon}/>
                 <div className="track-and-field-section4">
                     <h3>Scrimmages and Track Meets</h3>
                     <p>No training is complete without the thrill of competition. Our scrimmages and track meets give athletes the chance to apply what they’ve learned in a real-world setting. These events help build confidence, camaraderie, and the competitive spirit needed for success in track and field.</p>
@@ -78,7 +89,7 @@ export default function TrackAndField() {
                 <div className="testimonial-container">
                     <h1 className="testimonial-header">WHAT PARENTS ARE SAYING</h1>
                 </div>
-                <Testimonial />
+                <Testimonial/>
 
 
 

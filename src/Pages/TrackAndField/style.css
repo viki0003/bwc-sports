@@ -155,7 +155,7 @@
 }
 
 .bottom-left {
-    bottom: 10%;
+    bottom: 10% !important;
     left: 5%;
 }
 
@@ -508,7 +508,7 @@
     }
     .bottom-left, .bottom-right, .bottom-middle{
         
-        bottom: 15%;
+        bottom: 15% !important;
     }
 
     .track-and-field-section2-image-container img {
@@ -593,6 +593,8 @@
     .track-and-field-section4 p {
         font-size: 18px;
     }
+
+    
 
     .track-and-field-booking-container {
         flex-direction: row;
@@ -686,7 +688,7 @@
         font-size: 12px;
     }
     .bottom-left, .bottom-right, .bottom-middle{
-        bottom: 25%;
+        bottom: 25% !important;
     }
 
     .skill-text-overlay h4{

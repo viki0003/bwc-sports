@@ -1,0 +1,28 @@
+.sports-rec-day-content {
+    display: flex;
+    align-items: center;
+    gap: 63px;
+}
+
+.sports-rec-day-content .choose-plans-list {
+    width: 33%;
+}
+
+.sports-rec-day-content .choose-plans-list .cpl-item.blue {
+    width: 100%;
+}
+
+.sports-rec-day-content .video-container {
+    margin: 0;
+    width: 67%;
+}
+
+.sports-rec-day .sports-rec-day-content {
+    max-width: 1440px;
+    margin: 80px auto;
+    padding: 0px 40px;
+}
+
+.sports-rec-day .recess-heading {
+    border-color: #2B6DE1;
+}
