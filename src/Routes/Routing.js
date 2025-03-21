@@ -20,6 +20,7 @@ import FieldDays from "../Pages/FieldDays"
 import { TimeSlot } from "../Pages/TimeSlot";
 import { ConfirmationPopup } from "../Components/ConfirmationPopup";
 import SchoolPrograms from "../Pages/SchoolPrograms";
+import AfterSchoolProgram from "../Pages/AfterSchoolProgram";
 
 const Routing = () => {
   return (
@@ -53,6 +54,9 @@ const Routing = () => {
           <Route path="/add-a-child" element={<AddAChild />} />
           <Route element={<Layout />}>
           <Route path="/field-days" element={<FieldDays />} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/after-school-programs" element={<AfterSchoolProgram />} />
         </Route>
       </Routes>
     </BrowserRouter>
