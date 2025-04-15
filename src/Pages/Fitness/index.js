@@ -1,9 +1,14 @@
 import React from 'react'
 import BackIcon from '../../Assets/Icons/BackIcon'
 import './style.css'
-import fitness_image1 from '../../Assets/Images/fitness_image1.png';
+import Fitness1 from '../../Assets/Images/Fitness1.png';
 import fitness_image2 from '../../Assets/Images/fitness_image2.png';
 import fitness_image3 from '../../Assets/Images/fitness_image3.png';
+import Fitness21 from '../../Assets/Images/Fitness21.png';
+import Fitness22 from '../../Assets/Images/Fitness22.png';
+import Fitness23 from '../../Assets/Images/Fitness23.png';
+import Fitness24 from '../../Assets/Images/Fitness24.png';
+
 
 import fitness_banner_image from '../../Assets/Images/fitness_banner_image.png'
 import Features from '../../Components/Features';
@@ -41,10 +46,9 @@ export default function Fitness() {
                     <button className="one-on-one fitness-booking-selected">Sign Up for Classes Here</button>
                 </div>
                 <div className="fitness-image-container">
-                    <img src={fitness_image1} alt="soccer-image" />
+                    <img src={Fitness1} alt="soccer-image" />
                     <img src={fitness_image2} alt="soccer-image" />
                     <img src={fitness_image3} alt="soccer-image" />
-                    <img src={fitness_image1} alt="soccer-image" />
                 </div>
                 <div className="fitness-section2">
                     <h3>Why Choose BWC Fitness?</h3>
@@ -58,10 +62,10 @@ export default function Fitness() {
                     <h3>What We Offer</h3>
                     <p>Our training programs are designed to cover all key aspects of track and field, ensuring that each athlete develops the skills needed for success:</p>
                     <div className="fitness-section3-image-container">
-                        <div><span className="skill-text-overlay">Strength Training</span><img src={stock_photo} alt="Dribbling" /></div>
-                        <div><span className="skill-text-overlay">Agility Drills</span><img src={stock_photo} alt="Shooting" /></div>
-                        <div><span className="skill-text-overlay">Cardio Conditioning</span><img src={stock_photo} alt="Passing" /></div>
-                        <div><span className="skill-text-overlay">Flexibility</span><img src={stock_photo} alt="Defense" /></div>
+                        <div><span className="skill-text-overlay">Dribbling</span><img src={Fitness21} alt="Dribbling" /></div>
+                        <div><span className="skill-text-overlay">Shooting</span><img src={Fitness22} alt="Shooting" /></div>
+                        <div><span className="skill-text-overlay">Passing </span><img src={Fitness23} alt="Passing" /></div>
+                        <div><span className="skill-text-overlay">Defense</span><img src={Fitness24} alt="Defense" /></div>
                         
                     </div>
                 </div>
