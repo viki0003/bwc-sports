@@ -1,9 +1,10 @@
 import React from 'react'
 import BackIcon from '../../Assets/Icons/BackIcon'
 import './style.css'
-import basketball1 from '../../Assets/Images/basketball1.jpg'
+import BasketBall1 from '../../Assets/Images/BasketBall1.png'
 import basketball2 from '../../Assets/Images/basketball2.jpg'
-import basketballimage from '../../Assets/Images/basketballsectionimage.png'
+import BasketBall3 from '../../Assets/Images/BasketBall3.png'
+import basketball4 from '../../Assets/Images/BasketBall4.png'
 import dribbling from '../../Assets/Images/dribbling.png'
 import shooting from '../../Assets/Images/shooting.png'
 import passing from '../../Assets/Images/passing.png'
@@ -13,6 +14,9 @@ import basketball_trainer1 from '../../Assets/Images/basketball_trainer1.png'
 import basketball_trainer2 from '../../Assets/Images/basketball_trainer2.png'
 import basketball_trainer3 from '../../Assets/Images/basketball_trainer3.png'
 import stock_photo from '../../Assets/Images/stock_photo.png'
+import basketballspecial from '../../Assets/Images/BasketballSpecial.png'
+
+
 
 
 export default function Basketball() {
@@ -37,10 +41,10 @@ export default function Basketball() {
                     <button className="one-on-one basketball-booking-selected">Sign Up for Classes Here</button>
                 </div>
                 <div className="basketball-image-container">
-                    <img src={basketball1} alt="basketball-image" />
+                    <img src={BasketBall1} alt="basketball-image" />
                     <img src={basketball2} alt="basketball-image" />
-                    <img src={basketball1} alt="basketball-image" />
-                    <img src={basketball2} alt="basketball-image" />
+                    <img src={BasketBall3} alt="basketball-image" />
+                    <img src={basketball4} alt="basketball-image" />
                 </div>
                 <div className="basketball-section2">
                     <h3>Why Choose BWC Basketball?</h3>
@@ -48,7 +52,7 @@ export default function Basketball() {
                     <div className="basketball-section2-image-container">
                         <span className="basketball-overlay-text bottom-left">1-on-1 Training</span>
                         <span className="basketball-overlay-text top-right">Group Training</span>
-                        <img src={basketballimage} alt="basketball-image-session" />
+                        <img src={basketballspecial} alt="basketball-image-session" />
                     </div>
                 </div>
 
@@ -56,11 +60,11 @@ export default function Basketball() {
                     <h3>Dive into Our Exciting Programs</h3>
                     <p>Our programs are packed with a variety of drills and games designed to sharpen your skills and boost your confidence:</p>
                     <div className="basketball-section3-image-container">
-                        <div><span className="skill-text-overlay">Dribbling</span><img src={stock_photo} alt="Dribbling" /></div>
-                        <div><span className="skill-text-overlay">Shooting</span><img src={stock_photo} alt="Shooting" /></div>
-                        <div><span className="skill-text-overlay">Passing</span><img src={stock_photo} alt="Passing" /></div>
-                        <div><span className="skill-text-overlay">Defense</span><img src={stock_photo} alt="Defense" /></div>
-                        <div><span className="skill-text-overlay">Rebounding</span><img src={stock_photo} alt="Rebounding" /></div>
+                        <div><span className="skill-text-overlay"></span><img src={dribbling} alt="Dribbling" /></div>
+                        <div><span className="skill-text-overlay">Shooting</span><img src={shooting} alt="Shooting" /></div>
+                        <div><span className="skill-text-overlay">Passing</span><img src={passing} alt="Passing" /></div>
+                        <div><span className="skill-text-overlay">Defense</span><img src={defense} alt="Defense" /></div>
+                        <div><span className="skill-text-overlay">Rebounding</span><img src={rebounding} alt="Rebounding" /></div>
                     </div>
                 </div>
                 <div className="basketball-section4">

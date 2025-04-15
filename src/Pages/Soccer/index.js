@@ -2,6 +2,13 @@ import React from 'react'
 import BackIcon from '../../Assets/Icons/BackIcon'
 import './style.css'
 import soccer_image from '../../Assets/Images/soccer_image.png'
+import Soccer2 from '../../Assets/Images/Soccer2.png'
+import Soccer3 from '../../Assets/Images/Soccer3.png'
+import Soccer4 from '../../Assets/Images/Soccer4.png'   
+import Soccer21 from '../../Assets/Images/Soccer21.png'
+import Soccer22 from '../../Assets/Images/Soccer22.png'
+import Soccer23 from '../../Assets/Images/Soccer23.png'
+import Soccer24 from '../../Assets/Images/Soccer24.png'
 
 import soccer_banner_image from '../../Assets/Images/soccer_banner_image.png'
 import soccer_banner_image2 from '../../Assets/Images/soccer_banner_image2.png'
@@ -14,7 +21,7 @@ import rebounding from '../../Assets/Images/rebounding.png'
 import soccer_trainer1 from '../../Assets/Images/basketball_trainer1.png'
 import soccer_trainer2 from '../../Assets/Images/basketball_trainer2.png'
 import soccer_trainer3 from '../../Assets/Images/basketball_trainer3.png'
-
+import SoccerBanner1 from '../../Assets/Images/SoccerBanner1.png'
 
 export default function Soccer() {
     return (
@@ -39,9 +46,9 @@ export default function Soccer() {
                 </div>
                 <div className="soccer-image-container">
                     <img src={soccer_image} alt="soccer-image" />
-                    <img src={soccer_image} alt="soccer-image" />
-                    <img src={soccer_image} alt="soccer-image" />
-                    <img src={soccer_image} alt="soccer-image" />
+                    <img src={Soccer2} alt="soccer-image" />
+                    <img src={Soccer3} alt="soccer-image" />
+                    <img src={Soccer4} alt="soccer-image" />
                 </div>
                 <div className="soccer-section2">
                     <h3>Why Choose Our Soccer Program?</h3>
@@ -49,7 +56,7 @@ export default function Soccer() {
                     <div className="soccer-section2-image-container">
                         <span className="soccer-overlay-text bottom-left">1-on-1 Training</span>
                         <span className="soccer-overlay-text top-right">Group Training</span>
-                        <img src={soccer_banner_image} alt="soccer-image-session" />
+                        <img src={SoccerBanner1} alt="soccer-image-session" />
                     </div>
                 </div>
 
@@ -57,11 +64,10 @@ export default function Soccer() {
                     <h3>Dive into Our Exciting Programs</h3>
                     <p>Our programs are packed with a variety of drills and games designed to sharpen your skills and boost your confidence:</p>
                     <div className="soccer-section3-image-container">
-                        <div><span className="skill-text-overlay">Ball Control</span><img src={stock_photo} alt="Dribbling" /></div>
-                        <div><span className="skill-text-overlay">Passing</span><img src={stock_photo} alt="Shooting" /></div>
-                        <div><span className="skill-text-overlay">Shooting</span><img src={stock_photo} alt="Passing" /></div>
-                        <div><span className="skill-text-overlay">Defending</span><img src={stock_photo} alt="Defense" /></div>
-                        <div><span className="skill-text-overlay">Goal Keeping</span><img src={stock_photo} alt="Rebounding" /></div>
+                        <div><span className="skill-text-overlay"></span><img src={Soccer21} alt="Dribbling" /></div>
+                        <div><span className="skill-text-overlay"></span><img src={Soccer22} alt="Shooting" /></div>
+                        <div><span className="skill-text-overlay"></span><img src={Soccer23} alt="Passing" /></div>
+                        <div><span className="skill-text-overlay"></span><img src={Soccer24} alt="Defense" /></div>
                     </div>
                 </div>
                 <div className="soccer-section4">
