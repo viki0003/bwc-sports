@@ -1,0 +1,215 @@
+
+.quote-form-container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fcf2e6;
+  border-radius: 20px;
+  padding: 60px;
+  height: 521px;
+  max-width: 1190px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+}
+
+.quote-form-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../../../Assets/Images/Birth_Image2.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.quote-form-gallery,
+.quote-form {
+  position: relative;
+  z-index: 1;
+}
+
+.quote-form-gallery {
+  width: 40%;
+  padding-right: 24px;
+  height: 500px;
+  position: relative;
+}
+
+.gallery-layout-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 26px;
+}
+
+.layout-1 {
+  width: 144px;
+  height: 131px;
+  top: 5px;
+  left: 45px;
+}
+
+.layout-2 {
+  width: 224px;
+  height: 248px;
+  top: 5px;
+  left: 200px;
+}
+
+.layout-3 {
+  width: 224px;
+  height: 248px;
+  top: 145px;
+  left: -30px;
+}
+
+.layout-4 {
+  width: 144px;
+  height: 131px;
+  top: 260px;
+  left: 200px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.quote-form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 0.5rem;
+}
+
+.form-field input {
+  width: 100%;
+  border: 1.5px solid #000;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  margin-left: 2rem;
+  height: 42px;
+  padding: 0 12px;
+}
+
+.form-field textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #000;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  margin-left: 2rem;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 50%;
+}
+
+.submit-button {
+  background-color: #3579f6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 2rem;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: #2a68e5;
+}
+
+@media (max-width: 992px) {
+  .quote-form-container {
+    padding: 40px;
+  }
+
+  .quote-form-gallery {
+    height: 400px;
+  }
+
+  .layout-1,
+  .layout-2,
+  .layout-3,
+  .layout-4 {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .quote-form-container {
+    flex-direction: column;
+    padding: 30px 20px;
+    height: auto;
+  }
+
+  .quote-form-gallery,
+  .quote-form {
+    width: 100%;
+  }
+
+  .quote-form-gallery {
+    height: auto;
+    margin-bottom: 24px;
+  }
+
+  .gallery-item {
+    position: static;
+    margin-bottom: 16px;
+    width: 100%;
+    height: auto;
+  }
+
+  .gallery-layout-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    position: static;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .half-width {
+    width: 100%;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    margin-left: 0;
+  }
+
+  .submit-button {
+    margin-left: 0;
+  }
+}
