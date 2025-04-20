@@ -211,6 +211,7 @@
     white-space:nowrap;
     padding-bottom: 40px;
 }
+
 .basketball-section3-image-container div{
     display:flex;
     flex-direction:column;
@@ -221,21 +222,21 @@
     min-width: 360px;
     width:100%;
     
-    /* height: 379px; */
+    
     
 }
 
 
 .basketball-section3-image-container img {
-     /* Responsive image */
+     
      width:100%;
-     border-radius: 20px; /* Optional rounded corners */
+     border-radius: 20px; 
 }
 .skill-text-overlay {
     position: absolute;
-    bottom: 10px; /* Position at the bottom */
+    bottom: 10px; 
     left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
+    transform: translateX(-50%); 
     color: white;
     font-size: 24px;
     font-weight: bold;
@@ -272,7 +273,7 @@
 }
 
 .basketball-booking-container2{
-    background-image: url('../../Assets/Images/section5_banner.png');
+    background-image: url('../../Assets/Images/Basketball/basketball_section.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -426,6 +427,12 @@
 .outside-booking-container{
     display:none;
 }
+
+
+
+
+
+
 
 
 @media (max-width: 1300px) {

@@ -1,0 +1,24 @@
+.ue-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.ue-header{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 100%;
+    margin-bottom: 20px;
+}
+
+.ue-content{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
