@@ -1,0 +1,40 @@
+.fd-section .recess-heading {
+    border-top: 3px solid #c7822d;
+    border-bottom: 3px solid #c7822d;
+}
+
+.fd-section-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    gap: 60px;
+}
+
+.fd-section-container
+.fd-image-container{
+    width: 40%;
+}
+
+.fd-section-container
+.fd-image-container img{
+    width: 100%;
+}
+
+.fd-section-container
+.fd-image-description{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap:40px;
+    padding: 40px;
+}
+
+.fd-section-container
+.fd-image-description p{
+    font-size: 28px;
+    font-weight: 500;
+}

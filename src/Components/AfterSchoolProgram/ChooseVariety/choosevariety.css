@@ -1,0 +1,56 @@
+.variety-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.variety-header{
+    margin-top: 65px;
+}
+
+.variety-header h2{
+    font-family: Anton;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 100%;
+}
+.variety-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.variety-description p{
+    font-size: 28px;
+}
+
+.variety-usp{
+    font-size: 30px;
+    font-weight: 600;
+    padding-top: 40px;
+}
+
+.cv{
+    gap: 80px;
+}
+.cv-item{
+    max-width: 343px;
+    width: 100%;
+    max-height: 355px;
+    height: 100%;
+}
+
+.cv-item .overlay-text{
+    left:5%;
+    text-align: left;
+}
+.cv-item img{
+    width: 100%;
+    height: auto;
+}

@@ -1,18 +1,24 @@
 import React from 'react'
 import BackIcon from '../../Assets/Icons/BackIcon'
 import './style.css'
-import basketball1 from '../../Assets/Images/basketball1.jpg'
-import basketball2 from '../../Assets/Images/basketball2.jpg'
-import basketballimage from '../../Assets/Images/basketballsectionimage.png'
-import dribbling from '../../Assets/Images/dribbling.png'
-import shooting from '../../Assets/Images/shooting.png'
-import passing from '../../Assets/Images/passing.png'
-import defense from '../../Assets/Images/defense.png'
-import rebounding from '../../Assets/Images/rebounding.png'
-import basketball_trainer1 from '../../Assets/Images/basketball_trainer1.png'
-import basketball_trainer2 from '../../Assets/Images/basketball_trainer2.png'
-import basketball_trainer3 from '../../Assets/Images/basketball_trainer3.png'
-import stock_photo from '../../Assets/Images/stock_photo.png'
+
+
+import basket_trainer from '../../Assets/Images/Basketball/basket_trainer.png';
+import basket_trainer2 from '../../Assets/Images/Basketball/basket_trainer2.png';
+import basketball_banner from '../../Assets/Images/Basketball/basketball_banner.png';
+import basketball_section from '../../Assets/Images/Basketball/basketball_section.png';
+import basketball_section2 from '../../Assets/Images/Basketball/basketball_section2.png';
+import basketball_skill1 from '../../Assets/Images/Basketball/basketball_skill1.png';
+import basketball_skill2 from '../../Assets/Images/Basketball/basketball_skill2.png';
+import basketball_skill3 from '../../Assets/Images/Basketball/basketball_skill3.png';
+import basketball_skill4 from '../../Assets/Images/Basketball/basketball_skill4.png';
+import basketball_skill5 from '../../Assets/Images/Basketball/basketball_skill5.png';
+import basketball1 from '../../Assets/Images/Basketball/basketball1.png';
+import basketball2 from '../../Assets/Images/Basketball/basketball2.png';
+import basketball3 from '../../Assets/Images/Basketball/basketball3.png';
+import basketball4 from '../../Assets/Images/Basketball/basketball4.png';
+
+import basketball_trainer2 from "../../Assets/Images/basketball_trainer2.png"
 
 
 export default function Basketball() {
@@ -39,8 +45,8 @@ export default function Basketball() {
                 <div className="basketball-image-container">
                     <img src={basketball1} alt="basketball-image" />
                     <img src={basketball2} alt="basketball-image" />
-                    <img src={basketball1} alt="basketball-image" />
-                    <img src={basketball2} alt="basketball-image" />
+                    <img src={basketball3} alt="basketball-image" />
+                    <img src={basketball4} alt="basketball-image" />
                 </div>
                 <div className="basketball-section2">
                     <h3>Why Choose BWC Basketball?</h3>
@@ -48,7 +54,7 @@ export default function Basketball() {
                     <div className="basketball-section2-image-container">
                         <span className="basketball-overlay-text bottom-left">1-on-1 Training</span>
                         <span className="basketball-overlay-text top-right">Group Training</span>
-                        <img src={basketballimage} alt="basketball-image-session" />
+                        <img src={basketball_section2} alt="basketball-image-session" />
                     </div>
                 </div>
 
@@ -56,11 +62,11 @@ export default function Basketball() {
                     <h3>Dive into Our Exciting Programs</h3>
                     <p>Our programs are packed with a variety of drills and games designed to sharpen your skills and boost your confidence:</p>
                     <div className="basketball-section3-image-container">
-                        <div><span className="skill-text-overlay">Dribbling</span><img src={stock_photo} alt="Dribbling" /></div>
-                        <div><span className="skill-text-overlay">Shooting</span><img src={stock_photo} alt="Shooting" /></div>
-                        <div><span className="skill-text-overlay">Passing</span><img src={stock_photo} alt="Passing" /></div>
-                        <div><span className="skill-text-overlay">Defense</span><img src={stock_photo} alt="Defense" /></div>
-                        <div><span className="skill-text-overlay">Rebounding</span><img src={stock_photo} alt="Rebounding" /></div>
+                        <div><span className="skill-text-overlay">Dribbling</span><img src={basketball_skill1} alt="Dribbling" /></div> 
+                        <div><span className="skill-text-overlay">Shooting</span><img src={basketball_skill2} alt="Shooting" /></div>
+                        <div><span className="skill-text-overlay">Passing</span><img src={basketball_skill3} alt="Passing" /></div>
+                        <div><span className="skill-text-overlay">Defense</span><img src={basketball_skill4} alt="Defense" /></div>
+                        <div><span className="skill-text-overlay">Rebounding</span><img src={basketball_skill5} alt="Rebounding" /></div>
                     </div>
                 </div>
                 <div className="basketball-section4">
@@ -80,9 +86,9 @@ export default function Basketball() {
                     </div>
                 </div>
                 <div className="basketball-booking-container outside-booking-container">
-                        <button className="one-on-one">Schedule 1-on-1 Class Here</button>
-                        <button className="one-on-one">Schedule Group Class Here</button>
-                        <button className="one-on-one basketball-booking-selected">Sign Up for Classes Here</button>
+                    <button className="one-on-one">Schedule 1-on-1 Class Here</button>
+                    <button className="one-on-one">Schedule Group Class Here</button>
+                    <button className="one-on-one basketball-booking-selected">Sign Up for Classes Here</button>
                 </div>
 
                 <div className="basketball-trainers">
@@ -93,7 +99,7 @@ export default function Basketball() {
                                 <h4>Trainer Name</h4>
                                 <p>Trainer Specification</p>
                             </div>
-                            <img src={basketball_trainer1} alt="trainer-image" />
+                            <img src={basket_trainer} alt="trainer-image" />
 
                         </div>
                         <div className="basketball-trainer-image">
@@ -109,7 +115,7 @@ export default function Basketball() {
                                 <h4>Trainer Name</h4>
                                 <p>Trainer Specification</p>
                             </div>
-                            <img src={basketball_trainer3} alt="trainer-image" />
+                            <img src={basket_trainer2} alt="trainer-image" />
 
                         </div>
                     </div>
@@ -118,20 +124,20 @@ export default function Basketball() {
                     <h3>Locations</h3>
                     <div className="basketball-location-container">
                         <div class="card">
-                            <img src="https://todocodigo.net/img/626.jpg" alt="Image"/>
-                                <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
+                            <img src="https://todocodigo.net/img/626.jpg" alt="Image" />
+                            <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
                         </div>
                         <div class="card">
-                            <img src="https://todocodigo.net/img/626.jpg" alt="Image"/>
-                                <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
+                            <img src="https://todocodigo.net/img/626.jpg" alt="Image" />
+                            <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
                         </div>
                         <div class="card">
-                            <img src="https://todocodigo.net/img/626.jpg" alt="Image"/>
-                                <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
+                            <img src="https://todocodigo.net/img/626.jpg" alt="Image" />
+                            <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
                         </div>
                         <div class="card">
-                            <img src="https://todocodigo.net/img/626.jpg" alt="Image"/>
-                                <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
+                            <img src="https://todocodigo.net/img/626.jpg" alt="Image" />
+                            <div class="card-description"><p><strong>Holy Family</strong>, New York</p></div>
                         </div>
                     </div>
                 </div>

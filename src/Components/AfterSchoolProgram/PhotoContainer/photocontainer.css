@@ -1,0 +1,30 @@
+.asp-image-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 40px;
+    margin-top: 65px;
+    margin-bottom: 65px;
+}
+
+
+
+.asp-item{
+    max-width: 420px;
+    width: 100%;
+    max-height: 325px;
+    height: 100%;
+}
+
+
+.asp-item .overlay-text{
+    left:5%;
+    text-align: left;
+}
+.asp-item img{
+    width: 100%;
+    height: auto;
+}
