@@ -23,6 +23,7 @@ import SchoolPrograms from "../Pages/SchoolPrograms";
 import AfterSchoolProgram from "../Pages/AfterSchoolProgram";
 import SummerCamp from "../Pages/SummerCamp";
 import Dashboard from "../Pages/Dashboard";
+import MySessions from "../Pages/MySessions";
 
 const Routing = () => {
   return (
@@ -64,6 +65,7 @@ const Routing = () => {
           <Route path="/summer-camp" element={<SummerCamp />} />
         </Route>
         <Route path="/dashboard/self-direction" element={<Dashboard/>}/>
+        <Route path="/my-sessions" element={<MySessions/>}/>
       </Routes>
     </BrowserRouter>
   );
