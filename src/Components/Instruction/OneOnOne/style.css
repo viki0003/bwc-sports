@@ -1,0 +1,153 @@
+.one-on-one-text {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: clamp(32px, 5vw, 44px);
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: clamp(30px, 4vw, 40px);
+  max-width: min(800px, 90%);
+  padding: 0 clamp(10px, 2vw, 20px);
+}
+
+.sessions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+}
+
+.sessions-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: min(1500px, 95%);
+  gap: clamp(16px, 2vw, 24px);
+}
+
+.session-card {
+  position: relative;
+  width: min(459px, 45vw);
+  max-width: 459px;
+  height: min(506px, 50vw);
+  aspect-ratio: 459 / 506;
+  background-color: #d1d5db;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 37.5%);
+  z-index: 0.3;
+  pointer-events: none;
+  transition: background 0.45s ease;
+}
+
+.image-card:hover::before {
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.text-wrapper {
+  position: absolute;
+  bottom: clamp(20px, 3vw, 40px);
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(80%, 400px);
+  transition: transform 0.45s ease;
+}
+
+.card-text {
+  font-family: Inter, sans-serif;
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 700;
+  margin-bottom: clamp(10px, 2vw, 16px);
+  transition: transform 0.45s ease;
+}
+
+.hover-text {
+  font-family: Inter, sans-serif;
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 500;
+  line-height: 1.25;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.50s ease, opacity 0.45s ease;
+}
+
+.image-card:hover .text-wrapper .hover-text {
+  max-height: 300px;
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .hover-text {
+    max-height: none;
+    opacity: 1;
+  }
+}
+
+/* Media query for tablets and smaller desktops */
+@media (max-width: 900px) {
+  .session-card {
+    width: min(350px, 80vw);
+    height: min(385px, 88vw);
+  }
+
+  .card-text {
+    font-size: clamp(20px, 3vw, 26px);
+  }
+
+  .hover-text {
+    font-size: clamp(16px, 2.5vw, 20px);
+  }
+
+  .text-wrapper {
+    bottom: clamp(15px, 3vw, 30px);
+    width: min(85%, 320px);
+  }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+  .one-on-one-text {
+    font-size: clamp(24px, 6vw, 32px);
+    margin-bottom: 20px;
+  }
+
+  .sessions-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .session-card {
+    width: min(300px, 90vw);
+    height: min(330px, 99vw);
+  }
+
+  .card-text {
+    font-size: clamp(18px, 3vw, 22px);
+    margin-bottom: 12px;
+  }
+
+  .hover-text {
+    font-size: clamp(14px, 2.5vw, 18px);
+  }
+
+  .text-wrapper {
+    bottom: clamp(10px, 3vw, 20px);
+    width: min(90%, 280px);
+  }
+}

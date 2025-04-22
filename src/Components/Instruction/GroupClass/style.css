@@ -1,0 +1,198 @@
+.schedule-container {
+  padding: clamp(0.5rem, 2vw, 1rem);
+  font-family: Arial, sans-serif;
+  max-width: min(100%, 1432px);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: clamp(3rem, 5vw, 5rem);
+  margin-bottom: clamp(2rem, 4vw, 4rem);
+}
+
+.schedule-title {
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 600;
+  margin-bottom: clamp(1.5rem, 3vw, 3rem);
+}
+
+.schedule-table {
+  width: 100%;
+  max-width: min(100%, 1432px);
+  height: min(91px, 12vw);
+  border-collapse: separate; /* Changed to separate to support border-radius */
+  border-spacing: 0; /* Ensure no gaps between cells */
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1.5px solid black; /* Black border around the table's outer boundary */
+}
+
+.schedule-table thead {
+  background-color: rgba(53, 53, 53, 1);
+  color: white;
+  font-weight: 600;
+  height: min(91px, 12vw);
+  font-size: clamp(20px, 2.5vw, 28px);
+}
+
+/* Apply border-radius to corner cells in thead */
+.schedule-table thead th:first-child {
+  border-top-left-radius: 20px;
+}
+
+.schedule-table thead th:last-child {
+  border-top-right-radius: 20px;
+}
+
+/* Apply border-radius to corner cells in the last row of tbody */
+.schedule-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 20px;
+}
+
+.schedule-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 20px;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: clamp(0.5rem, 1.5vw, 1rem);
+  text-align: center;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 600; /* Ensure all table content is bold */
+  min-width: 80px; /* Prevents columns from becoming too narrow */
+  white-space: normal; /* Allow text wrapping on smaller screens */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Media query for tablets */
+@media (max-width: 900px) {
+  .schedule-table {
+    border-radius: 16px;
+    height: min(80px, 11vw);
+    border: 1.5px solid black;
+  }
+
+  .schedule-table thead th:first-child {
+    border-top-left-radius: 16px;
+  }
+
+  .schedule-table thead th:last-child {
+    border-top-right-radius: 16px;
+  }
+
+  .schedule-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 16px;
+  }
+
+  .schedule-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 16px;
+  }
+
+  .schedule-table thead {
+    font-size: clamp(18px, 2.5vw, 24px);
+    height: min(80px, 11vw);
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: clamp(0.5rem, 1.5vw, 0.75rem);
+    font-size: clamp(14px, 2vw, 20px);
+    font-weight: 600;
+    min-width: 70px;
+  }
+}
+
+/* Media query for small tablets */
+@media (max-width: 600px) {
+  .schedule-container {
+    padding: clamp(0.5rem, 2vw, 0.75rem);
+    margin-top: clamp(2rem, 4vw, 3rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .schedule-title {
+    font-size: clamp(28px, 4vw, 36px);
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+  }
+
+  .schedule-table {
+    border-radius: 12px;
+    height: min(70px, 10vw);
+    border: 2px solid black;
+  }
+
+  .schedule-table thead th:first-child {
+    border-top-left-radius: 12px;
+  }
+
+  .schedule-table thead th:last-child {
+    border-top-right-radius: 12px;
+  }
+
+  .schedule-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 12px;
+  }
+
+  .schedule-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 12px;
+  }
+
+  .schedule-table thead {
+    font-size: clamp(16px, 2.5vw, 20px);
+    height: min(70px, 10vw);
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: clamp(0.25rem, 1.5vw, 0.5rem);
+    font-size: clamp(12px, 2vw, 18px);
+    font-weight: 600;
+    min-width: 60px;
+  }
+}
+
+/* Media query for very small screens */
+@media (max-width: 400px) {
+  .schedule-title {
+    font-size: clamp(24px, 4vw, 32px);
+    margin-bottom: 1.5rem;
+  }
+
+  .schedule-table {
+    border-radius: 10px;
+    height: min(60px, 9vw);
+    border: 2px solid black;
+  }
+
+  .schedule-table thead th:first-child {
+    border-top-left-radius: 10px;
+  }
+
+  .schedule-table thead th:last-child {
+    border-top-right-radius: 10px;
+  }
+
+  .schedule-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+
+  .schedule-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+  }
+
+  .schedule-table thead {
+    font-size: clamp(14px, 2.5vw, 18px);
+    height: min(60px, 9vw);
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: clamp(0.25rem, 1.5vw, 0.5rem);
+    font-size: clamp(10px, 2vw, 16px);
+    font-weight: 600;
+    min-width: 50px;
+  }
+}

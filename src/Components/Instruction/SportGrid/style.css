@@ -1,0 +1,105 @@
+.sports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 45vw), 343px));
+  gap: clamp(10px, 2vw, 20px);
+  padding: clamp(10px, 2vw, 20px);
+  justify-content: center;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.sport-item {
+  width: 100%;
+  max-width: 343px;
+  height: min(355px, 50vw); /* Scales height with viewport width */
+  aspect-ratio: 343 / 355; /* Maintains aspect ratio */
+  border-radius: 20px;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sport-item .image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.sport-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.6s ease;
+  transform: scale(1.1) translateX(-5%);
+}
+
+.sport-item:hover .sport-image {
+  transform: scale(1.1) translateX(5%);
+}
+
+
+.sport-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(360deg, #000000 0%, rgba(0, 0, 0, 0) 41.5%);
+  z-index: 2;
+}
+
+.sport-name {
+  position: absolute;
+  bottom: clamp(15px, 3vw, 25px);
+  left: clamp(15px, 3vw, 30px);
+  color: white;
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  text-align: left;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 3;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .sports-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 80vw), 300px));
+  }
+
+  .sport-item {
+    height: min(300px, 48vw);
+  }
+
+  .sport-name {
+    font-size: clamp(14px, 2vw, 18px);
+    bottom: 15px;
+    left: 15px;
+  }
+}
+
+/* Media query for very small screens */
+@media (max-width: 400px) {
+  .sports-grid {
+    grid-template-columns: 1fr;
+    padding: 8px;
+  }
+
+  .sport-item {
+    height: min(250px, 60vw);
+  }
+
+  .sport-name {
+    font-size: 14px;
+    bottom: 12px;
+    left: 12px;
+    padding: 4px 8px;
+  }
+}
