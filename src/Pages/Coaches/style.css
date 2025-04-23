@@ -1,0 +1,19 @@
+.App {
+    text-align: center;
+  }
+  
+  .coaches-text {
+    max-width: 1513px;
+    margin-top: 40px;
+    padding: 0 20px;
+    color: #333;
+  }
+  
+  .coaches-line1,
+  .coaches-line2 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin: 0;
+  }
+  

@@ -1,0 +1,23 @@
+.App {
+    text-align: center;
+  }
+  
+  .FundRaise-text {
+    max-width: 1513px;
+    margin-top: 40px;
+    padding: 0 20px;
+    color: #333;
+  }
+  .FundRaise-line1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: normal; /* Anton is inherently bold */
+    font-size: 28px;
+  }
+  
+  .FundRaise-line2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+    margin: 0;
+  }
+  

@@ -1,0 +1,41 @@
+.banner-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.banner-image {
+  width: 100%;
+  max-width: 1600px;
+  height: 455px;
+  display: block;
+  object-fit: cover;
+}
+.banner-content {
+  position: absolute;
+  top: 30px; /* adjust as needed */
+  left: 40px; /* adjust as needed */
+  color: white; /* ensure visibility */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px; /* space between icon and text */
+}
+
+.banner-content h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: bold;
+}
+.banner-container .banner-content a {
+  display: inline-flex;
+  background: #F4F4F4;
+  border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
