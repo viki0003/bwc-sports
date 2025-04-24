@@ -8,7 +8,7 @@ import "./style.css";
 function BirthdayPage() {
   return (
     <div className="birthday-page">
-      <NavBar />
+      
       <section className="img-section-1"></section>
 
       <section className="hero-section">
@@ -38,7 +38,7 @@ function BirthdayPage() {
 
       <PartyForm />
 
-      <Footer />
+      
     </div>
   );
 }

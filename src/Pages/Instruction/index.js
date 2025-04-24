@@ -13,7 +13,7 @@ import "./style.css";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      
       <Banner />
       <SportsGrid />
 
@@ -30,7 +30,7 @@ function App() {
       <SportsProgram />
       <Locations />
       <Class />
-      <Footer />
+      
 
     </div>
   );

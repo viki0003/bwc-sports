@@ -24,6 +24,10 @@ import AfterSchoolProgram from "../Pages/AfterSchoolProgram";
 import SummerCamp from "../Pages/SummerCamp";
 import Dashboard from "../Pages/Dashboard";
 import MySessions from "../Pages/MySessions";
+import Instruction from "../Pages/Instruction";
+import Birthday from "../Pages/Birthday";
+import Fundraising from "../Pages/Fundraising";
+import Coaches from "../Pages/Coaches";
 
 const Routing = () => {
   return (
@@ -63,6 +67,18 @@ const Routing = () => {
         </Route>
         <Route element={<Layout />}>
           <Route path="/summer-camp" element={<SummerCamp />} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/instruction" element={<Instruction />} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/birthday" element={<Birthday/>} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/coaches" element={<Coaches/>} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/fund-raising" element={<Fundraising/>} />
         </Route>
         <Route path="/dashboard/self-direction" element={<Dashboard/>}/>
         <Route path="/my-sessions" element={<MySessions/>}/>

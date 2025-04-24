@@ -8,7 +8,7 @@ import Grid from "../../Components/Coaches/Grid";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      
       <Banner />
       <div className="coaches-text">
         <p className="coaches-line1">
@@ -20,7 +20,7 @@ function App() {
         </p>
       </div>
       <Grid />
-      <Footer />
+      
     </div>
   );
 }
