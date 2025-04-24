@@ -15,7 +15,7 @@ import soccer1 from "../../Assets/Images/Soccer/soccer1.png"; // Note the typo i
 import soccer_trainer1 from '../../Assets/Images/basketball_trainer1.png'
 import soccer_trainer2 from '../../Assets/Images/basketball_trainer2.png'
 import soccer_trainer3 from '../../Assets/Images/basketball_trainer3.png'
-
+import SoccerBanner1 from '../../Assets/Images/SoccerBanner1.png'
 
 export default function Soccer() {
     return (

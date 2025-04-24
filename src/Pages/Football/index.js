@@ -2,6 +2,10 @@ import React from 'react'
 import BackIcon from '../../Assets/Icons/BackIcon'
 import './style.css'
 import soccer_image from '../../Assets/Images/soccer_image.png'
+import football1 from '../../Assets/Images/football1.png'
+import football2 from '../../Assets/Images/football2.png'
+import football3 from '../../Assets/Images/football3.png'
+import football4 from '../../Assets/Images/football4.png'
 
 import soccer_banner_image from '../../Assets/Images/soccer_banner_image.png'
 import soccer_banner_image2 from '../../Assets/Images/soccer_banner_image2.png'
@@ -38,9 +42,9 @@ export default function Football() {
                     <button className="one-on-one football-booking-selected">Sign Up for Classes Here</button>
                 </div>
                 <div className="football-image-container">
-                    <img src={soccer_image} alt="soccer-image" />
-                    <img src={soccer_image} alt="soccer-image" />
-                    <img src={soccer_image} alt="soccer-image" />
+                    <img src={football1} alt="soccer-image" />
+                    <img src={football2} alt="soccer-image" />
+                    <img src={football3} alt="soccer-image" />
                     <img src={soccer_image} alt="soccer-image" />
                 </div>
                 <div className="football-section2">
