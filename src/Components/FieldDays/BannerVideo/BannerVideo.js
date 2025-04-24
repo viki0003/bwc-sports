@@ -30,7 +30,7 @@ export default function BannerVideo() {
                     BWC is a licensed DOE vendor with over 5 years of experience working within the NYC school system. We have served thousands of students each in both public and private schools, our DOE Vender is #BEC214306.
                     </p>
                     <div className="prgrm-cmpt">
-                        <button>Watch The Video </button>
+                        <button className="watch-video-btn">Watch The Video   </button>
                     </div>
                 </div>
 

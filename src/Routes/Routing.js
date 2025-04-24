@@ -20,6 +20,10 @@ import FieldDays from "../Pages/FieldDays";
 import { TimeSlot } from "../Pages/TimeSlot";
 import { ConfirmationPopup } from "../Components/ConfirmationPopup";
 import SchoolPrograms from "../Pages/SchoolPrograms";
+import AfterSchoolProgram from "../Pages/AfterSchoolProgram";
+import SummerCamp from "../Pages/SummerCamp";
+import Dashboard from "../Pages/Dashboard";
+import MySessions from "../Pages/MySessions";
 
 const Routing = () => {
   return (
@@ -54,6 +58,14 @@ const Routing = () => {
         <Route element={<Layout />}>
           <Route path="/field-days" element={<FieldDays />} />
         </Route>
+        <Route element={<Layout />}>
+          <Route path="/after-school-programs" element={<AfterSchoolProgram />} />
+        </Route>
+        <Route element={<Layout />}>
+          <Route path="/summer-camp" element={<SummerCamp />} />
+        </Route>
+        <Route path="/dashboard/self-direction" element={<Dashboard/>}/>
+        <Route path="/my-sessions" element={<MySessions/>}/>
       </Routes>
     </BrowserRouter>
   );
