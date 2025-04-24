@@ -4,6 +4,11 @@ import './style.css'
 import golf_image1 from '../../Assets/Images/golf_image1.png';
 import golf_image2 from '../../Assets/Images/golf_image2.png';
 import golf_image3 from '../../Assets/Images/golf_image3.png';
+import Golf4 from '../../Assets/Images/Golf4.png';
+import Golf5 from '../../Assets/Images/Golf5.png';
+import Golf6 from '../../Assets/Images/Golf6.png';
+import Golf7 from '../../Assets/Images/Golf7.png';
+import Golf8 from '../../Assets/Images/Golf8.png';
 
 import golf_banner_image from '../../Assets/Images/golf_banner_image.png'
 
@@ -48,7 +53,6 @@ export default function Golf() {
                     <img src={golf_image1} alt="soccer-image" />
                     <img src={golf_image2} alt="soccer-image" />
                     <img src={golf_image3} alt="soccer-image" />
-                    <img src={golf_image1} alt="soccer-image" />
                 </div>
                 <div className="golf-section2">
                     <h3>Why Golf with Us?</h3>
@@ -61,11 +65,11 @@ export default function Golf() {
                     <h3>Programs That Make Champions</h3>
                     <p>Our training programs are designed to cover all key aspects of track and field, ensuring that each athlete develops the skills needed for success:</p>
                     <div className="golf-section3-image-container">
-                        <div><span className="skill-text-overlay">Driving</span><img src={stock_photo} alt="Dribbling" /></div>
-                        <div><span className="skill-text-overlay">Iron Play</span><img src={stock_photo} alt="Shooting" /></div>
-                        <div><span className="skill-text-overlay">Putting</span><img src={stock_photo} alt="Passing" /></div>
-                        <div><span className="skill-text-overlay">Chipping</span><img src={stock_photo} alt="Defense" /></div>
-                        <div><span className="skill-text-overlay">Bunker Play</span><img src={stock_photo} alt="Rebounding" /></div>
+                        <div><span className="skill-text-overlay">Driving</span><img src={Golf4} alt="Dribbling" /></div>
+                        <div><span className="skill-text-overlay">Iron Play</span><img src={Golf5} alt="Shooting" /></div>
+                        <div><span className="skill-text-overlay">Putting</span><img src={Golf6} alt="Passing" /></div>
+                        <div><span className="skill-text-overlay">Chipping</span><img src={Golf7} alt="Defense" /></div>
+                        <div><span className="skill-text-overlay">Bunker Play</span><img src={Golf8} alt="Rebounding" /></div>
                     </div>
                 </div>
                 

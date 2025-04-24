@@ -5,6 +5,15 @@ import bowling_image1 from '../../Assets/Images/bowling_image1.png'
 import bowling_image2 from '../../Assets/Images/bowling_image2.png'
 import bowling_image3 from '../../Assets/Images/bowling_image3.png'
 import bowling_image4 from '../../Assets/Images/bowling_image4.png'
+import Bowling21 from '../../Assets/Images/Bowling21.png'
+import Bowling22 from '../../Assets/Images/Bowling22.png'
+import Bowling23 from '../../Assets/Images/Bowling23.png'
+import Bowling24 from '../../Assets/Images/Bowling24.png'
+import Bowling25 from '../../Assets/Images/Bowling25.png'
+import bowling11 from '../../Assets/Images/Bowling11.png'
+import bowling12 from '../../Assets/Images/Bowling12.png'
+import bowling13 from '../../Assets/Images/Bowling13.png'
+
 
 import bowling_section_image from '../../Assets/Images/bowling_section_image.png'
 
@@ -60,11 +69,11 @@ export default function Bowling() {
                     <h3>Dive into Our Exciting Programs</h3>
                     <p>Our programs are packed with a variety of drills and games designed to sharpen your skills and boost your confidence:</p>
                     <div className="bowling-section3-image-container">
-                        <div className="bowling-overlay"><span className="skill-text-overlay">Stance & Approach</span><img src={stock_photo} alt="Dribbling" /></div>
-                        <div><span className="skill-text-overlay">Grip & Release</span><img src={stock_photo} alt="Shooting" /></div>
-                        <div><span className="skill-text-overlay">Targeting</span><img src={stock_photo} alt="Passing" /></div>
-                        <div><span className="skill-text-overlay">Ball Speed & Control</span><img src={stock_photo} alt="Defense" /></div>
-                        
+                        <div className="bowling-overlay"><span className="skill-text-overlay">Stance & Approach</span><img src={Bowling21} alt="Dribbling" /></div>
+                        <div><span className="skill-text-overlay">Grip & Release</span><img src={Bowling22} alt="Shooting" /></div>
+                        <div><span className="skill-text-overlay">Targeting</span><img src={Bowling23} alt="Passing" /></div>
+                        <div><span className="skill-text-overlay">Ball Speed & Control</span><img src={Bowling24} alt="Defense" /></div>
+                        <div><span className="skill-text-overlay">Ball Speed & Control</span><img src={Bowling25} alt="Defense" /></div>
                     </div>
                 </div>
                 <div className="bowling-section4">
@@ -97,7 +106,7 @@ export default function Bowling() {
                                 <h4>Trainer Name</h4>
                                 <p>Trainer Specification</p>
                             </div>
-                            <img src={bowling_trainer1} alt="trainer-image" />
+                            <img src={bowling11} alt="trainer-image" />
 
                         </div>
                         <div className="bowling-trainer-image">
@@ -105,7 +114,7 @@ export default function Bowling() {
                                 <h4>Trainer Name</h4>
                                 <p>Trainer Specification</p>
                             </div>
-                            <img src={bowling_trainer2} alt="trainer-image" />
+                            <img src={bowling12} alt="trainer-image" />
 
                         </div>
                         <div className="bowling-trainer-image">
@@ -113,7 +122,7 @@ export default function Bowling() {
                                 <h4>Trainer Name</h4>
                                 <p>Trainer Specification</p>
                             </div>
-                            <img src={bowling_trainer3} alt="trainer-image" />
+                            <img src={bowling13} alt="trainer-image" />
 
                         </div>
                     </div>

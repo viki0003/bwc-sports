@@ -1,9 +1,14 @@
 import React from 'react'
 import BackIcon from '../../Assets/Icons/BackIcon'
 import './style.css'
-import track_and_field_image1 from '../../Assets/Images/track_and_field_image1.png';
-import track_and_field_image2 from '../../Assets/Images/track_and_field_image2.png';
-import track_and_field_image3 from '../../Assets/Images/track_and_field_image3.png';
+import Track1 from '../../Assets/Images/Track1.png'
+import Track2 from '../../Assets/Images/Track2.png'
+import Track3 from '../../Assets/Images/Track3.png'
+import Track4 from '../../Assets/Images/Track4.png'
+import Track5 from '../../Assets/Images/Track5.png'
+import Track6 from '../../Assets/Images/Track6.png'
+import Track7 from '../../Assets/Images/Track7.png'
+import Track8 from '../../Assets/Images/Track8.png'
 import stock_photo from '../../Assets/Images/stock_photo.png'
 import track_and_field_banner_image from '../../Assets/Images/track_and_field_banner_image.png'
 import soccer_banner_image2 from '../../Assets/Images/soccer_banner_image2.png'
@@ -50,10 +55,10 @@ export default function TrackAndField() {
                     <button className="one-on-one track-and-field-booking-selected">Sign Up for Classes Here</button>
                 </div>
                 <div className="track-and-field-image-container">
-                    <img src={track_and_field_image1} alt="soccer-image" />
-                    <img src={track_and_field_image2} alt="soccer-image" />
-                    <img src={track_and_field_image3} alt="soccer-image" />
-                    <img src={track_and_field_image1} alt="soccer-image" />
+                    <img src={Track1} alt="soccer-image" />
+                    <img src={Track2} alt="soccer-image" />
+                    <img src={Track3} alt="soccer-image" />
+                    {/* <img src={track_and_field_image1} alt="soccer-image" /> */}
                 </div>
                 <div className="track-and-field-section2">
                     <h3>Why Choose BWC Track & Field?</h3>
@@ -70,11 +75,11 @@ export default function TrackAndField() {
                     <h3>Programs That Make Champions</h3>
                     <p>Our training programs are designed to cover all key aspects of track and field, ensuring that each athlete develops the skills needed for success:</p>
                     <div className="track-and-field-section3-image-container">
-                        <div><span className="skill-text-overlay">Sprinting</span><img src={stock_photo} alt="Dribbling" /></div>
-                        <div><span className="skill-text-overlay">Distance Running</span><img src={stock_photo} alt="Shooting" /></div>
-                        <div><span className="skill-text-overlay">Jumping</span><img src={stock_photo} alt="Passing" /></div>
-                        <div><span className="skill-text-overlay">Throwing</span><img src={stock_photo} alt="Defense" /></div>
-                        <div><span className="skill-text-overlay">Agility and Speed</span><img src={stock_photo} alt="Rebounding" /></div>
+                        <div><span className="skill-text-overlay">Sprinting</span><img src={Track4} alt="Dribbling" /></div>
+                        <div><span className="skill-text-overlay">Distance Running</span><img src={Track5} alt="Shooting" /></div>
+                        <div><span className="skill-text-overlay">Jumping</span><img src={Track6} alt="Passing" /></div>
+                        <div><span className="skill-text-overlay">Throwing</span><img src={Track7} alt="Defense" /></div>
+                        <div><span className="skill-text-overlay">Agility and Speed</span><img src={Track8} alt="Rebounding" /></div>
                     </div>
                 </div>
                 <div className="track-and-field-section4">
