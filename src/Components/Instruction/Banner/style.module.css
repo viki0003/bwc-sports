@@ -1,0 +1,30 @@
+.image {
+    width: 102%; /* Full width of the parent container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    display: block;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: white;
+    z-index: 100;
+  }
+  
+  .heading {
+    font-size: 58px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .subtext {
+    font-size: 39px;
+    color:rgba(69, 69, 69, 1);/* Tailwind gray-600 */
+    text-align: center;
+    margin-top: 0.5rem;
+  }

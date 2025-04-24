@@ -1,0 +1,16 @@
+.mysessions-container{
+    display:flex;
+    flex-direction:row;
+    justify-content: left;
+    align-items: center;
+    padding:40px 0;
+    position:relative;
+}
+
+.mysessions-container .mysessions-icon{
+}
+
+.mysessions-container h1{
+    margin-top:60px;
+    margin-left:40px;
+}

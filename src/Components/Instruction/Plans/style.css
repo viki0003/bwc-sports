@@ -1,0 +1,259 @@
+.choose-plans-wrapper {
+  text-align: center;
+  margin-top: 6rem;
+  padding: 2rem 1rem;
+}
+
+.plans-header h2 {
+  font-size: 52px;
+  font-weight: 700;
+}
+
+.plans-header h3 {
+  font-size: 40px;
+  margin-top: 2.5rem;
+  color: #333;  
+  font-weight: 600;
+}
+
+.plans-header p {
+  font-size: 32px;
+  color: #555;
+  margin-top: 1rem;
+  margin-bottom: 6rem;
+  font-weight: 500;
+}
+
+.choose-plans {
+  display: flex;
+  flex-direction: column;
+  padding: 0 40px;
+  margin: 50px auto;
+  max-width: 1200px; /* Constrain max-width for better control */
+  align-items: center;
+}
+
+.choose-plans-list {
+  display: flex;
+  justify-content: center; /* Center cards horizontally */
+  align-items: center; /* Align cards vertically by their center */
+  gap: 40px; /* Increased gap for better spacing */
+  margin: 0 auto;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* ---------- Generic Card Frame ---------- */
+.choose-plans-list .cpl-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 30px 3px 3px;
+  min-height: 700px; /* Uniform height for centerline alignment */
+  box-sizing: border-box;
+}
+
+.choose-plans-list .cpl-item h4 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ---------- Inner Content Wrapper ---------- */
+.cpl-item .cpl-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 80px 2px 0px; /* Adjusted padding for consistency */
+  width: 100%;
+  position: relative;
+  flex-grow: 1; /* Ensure content stretches to fill card */
+  box-sizing: border-box;
+}
+
+.cpl-item .cpl-item-content h5 {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 100%;
+  text-align: center;
+}
+
+/* ---------- Feature List ---------- */
+.cpl-item .cpl-item-content ul.cpl-item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  gap: 30px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 100%;
+}
+
+.cpl-item .cpl-item-content ul.cpl-item-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------- Images & Misc. Text ---------- */
+.cpl-item .cpl-item-content img {
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+}
+
+.plan-text {
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 20px;
+  text-align: center;
+  max-width: 80%;
+}
+
+.per-month {
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: -30px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* ---------- “More Info” Button ---------- */
+.cpl-item .cpl-item-content button.more-info {
+  padding: 18px 44px;
+  color: #fff;
+  border: 0;
+  border-radius: 7px;
+  font-family: Inter, sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 100%;
+  cursor: pointer;
+}
+
+/* ---------- Most-Popular Ribbon ---------- */
+.most-popular-badge {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background: #fcf6ba;
+  color: #be7c00;
+  padding: 8px 30px 10px 50px;
+  font-weight: 600;
+  font-size: 20px;
+  z-index: 1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0 100%, 15% 50%, 0 0);
+}
+
+/* ---------- Golden Plan Styling ---------- */
+.choose-plans-list .cpl-item.golden {
+  background: linear-gradient(
+    166.36deg,
+    rgb(191, 149, 63) 0.74%,
+    rgb(252, 246, 186) 22.56%,
+    rgb(179, 135, 40) 46.95%,
+    rgb(251, 245, 183) 67.48%,
+    rgb(170, 119, 28) 86.31%
+  );
+  width: 427px;
+  height: 780px;
+
+
+}
+
+.choose-plans-list .cpl-item.golden h4 {
+  color: rgba(109, 74, 0, 1);
+  font-size: 34px;
+  
+}
+
+.choose-plans-list .cpl-item.golden .cpl-item-content h5 {
+  color: rgba(109, 74, 0, 1);
+  font-size: 50px;
+  
+}
+
+.choose-plans-list .cpl-item.golden .cpl-item-content ul.cpl-item-list {
+  color: rgba(109, 74, 0, 1);
+  font-size: 25px;
+  
+}
+
+.choose-plans-list
+  .cpl-item.golden
+  .cpl-item-content
+  ul.cpl-item-list
+  li
+  span.cpl-check-icon {
+  color: rgba(109, 74, 0, 1);
+  font-size: 25px;
+  
+}
+
+.per-month.golden {
+  color: rgba(109, 74, 0, 1);
+
+  font-size: 20px;
+  
+}
+
+.plan-text.golden {
+  color: rgba(109, 74, 0, 1);
+  font-size: 20px;
+  margin-bottom: 15px;
+  
+}
+
+/* ---------- Blue Plan Styling ---------- */
+.choose-plans-list .cpl-item.blue {
+  background: rgba(18, 113, 255, 1);
+  width: 371px; /* Smaller width */
+}
+
+.choose-plans-list .cpl-item.blue h4 {
+  color: #fff;
+  
+}
+
+.choose-plans-list .cpl-item.blue .cpl-item-content h5 {
+  color: rgba(0, 62, 154, 1);
+}
+
+.choose-plans-list .cpl-item.blue .cpl-item-content ul.cpl-item-list {
+  color: rgba(0, 62, 154, 1);
+}
+
+.choose-plans-list
+  .cpl-item.blue
+  .cpl-item-content
+  ul.cpl-item-list
+  li
+  span.cpl-check-icon {
+  color: rgba(18, 113, 255, 1);
+}
+
+.choose-plans-list .cpl-item.blue .cpl-item-content button.more-info {
+  background: rgba(18, 113, 255, 1);
+}
+
+.per-month.blue {
+  color: rgba(0, 62, 154, 1);
+}
+
+.plan-text.blue {
+  color: rgba(0, 62, 154, 1);
+}

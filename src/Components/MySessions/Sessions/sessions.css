@@ -1,0 +1,48 @@
+
+  .mysession-container {
+    max-width: 1440px;
+    margin: auto;
+  }
+  
+  h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .mysession-session-header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .mysession-session-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr auto;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+  }
+  
+  .mysession-session-card span {
+    font-size: 15px;
+  }
+  
+  .mysession-session-card button {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .mysession-session-card button:hover {
+    background-color: #d32f2f;
+  }
+  

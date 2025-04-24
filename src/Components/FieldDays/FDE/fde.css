@@ -1,0 +1,26 @@
+.recess .fde{
+    padding-left:0px;
+    border-top: 3px solid #00b10c;
+    border-bottom: 3px solid #00b10c;
+}
+
+.fde-as{
+    margin-top: 0;
+}
+
+.fde-btn{
+    font-size: 22px;
+    font-weight: 500;
+    padding: 18px 50px;
+    border-radius: 10px;
+    color: white;
+    background-color: #F04BFF;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.carnival-btn{
+    color: black;
+    background: linear-gradient(to right,#fff369, #ffb04f);
+}

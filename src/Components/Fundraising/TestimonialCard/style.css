@@ -1,0 +1,67 @@
+.testimonial-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align content to the top */
+  position: relative; /* Enable absolute positioning for images */
+  background-color: rgba(251, 251, 251, 1);
+  border: 2px solid #d1d1d1;
+  border-radius: 20px;
+  padding: 24px;
+  width: 948px;
+  height: 357px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: visible;
+
+}
+
+.testimonial-text {
+  max-width: 500px;
+  text-align: left; /* Align text to the left */
+  z-index: 1; /* Ensure text stays above images */
+}
+
+.quote {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 22px;
+  margin-left: 22px;
+  color: #000;
+  position: absolute;
+}
+
+.author {
+  margin-top: 100px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left:20px;
+  color: #333;
+}
+
+.testimonial-image1 {
+  position: absolute;
+  right: -2px;
+  bottom: -75px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.testimonial-image1 img {
+  width: 350.59px;
+  height: 350px;
+  object-fit: contain;
+}
+
+.testimonial-image2 {
+  position: absolute; 
+  top: -80px;
+  right: -40px; 
+  z-index: 0; 
+}
+
+.testimonial-image2 img {
+  width: 376.84px;
+  height: 480px; /* Match container height to avoid overflow */
+  object-fit: contain;
+ 
+}

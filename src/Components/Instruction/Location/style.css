@@ -1,0 +1,191 @@
+.schedule-wrapper {
+  padding: clamp(0.5rem, 2vw, 1rem);
+  font-family: sans-serif;
+  max-width: min(100%, 1200px);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: clamp(5rem, 8vw, 10rem);
+}
+
+.schedule-heading {
+  text-align: center;
+  font-size: clamp(28px, 4vw, 36px);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.schedule-main-table {
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  max-width: min(100%, 1200px);
+  border: 2px solid rgba(217, 217, 217, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-main-header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(223, 184, 95, 1);
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  font-size: clamp(18px, 2.5vw, 26px);
+  height: min(115px, 15vw);
+}
+
+.schedule-thursday,
+.schedule-saturday,
+.schedule-sunday {
+  flex: 1;
+  min-width: 100px; /* Prevents columns from becoming too narrow */
+  padding: clamp(0.75rem, 2vw, 2rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* Allow wrapping for smaller screens */
+}
+
+.schedule-main-body {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #fff;
+  height: min(350px, 45vw);
+  margin-top: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.schedule-thursday-body,
+.schedule-saturday-body,
+.schedule-sunday-body {
+  flex: 1;
+  min-width: 100px; /* Ensures body columns align with headers */
+  padding: clamp(0.5rem, 2vw, 1rem);
+}
+
+.schedule-main-body p {
+  margin: 0.5rem 0;
+  font-size: clamp(14px, 2vw, 20px);
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal; /* Allow wrapping for better readability */
+}
+
+/* Media query for tablets */
+@media (max-width: 900px) {
+  .schedule-main-table {
+    border-radius: 16px;
+  }
+
+  .schedule-main-header {
+    font-size: clamp(16px, 2.5vw, 22px);
+    height: min(100px, 14vw);
+  }
+
+  .schedule-main-body {
+    height: min(300px, 50vw);
+  }
+
+  .schedule-thursday,
+  .schedule-saturday,
+  .schedule-sunday {
+    padding: clamp(0.5rem, 2vw, 1.5rem);
+  }
+
+  .schedule-thursday-body,
+  .schedule-saturday-body,
+  .schedule-sunday-body {
+    padding: clamp(0.5rem, 2vw, 0.75rem);
+  }
+
+  .schedule-main-body p {
+    font-size: clamp(13px, 2vw, 18px);
+  }
+}
+
+/* Media query for small tablets */
+@media (max-width: 600px) {
+  .schedule-wrapper {
+    padding: clamp(0.5rem, 2vw, 0.75rem);
+    margin-top: clamp(3rem, 6vw, 5rem);
+  }
+
+  .schedule-heading {
+    font-size: clamp(22px, 5vw, 30px);
+    margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .schedule-main-table {
+    border-radius: 12px;
+  }
+
+  .schedule-main-header {
+    font-size: clamp(14px, 2.5vw, 18px);
+    height: min(80px, 13vw);
+  }
+
+  .schedule-main-body {
+    height: min(250px, 55vw);
+    margin-top: 0.75rem;
+  }
+
+  .schedule-thursday,
+  .schedule-saturday,
+  .schedule-sunday {
+    padding: clamp(0.5rem, 2vw, 1rem);
+    min-width: 80px;
+  }
+
+  .schedule-thursday-body,
+  .schedule-saturday-body,
+  .schedule-sunday-body {
+    padding: clamp(0.5rem, 2vw, 0.75rem);
+    min-width: 80px;
+  }
+
+  .schedule-main-body p {
+    font-size: clamp(12px, 2vw, 16px);
+  }
+}
+
+/* Media query for very small screens */
+@media (max-width: 400px) {
+  .schedule-heading {
+    font-size: clamp(20px, 5vw, 26px);
+    margin-bottom: 1.5rem;
+  }
+
+  .schedule-main-table {
+    border-radius: 10px;
+  }
+
+  .schedule-main-header {
+    font-size: clamp(12px, 2.5vw, 16px);
+    height: min(70px, 14vw);
+  }
+
+  .schedule-main-body {
+    height: min(200px, 60vw);
+  }
+
+  .schedule-thursday,
+  .schedule-saturday,
+  .schedule-sunday {
+    padding: clamp(0.25rem, 2vw, 0.75rem);
+    min-width: 60px;
+  }
+
+  .schedule-thursday-body,
+  .schedule-saturday-body,
+  .schedule-sunday-body {
+    padding: clamp(0.25rem, 2vw, 0.5rem);
+    min-width: 60px;
+  }
+
+  .schedule-main-body p {
+    font-size: clamp(10px, 2.5vw, 14px);
+    line-height: 1.4;
+  }
+}
