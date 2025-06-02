@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../Components/Layout";
+import Layout from "../Components/Layout/Layout";
 import Home from "../Pages/Home";
 import Login from "../Pages/Authentication/Login";
 import MOUForm from "../Pages/MOUForm";
@@ -25,6 +25,9 @@ import SummerCamp from "../Pages/SummerCamp";
 import Dashboard from "../Pages/Dashboard";
 import MySessions from "../Pages/MySessions";
 import Fundraising from "../Pages/Fundraising";
+import UserDashLayout from "../Components/Layout/UserDashLyout/UserDashLayout";
+import Profile from "../Pages/UserDashboard/Profile/Profile";
+import YourPlayers from "../Pages/UserDashboard/YourPlayers/YourPlayers";
 
 const Routing = () => {
   return (
@@ -38,6 +41,10 @@ const Routing = () => {
         <Route path="/time-slot" element={<TimeSlot />} />
         <Route path="/buy-packages" element={<BuyPackages />} />
         <Route path="/confirmation-popup" element={<ConfirmationPopup />} />
+        <Route path="/add-a-child" element={<AddAChild />} />
+        <Route path="/dashboard/self-direction" element={<Dashboard />} />
+        <Route path="/my-sessions" element={<MySessions />} />
+        <Route path="/fundraising" element={<Fundraising />} />
         <Route element={<Layout />}>
           <Route path="/soccer" element={<Soccer />} />
           <Route path="/football" element={<Football />} />
@@ -47,27 +54,19 @@ const Routing = () => {
           <Route path="/basketball" element={<Basketball />} />
           <Route path="/home" element={<Home />} />
           <Route path="/school-programs" element={<SchoolPrograms />} />
-        </Route>
-        <Route element={<Layout />}>
           <Route path="/fitness" element={<Fitness />} />
-        </Route>
-        <Route element={<Layout />}>
           <Route path="/bowling" element={<Bowling />} />
-        </Route>
-
-        <Route path="/add-a-child" element={<AddAChild />} />
-        <Route element={<Layout />}>
           <Route path="/field-days" element={<FieldDays />} />
-        </Route>
-        <Route element={<Layout />}>
-          <Route path="/after-school-programs" element={<AfterSchoolProgram />} />
-        </Route>
-        <Route element={<Layout />}>
+          <Route
+            path="/after-school-programs"
+            element={<AfterSchoolProgram />}
+          />
           <Route path="/summer-camp" element={<SummerCamp />} />
         </Route>
-        <Route path="/dashboard/self-direction" element={<Dashboard/>}/>
-        <Route path="/my-sessions" element={<MySessions/>}/>
-        <Route path="/fundraising" element={<Fundraising/>}/>
+        <Route element={<UserDashLayout />}>
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/your-players" element={<YourPlayers />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
