@@ -28,6 +28,11 @@ import Fundraising from "../Pages/Fundraising";
 import UserDashLayout from "../Components/Layout/UserDashLyout/UserDashLayout";
 import Profile from "../Pages/UserDashboard/Profile/Profile";
 import YourPlayers from "../Pages/UserDashboard/YourPlayers/YourPlayers";
+import SavedPaymentMethod from "../Pages/UserDashboard/PaymentsBillings/SavedPaymentMethod/SavedPaymentMethod";
+import PaymentHistory from "../Pages/UserDashboard/PaymentsBillings/PaymentHistory/PaymentHistory";
+import MyPackagesPlans from "../Pages/UserDashboard/MyPackagesPlans/MyPackagesPlans";
+import ChangePassword from "../Pages/UserDashboard/ChangePassword/ChangePassword";
+import Notifications from "../Pages/UserDashboard/Notifications/Notifications";
 
 const Routing = () => {
   return (
@@ -66,6 +71,11 @@ const Routing = () => {
         <Route element={<UserDashLayout />}>
           <Route path="/profile" element={<Profile />} />
           <Route path="/your-players" element={<YourPlayers />} />
+          <Route path="/saved-payment-method" element={<SavedPaymentMethod />} />
+          <Route path="/payment-history" element={<PaymentHistory />} />
+          <Route path="/my-package-plans" element={<MyPackagesPlans />} />
+          <Route path="/change-password" element={<ChangePassword />} />
+          <Route path="/notifications" element={<Notifications />} />
         </Route>
       </Routes>
     </BrowserRouter>

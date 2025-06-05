@@ -16,13 +16,15 @@
     justify-content: center;     
     cursor: pointer;
     text-align: center;
-    font-size: 14px;
+    font-size: 18px;
     box-sizing: border-box;
   }
   
-  .sidebar-item a {
+  .sidebar-item a,
+  .sidebar-item span {
     text-decoration: none;
     color: #000000;
+    font-weight: 600;
   }
   
   .sidebar-item:hover {
@@ -56,21 +58,27 @@
   }
   
   .sidebar .dropdown .sidebar-subitem a {
-    background: #fff;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Inter;
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 18px;
     line-height: 100%;
     height: 60px;
     text-decoration: none;
     color: #000;
   }
   
-  .sidebar .dropdown .sidebar-subitem.active a {background: #fff;}
+  .sidebar-item.has-active {
+    background: #FFE1B1;
+    position: relative;
+  }
+  
+  .sidebar-subitem.active a {
+    background: #FFD99C;
+  }
   
   .sidebar-item.has-active::after {
     content: "";
@@ -78,7 +86,7 @@
     height: 0px;
     border-style: solid;
     border-width: 9px 13px 0 13px;
-    border-color: #CACACA transparent transparent transparent;
+    border-color: #FFE1B1 transparent transparent transparent;
     transform: rotate(0deg);
     position: absolute;
     bottom: -9px;

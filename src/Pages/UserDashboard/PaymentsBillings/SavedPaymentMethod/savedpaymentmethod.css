@@ -1,0 +1,68 @@
+.saved-payment-method {
+    margin-top: 40px;
+}
+
+
+.saved-payment-method {
+    margin-top: 40px;
+}
+
+.saved-payment-method-item {
+    padding: 40px;
+    background: #FFEED9;
+    border-radius: 32px;
+}
+
+.saved-payment-method-item h4 {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 100%;
+    color: #000;
+    margin-bottom: 32px;
+    display: block;
+}
+
+.saved-payment-method-item form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.saved-payment-method-item form .form-group {
+    margin-bottom: 0;
+    width: calc(50% - 16px);
+}
+
+.saved-payment-method-item form .form-group input {
+    margin-bottom: 0px;
+    border: 1px solid #C7C7C7;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.saved-payment-method-item form .form-group label {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: #595959;
+    margin-bottom: 17px;
+    display: block;
+}
+
+.saved-payment-method-item form .form-group.w-full {
+    width: 100%;
+}
+
+.saved-payment-method-item form .form-group.form-btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.saved-payment-method-item form .form-group.form-btns button.btn {
+    width: 100%;
+}

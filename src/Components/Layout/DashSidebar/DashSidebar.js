@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./dashsidebar.css";
 
 const DashSidebar = () => {
   const location = useLocation();
   const isActive = (path) => location.pathname.startsWith(path);
+  const [userMgmtOpen, setUserMgmtOpen] = useState(false);
+
+  const isSubActive = (path) => location.pathname === path;
+
+  const toggleUserMgmt = () => {
+    setUserMgmtOpen(!userMgmtOpen);
+  };
 
   return (
     <div className="sidebar">
@@ -19,17 +26,34 @@ const DashSidebar = () => {
       </div>
 
       <div
-        className={`sidebar-item ${
-          isActive("/payments-billings") ? "active" : ""
-        }`}
+        className={`sidebar-item ${userMgmtOpen ? "has-active" : ""}`}
+        onClick={toggleUserMgmt}
       >
-        <Link to="/payments-billings">Payments & Billings</Link>
+        <span>Payments & Billings</span>
       </div>
+      {userMgmtOpen && (
+        <div className="dropdown">
+          <div
+            className={`sidebar-subitem ${
+              isSubActive("/saved-payment-method") ? "active" : ""
+            }`}
+          >
+            <Link to="/saved-payment-method">Saved Payment Method</Link>
+          </div>
+          <div
+            className={`sidebar-subitem ${
+              isSubActive("/payment-history") ? "active" : ""
+            }`}
+          >
+            <Link to="/payment-history"> Payment History</Link>
+          </div>
+        </div>
+      )}
 
       <div
-        className={`sidebar-item ${isActive("/subscriptions") ? "active" : ""}`}
+        className={`sidebar-item ${isActive("/my-package-plans") ? "active" : ""}`}
       >
-        <Link to="/subscriptions">Subscriptions</Link>
+        <Link to="/my-package-plans">My Packages & Plans</Link>
       </div>
 
       <div
