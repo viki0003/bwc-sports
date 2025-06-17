@@ -1,8 +1,30 @@
+// Profile.js
+import React, { useContext, useEffect, useState } from "react";
+import { ParentContext } from "../../../APIContext/ParentContext";
+import { useLogin } from "../../../APIContext/LoginContext";
 import PenIcon from "../../../Assets/Icons/PenIcon";
 import Avtar from "../../../Assets/Images/avtar.jpg";
 import PageTitle from "../../../Components/Layout/UserDashLyout/PageTitle";
 import "./profile.css";
+
 const Profile = () => {
+  const { parentProfiles, loading } = useContext(ParentContext);
+  const { user } = useLogin();
+  const [profile, setProfile] = useState(null);
+
+  useEffect(() => {
+    const userId = user?.id;
+    if (userId && parentProfiles.length > 0) {
+      const matchedProfile = parentProfiles.find(
+        (parent) => parent?.user?.id === userId
+      );
+      setProfile(matchedProfile || null);
+    }
+  }, [user, parentProfiles]);
+
+  if (loading) return <div>Loading...</div>;
+  if (!profile) return <div>No profile found.</div>;
+
   return (
     <>
       <PageTitle
@@ -25,17 +47,32 @@ const Profile = () => {
           <div className="profile-details">
             <form className="profile-form">
               <div className="form-group">
-                <label htmlFor="name">First Name</label>
-                <input type="text" id="name" />
+                <label htmlFor="firstName">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  value={profile.user.first_name || ""}
+                  readOnly
+                />
               </div>
               <div className="form-group">
-                <label htmlFor="email">Last Name</label>
-                <input type="email" id="email" />
+                <label htmlFor="lastName">Last Name</label>
+                <input
+                  type="text"
+                  id="lastName"
+                  value={profile.user.last_name || ""}
+                  readOnly
+                />
               </div>
               <div className="form-group w-full input-w-text">
                 <div className="form-input">
-                  <label htmlFor="phone">Display Name</label>
-                  <input type="tel" id="phone" />
+                  <label htmlFor="displayName">Display Name</label>
+                  <input
+                    type="text"
+                    id="displayName"
+                    value={profile.user.username || ""}
+                    readOnly
+                  />
                 </div>
                 <p>
                   This will be how your name will be displayed in the account
@@ -43,17 +80,31 @@ const Profile = () => {
                 </p>
               </div>
               <div className="form-group">
-                <label htmlFor="phone">Email</label>
-                <input type="tel" id="phone" />
+                <label htmlFor="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  value={profile.email || user?.email || ""}
+                  readOnly
+                />
               </div>
               <div className="form-group">
-                <label htmlFor="phone">Mobile Number</label>
-                <input type="tel" id="phone" />
+                <label htmlFor="mobile">Mobile Number</label>
+                <input
+                  type="tel"
+                  id="mobile"
+                  value={profile.phone || ""}
+                  readOnly
+                />
               </div>
-
               <div className="form-group w-full">
-                <label htmlFor="phone">Address</label>
-                <input type="tel" id="phone" />
+                <label htmlFor="address">Address</label>
+                <input
+                  type="text"
+                  id="address"
+                  value={profile.address || ""}
+                  readOnly
+                />
               </div>
             </form>
           </div>
@@ -62,4 +113,5 @@ const Profile = () => {
     </>
   );
 };
+
 export default Profile;

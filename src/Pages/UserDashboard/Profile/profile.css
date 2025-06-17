@@ -75,6 +75,7 @@
     height: 50px;
     margin-top: 5px;
     margin-bottom: 0px;
+    padding-left: 15px !important;
 }
 
 .profile-ele .profile-details form.profile-form .form-group label {

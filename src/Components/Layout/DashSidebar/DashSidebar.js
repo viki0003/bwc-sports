@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLogin } from "../../../APIContext/LoginContext";
 import "./dashsidebar.css";
 
 const DashSidebar = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { logout } = useLogin();
   const isActive = (path) => location.pathname.startsWith(path);
   const [userMgmtOpen, setUserMgmtOpen] = useState(false);
 
@@ -11,6 +14,11 @@ const DashSidebar = () => {
 
   const toggleUserMgmt = () => {
     setUserMgmtOpen(!userMgmtOpen);
+  };
+
+  const handleLogout = () => {
+    logout();
+    navigate("/");
   };
 
   return (
@@ -51,7 +59,9 @@ const DashSidebar = () => {
       )}
 
       <div
-        className={`sidebar-item ${isActive("/my-package-plans") ? "active" : ""}`}
+        className={`sidebar-item ${
+          isActive("/my-package-plans") ? "active" : ""
+        }`}
       >
         <Link to="/my-package-plans">My Packages & Plans</Link>
       </div>
@@ -68,8 +78,8 @@ const DashSidebar = () => {
       >
         <Link to="/change-password">Change Password</Link>
       </div>
-      <div className={`sidebar-item ${isActive("/logout") ? "active" : ""}`}>
-        <Link to="/logout">Log Out</Link>
+      <div className="sidebar-item" onClick={handleLogout}>
+        <span>Log Out</span>
       </div>
     </div>
   );
