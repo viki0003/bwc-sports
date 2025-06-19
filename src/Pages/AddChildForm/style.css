@@ -1,0 +1,86 @@
+.add-child-form-container{
+    background-color: #fff;
+}
+
+.add-child-form-container {
+    width: 100%;
+}
+
+.add-child-form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.add-child-form-container form .form-group {
+    width: calc(33% - 10px);
+    margin-bottom: 0;
+}
+
+.add-child-form-container form .form-group input.p-inputtext.p-component {
+    margin-bottom: 0;
+}
+
+.add-child-form-container {
+    width: 100%;
+}
+
+.add-child-form-container form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.add-child-form-container form .form-group {
+    width: calc(33% - 10px);
+    margin-bottom: 0;
+}
+
+.add-child-form-container form .form-group input.p-inputtext.p-component {
+    color: #000000;
+    border: 3px solid #D9D9D9;
+    border-radius: 15px;
+    padding: 23px 25px !important;
+}
+
+.add-child-form-container form .form-group input.p-inputtext.p-component::placeholder {
+    color: #000;
+}
+
+.calesndr-cstm button {
+    display: none;
+}
+
+.calesndr-cstm input.p-inputtext.p-component,
+.calesndr-cstm{
+    width: 100%;
+}
+
+
+.form-group.jersey-size-dropdown .p-dropdown {
+    width: 100%;
+    height: 100%;
+    border: 3px solid #D9D9D9;
+    border-radius: 15px;
+}
+
+.form-group.jersey-size-dropdown .p-dropdown span.p-placeholder,
+.form-group.jersey-size-dropdown .jersey-size-dropdownn span.p-dropdown-label.p-inputtext {
+    display: flex;
+    align-items: center;
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 100%;
+    color: #000;
+}
+
+.p-dropdown-panel.p-component.p-ripple-disabled.p-connected-overlay-enter-done {
+    padding: 10px;
+}
+
+.p-dropdown-panel.p-component.p-ripple-disabled.p-connected-overlay-enter-done ul.p-dropdown-items {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}

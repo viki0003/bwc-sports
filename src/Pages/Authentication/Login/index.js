@@ -56,7 +56,7 @@ const Login = () => {
         detail: "Welcome back!",
         life: 3000,
       });
-      navigate("/home");
+      navigate("/");
     } else {
       toast.current.show({
         severity: "error",

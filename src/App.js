@@ -3,6 +3,7 @@ import "primereact/resources/themes/lara-light-cyan/theme.css";
 import { PrimeReactProvider } from "primereact/api";
 import { ParentProvider } from "./APIContext/ParentContext";
 import { LoginProvider } from "./APIContext/LoginContext";
+import { PlayerAccountProvider } from "./APIContext/PlayerAccountContext";
 import "./App.css";
 
 function App() {
@@ -10,7 +11,9 @@ function App() {
     <PrimeReactProvider>
       <LoginProvider>
         <ParentProvider>
-          <Routing />
+          <PlayerAccountProvider>
+            <Routing />
+          </PlayerAccountProvider>
         </ParentProvider>
       </LoginProvider>
     </PrimeReactProvider>

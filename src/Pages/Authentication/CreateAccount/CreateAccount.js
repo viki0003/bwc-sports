@@ -81,9 +81,8 @@ const CreateAccount = () => {
         is_self_pay: "true",
       });
 
-      // Navigate after short delay
       setTimeout(() => {
-        navigate("/"); // Replace with actual login route if needed
+        navigate("/login");
       }, 1500);
     } catch (error) {
       toastRef.current.show({
@@ -214,7 +213,7 @@ const CreateAccount = () => {
               <hr />
               <div className="ca-form-group login-link">
                 <p>Already have an account? Login</p>
-                <Link to="/">Log in to Your Account</Link>
+                <Link to="/login">Log in to Your Account</Link>
               </div>
             </form>
           </div>

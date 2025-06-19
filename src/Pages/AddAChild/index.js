@@ -1,12 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { ChildImageContainer } from "../../Components/AddAChild/ChildImageContainer";
-import child_image from "../../Assets/Images/child.png";
 import BackIcon from "../../Assets/Icons/BackIcon";
-import "./style.css";
-import AddIcon from "../../Assets/Icons/AddIcon";
 import NavbarCustom from "../../Components/NavbarCustom";
+import AddIcon from "../../Assets/Icons/AddIcon";
+import child_image from "../../Assets/Images/child.png";
+import { Link } from "react-router-dom";
+import { usePlayerAccount } from "../../APIContext/PlayerAccountContext";
+import "./style.css";
 
 export default function AddAChild() {
+  const { players, fetchPlayers } = usePlayerAccount();
+
+  useEffect(() => {
+    fetchPlayers();
+  }, [fetchPlayers]);
+
   return (
     <>
       <NavbarCustom />
@@ -22,21 +30,28 @@ export default function AddAChild() {
         </div>
 
         <div className="add-child-image-container">
-          <ChildImageContainer image={child_image} name="Arron" />
-          <div className="adding-image-container">
+          {players.length > 0 ? (
+            players.map((child, index) => (
+              <ChildImageContainer
+                key={index}
+                image={child.profile_image || child_image}
+                name={child.name}
+                age={child.age}
+              />
+            ))
+          ) : (
+            <p>No children found. Please add one.</p>
+          )}
+
+          <Link to="/add-child-form" className="adding-image-container">
             <span className="adding-icon">
               <AddIcon />
             </span>
             <p className="child-overlay-text adding-child-text">
               Add Another Child
             </p>
-          </div>
+          </Link>
         </div>
-        {/* <div className="add-child-submit-button">
-          <button type="submit" className="p-submit-button add-child-btn">
-            Proceed
-          </button>
-        </div> */}
       </div>
     </>
   );

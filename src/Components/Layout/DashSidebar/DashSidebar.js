@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useLogin } from "../../../APIContext/LoginContext";
+import { Link, useLocation } from "react-router-dom";
+import { useLogout } from "../../../APIContext/UseLogout";
 import "./dashsidebar.css";
 
 const DashSidebar = () => {
   const location = useLocation();
-  const navigate = useNavigate();
-  const { logout } = useLogin();
+  const logout = useLogout();
+
   const isActive = (path) => location.pathname.startsWith(path);
   const [userMgmtOpen, setUserMgmtOpen] = useState(false);
 
@@ -14,11 +14,6 @@ const DashSidebar = () => {
 
   const toggleUserMgmt = () => {
     setUserMgmtOpen(!userMgmtOpen);
-  };
-
-  const handleLogout = () => {
-    logout();
-    navigate("/");
   };
 
   return (
@@ -72,13 +67,11 @@ const DashSidebar = () => {
         <Link to="/notifications">Notifications</Link>
       </div>
       <div
-        className={`sidebar-item ${
-          isActive("/change-password") ? "active" : ""
-        }`}
+        className={`sidebar-item ${isActive("/change-password") ? "active" : ""}`}
       >
         <Link to="/change-password">Change Password</Link>
       </div>
-      <div className="sidebar-item" onClick={handleLogout}>
+      <div className="sidebar-item" onClick={logout}>
         <span>Log Out</span>
       </div>
     </div>
