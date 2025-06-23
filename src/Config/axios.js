@@ -1,5 +1,5 @@
 import axios from "axios";
-import BASE_API_URL from "./Config";
+import BASE_API_URL from "./Config"; // Make sure BASE_API_URL is defined/exported correctly
 
 const axiosInstance = axios.create({
   baseURL: BASE_API_URL,
@@ -47,11 +47,9 @@ axiosInstance.interceptors.response.use(
       return axiosInstance(originalRequest);
     } catch (refreshError) {
       localStorage.clear();
-
       if (!window.location.pathname.includes("/login")) {
         window.location.href = "/login";
       }
-
       return Promise.reject(refreshError);
     }
   }

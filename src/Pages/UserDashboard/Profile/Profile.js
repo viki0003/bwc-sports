@@ -1,4 +1,3 @@
-// Profile.js
 import React, { useContext, useEffect, useState } from "react";
 import { ParentContext } from "../../../APIContext/ParentContext";
 import { useLogin } from "../../../APIContext/LoginContext";

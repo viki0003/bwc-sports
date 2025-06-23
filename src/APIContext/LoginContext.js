@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, { createContext, useState, useContext, useEffect, useRef } from "react";
 import axiosInstance from "../Config/axios";
 import { Toast } from "primereact/toast";
 
@@ -13,7 +13,7 @@ export const LoginProvider = ({ children }) => {
 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const toastRef = React.useRef(null);
+  const toastRef = useRef(null);
 
   const login = async ({ username_or_email, password }) => {
     setLoading(true);
@@ -36,7 +36,6 @@ export const LoginProvider = ({ children }) => {
 
       return { success: true };
     } catch (err) {
-      console.error("Login Error:", err);
       const errorMessage =
         err.response?.data?.detail ||
         err.response?.data?.errors?.username_or_email?.[0] ||
@@ -49,7 +48,7 @@ export const LoginProvider = ({ children }) => {
           severity: "error",
           summary: "Login Failed",
           detail: errorMessage,
-          life: 3000,
+          life: 40000,
         });
       }
 
@@ -62,7 +61,7 @@ export const LoginProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.clear();
-    window.location.href = "/";
+    window.location.href = "/login";
   };
 
   useEffect(() => {

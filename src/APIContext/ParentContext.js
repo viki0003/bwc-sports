@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState, useCallback } from "react";
+import React, { createContext, useEffect, useState, useCallback, useRef } from "react";
 import axiosInstance from "../Config/axios";
 import { Toast } from "primereact/toast";
 
@@ -8,9 +8,12 @@ export const ParentProvider = ({ children }) => {
   const [parentProfiles, setParentProfiles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const toastRef = React.useRef(null);
+  const toastRef = useRef(null);
 
   const fetchParents = useCallback(async () => {
+    const token = localStorage.getItem("accessToken");
+    if (!token) return;
+
     setLoading(true);
     setError(null);
 
@@ -20,7 +23,7 @@ export const ParentProvider = ({ children }) => {
     } catch (err) {
       const errorMessage = err.response?.data?.detail || "Failed to fetch parent profiles";
       setError(errorMessage);
-      
+
       if (toastRef.current) {
         toastRef.current.show({
           severity: "error",
@@ -58,7 +61,10 @@ export const ParentProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetchParents();
+    const timer = setTimeout(() => {
+      fetchParents();
+    }, 0);
+    return () => clearTimeout(timer);
   }, [fetchParents]);
 
   return (
