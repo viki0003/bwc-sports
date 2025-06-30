@@ -1,23 +1,19 @@
 import Routing from "./Routes/Routing";
 import "primereact/resources/themes/lara-light-cyan/theme.css";
-import { PrimeReactProvider } from "primereact/api";
 import { ParentProvider } from "./APIContext/ParentContext";
-import { LoginProvider } from "./APIContext/LoginContext";
 import { PlayerAccountProvider } from "./APIContext/PlayerAccountContext";
 import "./App.css";
+import { useLogin } from "./APIContext/LoginContext";
 
-function App() {
+function AppWrapper() {
+  const { user } = useLogin();
   return (
-    <PrimeReactProvider>
-      <LoginProvider>
-        <ParentProvider>
-          <PlayerAccountProvider>
-            <Routing />
-          </PlayerAccountProvider>
-        </ParentProvider>
-      </LoginProvider>
-    </PrimeReactProvider>
+    <ParentProvider user={user}>
+      <PlayerAccountProvider>
+        <Routing />
+      </PlayerAccountProvider>
+    </ParentProvider>
   );
 }
 
-export default App;
+export default AppWrapper;

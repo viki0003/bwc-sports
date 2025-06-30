@@ -1,25 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ParentContext } from "../../../APIContext/ParentContext";
-import { useLogin } from "../../../APIContext/LoginContext";
 import PenIcon from "../../../Assets/Icons/PenIcon";
 import Avtar from "../../../Assets/Images/avtar.jpg";
 import PageTitle from "../../../Components/Layout/UserDashLyout/PageTitle";
 import "./profile.css";
 
 const Profile = () => {
-  const { parentProfiles, loading } = useContext(ParentContext);
-  const { user } = useLogin();
+  const { parentProfile, loading } = useContext(ParentContext);
   const [profile, setProfile] = useState(null);
 
   useEffect(() => {
-    const userId = user?.id;
-    if (userId && parentProfiles.length > 0) {
-      const matchedProfile = parentProfiles.find(
-        (parent) => parent?.user?.id === userId
-      );
-      setProfile(matchedProfile || null);
+    if (parentProfile) {
+      setProfile(parentProfile);
     }
-  }, [user, parentProfiles]);
+  }, [parentProfile]);
 
   if (loading) return <div>Loading...</div>;
   if (!profile) return <div>No profile found.</div>;
@@ -38,9 +32,7 @@ const Profile = () => {
           <div className="profile-image">
             <div className="img-container">
               <img src={Avtar} alt="Profile" />
-              <span>
-                <PenIcon />
-              </span>
+              <span><PenIcon /></span>
             </div>
           </div>
           <div className="profile-details">
@@ -50,7 +42,7 @@ const Profile = () => {
                 <input
                   type="text"
                   id="firstName"
-                  value={profile.user.first_name || ""}
+                  value={profile.user?.first_name || ""}
                   readOnly
                 />
               </div>
@@ -59,7 +51,7 @@ const Profile = () => {
                 <input
                   type="text"
                   id="lastName"
-                  value={profile.user.last_name || ""}
+                  value={profile.user?.last_name || ""}
                   readOnly
                 />
               </div>
@@ -69,13 +61,12 @@ const Profile = () => {
                   <input
                     type="text"
                     id="displayName"
-                    value={profile.user.username || ""}
+                    value={profile.user?.username || ""}
                     readOnly
                   />
                 </div>
                 <p>
-                  This will be how your name will be displayed in the account
-                  section and in reviews
+                  This will be how your name will be displayed in the account section and in reviews
                 </p>
               </div>
               <div className="form-group">
@@ -83,7 +74,7 @@ const Profile = () => {
                 <input
                   type="email"
                   id="email"
-                  value={profile.email || user?.email || ""}
+                  value={profile.user?.email || ""}
                   readOnly
                 />
               </div>

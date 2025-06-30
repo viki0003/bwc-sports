@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import PrivateRoute from "./PrivateRoute";
 
 // Public Pages
@@ -36,8 +36,6 @@ import Golf from "../Pages/Golf";
 import Fitness from "../Pages/Fitness";
 import Bowling from "../Pages/Bowling";
 import FieldDays from "../Pages/FieldDays";
-
-// Dashboard Pages
 import Profile from "../Pages/UserDashboard/Profile/Profile";
 import YourPlayers from "../Pages/UserDashboard/YourPlayers/YourPlayers";
 import SavedPaymentMethod from "../Pages/UserDashboard/PaymentsBillings/SavedPaymentMethod/SavedPaymentMethod";
@@ -48,54 +46,128 @@ import Notifications from "../Pages/UserDashboard/Notifications/Notifications";
 
 const Routing = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        {/* Public Routes */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/create-an-account" element={<CreateAccount />} />
-        <Route path="/mou-form" element={<MOUForm />} />
+    <Routes>
+      <Route path="/login" element={<Login />} />
+      <Route path="/create-an-account" element={<CreateAccount />} />
+      <Route path="/mou-form" element={<MOUForm />} />
+      <Route
+        path="/preferences"
+        element={
+          <PrivateRoute>
+            <Preferences />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/list-of-sports"
+        element={
+          <PrivateRoute>
+            <ListOfSports />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/time-slot"
+        element={
+          <PrivateRoute>
+            <TimeSlot />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/buy-packages"
+        element={
+          <PrivateRoute>
+            <BuyPackages />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/confirmation-popup"
+        element={
+          <PrivateRoute>
+            <ConfirmationPopup />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/add-a-child"
+        element={
+          <PrivateRoute>
+            <AddAChild />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/add-child-form"
+        element={
+          <PrivateRoute>
+            <AddChildForm />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/dashboard/self-direction"
+        element={
+          <PrivateRoute>
+            <Dashboard />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/my-sessions"
+        element={
+          <PrivateRoute>
+            <MySessions />
+          </PrivateRoute>
+        }
+      />
+      <Route
+        path="/fundraising"
+        element={
+          <PrivateRoute>
+            <Fundraising />
+          </PrivateRoute>
+        }
+      />
 
-        {/* Protected Non-Layout Pages */}
-        <Route path="/preferences" element={<PrivateRoute><Preferences /></PrivateRoute>} />
-        <Route path="/list-of-sports" element={<PrivateRoute><ListOfSports /></PrivateRoute>} />
-        <Route path="/time-slot" element={<PrivateRoute><TimeSlot /></PrivateRoute>} />
-        <Route path="/buy-packages" element={<PrivateRoute><BuyPackages /></PrivateRoute>} />
-        <Route path="/confirmation-popup" element={<PrivateRoute><ConfirmationPopup /></PrivateRoute>} />
-        <Route path="/add-a-child" element={<PrivateRoute><AddAChild /></PrivateRoute>} />
-        <Route path="/add-child-form" element={<PrivateRoute><AddChildForm /></PrivateRoute>} />
-        <Route path="/dashboard/self-direction" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
-        <Route path="/my-sessions" element={<PrivateRoute><MySessions /></PrivateRoute>} />
-        <Route path="/fundraising" element={<PrivateRoute><Fundraising /></PrivateRoute>} />
-
-        {/* Sports Section with Layout - Protected */}
-        <Route element={<PrivateRoute><Layout /></PrivateRoute>}>
-          <Route path="/" element={<Home />} />
-          <Route path="/soccer" element={<Soccer />} />
-          <Route path="/football" element={<Football />} />
-          <Route path="/baseball" element={<Baseball />} />
-          <Route path="/basketball" element={<Basketball />} />
-          <Route path="/track-and-field" element={<TrackAndField />} />
-          <Route path="/golf" element={<Golf />} />
-          <Route path="/fitness" element={<Fitness />} />
-          <Route path="/bowling" element={<Bowling />} />
-          <Route path="/field-days" element={<FieldDays />} />
-          <Route path="/school-programs" element={<SchoolPrograms />} />
-          <Route path="/after-school-programs" element={<AfterSchoolProgram />} />
-          <Route path="/summer-camp" element={<SummerCamp />} />
-        </Route>
-
-        {/* User Dashboard Section - Protected */}
-        <Route element={<PrivateRoute><UserDashLayout /></PrivateRoute>}>
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/your-players" element={<YourPlayers />} />
-          <Route path="/saved-payment-method" element={<SavedPaymentMethod />} />
-          <Route path="/payment-history" element={<PaymentHistory />} />
-          <Route path="/my-package-plans" element={<MyPackagesPlans />} />
-          <Route path="/change-password" element={<ChangePassword />} />
-          <Route path="/notifications" element={<Notifications />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+      <Route
+        element={
+          <PrivateRoute>
+            <Layout />
+          </PrivateRoute>
+        }
+      >
+        <Route path="/" element={<Home />} />
+        <Route path="/soccer" element={<Soccer />} />
+        <Route path="/football" element={<Football />} />
+        <Route path="/baseball" element={<Baseball />} />
+        <Route path="/basketball" element={<Basketball />} />
+        <Route path="/track-and-field" element={<TrackAndField />} />
+        <Route path="/golf" element={<Golf />} />
+        <Route path="/fitness" element={<Fitness />} />
+        <Route path="/bowling" element={<Bowling />} />
+        <Route path="/field-days" element={<FieldDays />} />
+        <Route path="/school-programs" element={<SchoolPrograms />} />
+        <Route path="/after-school-programs" element={<AfterSchoolProgram />} />
+        <Route path="/summer-camp" element={<SummerCamp />} />
+      </Route>
+      <Route
+        element={
+          <PrivateRoute>
+            <UserDashLayout />
+          </PrivateRoute>
+        }
+      >
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/your-players" element={<YourPlayers />} />
+        <Route path="/saved-payment-method" element={<SavedPaymentMethod />} />
+        <Route path="/payment-history" element={<PaymentHistory />} />
+        <Route path="/my-package-plans" element={<MyPackagesPlans />} />
+        <Route path="/change-password" element={<ChangePassword />} />
+        <Route path="/notifications" element={<Notifications />} />
+      </Route>
+    </Routes>
   );
 };
 

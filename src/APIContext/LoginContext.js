@@ -25,7 +25,11 @@ export const LoginProvider = ({ children }) => {
         password,
       });
 
-      const loggedInUser = data.payload.user;
+      let loggedInUser = data.payload.user;
+      if (loggedInUser?.user) {
+        loggedInUser = { ...loggedInUser, ...loggedInUser.user };
+      }
+
       const accessToken = data.payload.access;
       const refreshToken = data.payload.refresh;
 
@@ -42,15 +46,12 @@ export const LoginProvider = ({ children }) => {
         "Login failed";
 
       setError(errorMessage);
-
-      if (toastRef.current) {
-        toastRef.current.show({
-          severity: "error",
-          summary: "Login Failed",
-          detail: errorMessage,
-          life: 40000,
-        });
-      }
+      toastRef.current?.show({
+        severity: "error",
+        summary: "Login Failed",
+        detail: errorMessage,
+        life: 4000,
+      });
 
       return { success: false, message: errorMessage };
     } finally {
@@ -59,8 +60,10 @@ export const LoginProvider = ({ children }) => {
   };
 
   const logout = () => {
+    localStorage.removeItem("user");
+    localStorage.removeItem("accessToken");
+    localStorage.removeItem("refreshToken");
     setUser(null);
-    localStorage.clear();
     window.location.href = "/login";
   };
 

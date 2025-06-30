@@ -1,82 +1,59 @@
-import React, { createContext, useEffect, useState, useCallback, useRef } from "react";
+import React, { createContext, useEffect, useState, useRef } from "react";
 import axiosInstance from "../Config/axios";
 import { Toast } from "primereact/toast";
+import { useLocation } from "react-router-dom";
 
 export const ParentContext = createContext();
 
-export const ParentProvider = ({ children }) => {
-  const [parentProfiles, setParentProfiles] = useState([]);
+export const ParentProvider = ({ children, user }) => {
+  const [parentProfile, setParentProfile] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const toastRef = useRef(null);
+  const location = useLocation();
 
-  const fetchParents = useCallback(async () => {
+  const fetchCurrentParent = async () => {
     const token = localStorage.getItem("accessToken");
-    if (!token) return;
-
-    setLoading(true);
-    setError(null);
-
-    try {
-      const response = await axiosInstance.get("/customer/parent-account/");
-      setParentProfiles(response.data);
-    } catch (err) {
-      const errorMessage = err.response?.data?.detail || "Failed to fetch parent profiles";
-      setError(errorMessage);
-
-      if (toastRef.current) {
-        toastRef.current.show({
-          severity: "error",
-          summary: "Error",
-          detail: errorMessage,
-          life: 3000,
-        });
-      }
-    } finally {
+    if (!token || !user?.id) {
+      setParentProfile(null);
       setLoading(false);
+      return;
     }
-  }, []);
 
-  const addParent = async (formData) => {
     try {
-      const response = await axiosInstance.post("/customer/parent-account/", formData, {
+      const response = await axiosInstance.get("/customer/parent-account/", {
         headers: {
-          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`,
         },
       });
-      await fetchParents();
-      return response.data;
-    } catch (err) {
-      const errorMessage = err.response?.data?.detail || "Failed to create parent";
-      if (toastRef.current) {
-        toastRef.current.show({
-          severity: "error",
-          summary: "Error",
-          detail: errorMessage,
-          life: 3000,
-        });
+
+      if (response.data && typeof response.data === "object") {
+        setParentProfile(response.data);
+      } else {
+        setParentProfile(null);
       }
-      throw new Error(errorMessage);
+    } catch (err) {
+      const errorMessage =
+        err.response?.data?.detail || "Failed to fetch parent";
+      toastRef.current?.show({
+        severity: "error",
+        summary: "Error",
+        detail: errorMessage,
+        life: 3000,
+      });
+      setParentProfile(null);
+    } finally {
+      setLoading(false);
     }
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      fetchParents();
-    }, 0);
-    return () => clearTimeout(timer);
-  }, [fetchParents]);
+    setLoading(true);
+    fetchCurrentParent();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user?.id, location.pathname]);
 
   return (
-    <ParentContext.Provider
-      value={{
-        parentProfiles,
-        loading,
-        error,
-        fetchParents,
-        addParent,
-      }}
-    >
+    <ParentContext.Provider value={{ parentProfile, loading }}>
       <Toast ref={toastRef} />
       {children}
     </ParentContext.Provider>
