@@ -43,6 +43,7 @@ export default function Basketball() {
                     <button className="one-on-one basketball-booking-selected">Sign Up for Classes Here</button>
                 </div>
                 <div className="basketball-image-container">
+
                     <img src={basketball1} alt="basketball-image" />
                     <img src={basketball2} alt="basketball-image" />
                     <img src={basketball3} alt="basketball-image" />

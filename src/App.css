@@ -42,3 +42,17 @@ input {
   color: #5b5b5b;
   font-weight: 600;
 }
+
+.p-toast-message {
+  padding: 9px;
+}
+
+.p-toast-message .p-toast-message-text {
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+}
+
+.p-toast-message .p-toast-message-text .p-toast-detail {
+  margin: 0;
+}

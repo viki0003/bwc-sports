@@ -20,8 +20,8 @@ const CheckIcon = () => {
           y2="28"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF9615" />
-          <stop offset="1" stop-color="#FFCE93" />
+          <stop stopColor="#FF9615" />
+          <stop offset="1" stopColor="#FFCE93" />
         </linearGradient>
       </defs>
     </svg>

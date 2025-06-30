@@ -6,7 +6,7 @@ import Footer from "../../Components/Footer";
 import SwishContainer from "../../Components/Fundraising/SwishContainer";
 import TestimonialCard from "../../Components/Fundraising/TestimonialCard";
 
-function App() {
+const Fundraising = () => {
   return (
     <div className="App">
       
@@ -26,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default Fundraising;

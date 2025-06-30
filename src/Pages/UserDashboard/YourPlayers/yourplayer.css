@@ -1,0 +1,20 @@
+.profile-container.player-container .player-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 25px;
+}
+
+.profile-container.player-container .player-header h2 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 100%;
+    color: #151515;
+}
+
+.profile-container.player-container {
+    background: #F9F9F9;
+    border-radius: 27px;
+    padding: 33px;
+}
