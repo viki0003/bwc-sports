@@ -13,6 +13,7 @@ export const ParentProvider = ({ children, user }) => {
 
   const fetchCurrentParent = async () => {
     const token = localStorage.getItem("accessToken");
+
     if (!token || !user?.id) {
       setParentProfile(null);
       setLoading(false);
@@ -46,6 +47,56 @@ export const ParentProvider = ({ children, user }) => {
     }
   };
 
+  const updateParentProfile = async (updatedData) => {
+    const token = localStorage.getItem("accessToken");
+
+    if (!token || !user?.id) {
+      toastRef.current?.show({
+        severity: "error",
+        summary: "Unauthorized",
+        detail: "You must be logged in to update the profile.",
+        life: 3000,
+      });
+      return { success: false };
+    }
+
+    try {
+      const response = await axiosInstance.patch(
+        "/customer/parent-account/",
+        updatedData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+
+      setParentProfile(response.data);
+
+      toastRef.current?.show({
+        severity: "success",
+        summary: "Success",
+        detail: "Profile updated successfully.",
+        life: 3000,
+      });
+
+      return { success: true, data: response.data };
+    } catch (err) {
+      const errorMessage =
+        err.response?.data?.detail ||
+        "Failed to update profile. Please try again.";
+
+      toastRef.current?.show({
+        severity: "error",
+        summary: "Update Failed",
+        detail: errorMessage,
+        life: 3000,
+      });
+
+      return { success: false, message: errorMessage };
+    }
+  };
+
   useEffect(() => {
     setLoading(true);
     fetchCurrentParent();
@@ -53,7 +104,14 @@ export const ParentProvider = ({ children, user }) => {
   }, [user?.id, location.pathname]);
 
   return (
-    <ParentContext.Provider value={{ parentProfile, loading }}>
+    <ParentContext.Provider
+      value={{
+        parentProfile,
+        loading,
+        fetchCurrentParent, // ✅ added here
+        updateParentProfile,
+      }}
+    >
       <Toast ref={toastRef} />
       {children}
     </ParentContext.Provider>
