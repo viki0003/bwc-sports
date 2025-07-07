@@ -41,9 +41,10 @@
 .testimonial-image1 {
   position: absolute;
   right: -2px;
-  bottom: -75px;
+  bottom: -65px;
   z-index: 0;
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .testimonial-image1 img {

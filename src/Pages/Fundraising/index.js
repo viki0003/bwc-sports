@@ -9,7 +9,7 @@ import TestimonialCard from "../../Components/Fundraising/TestimonialCard";
 const Fundraising = () => {
   return (
     <div className="App">
-      <Navbar />
+      
       <Banner />
       <div className="FundRaise-text">
         <p className="FundRaise-line1">
@@ -21,7 +21,7 @@ const Fundraising = () => {
       </div>
       <SwishContainer />
       <TestimonialCard />
-      <Footer />
+      
     </div>
   );
 }
