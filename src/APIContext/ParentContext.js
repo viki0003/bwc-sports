@@ -11,6 +11,7 @@ export const ParentProvider = ({ children, user }) => {
   const toastRef = useRef(null);
   const location = useLocation();
 
+  // ✅ Fetch current parent profile
   const fetchCurrentParent = async () => {
     const token = localStorage.getItem("accessToken");
 
@@ -47,6 +48,7 @@ export const ParentProvider = ({ children, user }) => {
     }
   };
 
+  // ✅ Update parent profile (supports FormData and JSON)
   const updateParentProfile = async (updatedData) => {
     const token = localStorage.getItem("accessToken");
 
@@ -60,6 +62,8 @@ export const ParentProvider = ({ children, user }) => {
       return { success: false };
     }
 
+    const isFormData = updatedData instanceof FormData;
+
     try {
       const response = await axiosInstance.patch(
         "/customer/parent-account/",
@@ -67,6 +71,7 @@ export const ParentProvider = ({ children, user }) => {
         {
           headers: {
             Authorization: `Bearer ${token}`,
+            ...(isFormData && { "Content-Type": "multipart/form-data" }),
           },
         }
       );
@@ -83,8 +88,7 @@ export const ParentProvider = ({ children, user }) => {
       return { success: true, data: response.data };
     } catch (err) {
       const errorMessage =
-        err.response?.data?.detail ||
-        "Failed to update profile. Please try again.";
+        err.response?.data?.detail || "Failed to update profile.";
 
       toastRef.current?.show({
         severity: "error",
@@ -108,7 +112,7 @@ export const ParentProvider = ({ children, user }) => {
       value={{
         parentProfile,
         loading,
-        fetchCurrentParent, // ✅ added here
+        fetchCurrentParent,
         updateParentProfile,
       }}
     >
