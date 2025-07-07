@@ -11,7 +11,6 @@ export const ParentProvider = ({ children, user }) => {
   const toastRef = useRef(null);
   const location = useLocation();
 
-  // ✅ Fetch current parent profile
   const fetchCurrentParent = async () => {
     const token = localStorage.getItem("accessToken");
 
@@ -48,10 +47,9 @@ export const ParentProvider = ({ children, user }) => {
     }
   };
 
-  // ✅ Update parent profile (supports FormData and JSON)
   const updateParentProfile = async (updatedData) => {
     const token = localStorage.getItem("accessToken");
-
+  
     if (!token || !user?.id) {
       toastRef.current?.show({
         severity: "error",
@@ -61,42 +59,46 @@ export const ParentProvider = ({ children, user }) => {
       });
       return { success: false };
     }
-
+  
+    let headers = {
+      Authorization: `Bearer ${token}`,
+    };
+  
+    // Check if updatedData is already FormData (from the component)
     const isFormData = updatedData instanceof FormData;
-
+  
+    if (isFormData) {
+      headers["Content-Type"] = "multipart/form-data";
+    }
+  
     try {
       const response = await axiosInstance.patch(
         "/customer/parent-account/",
         updatedData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            ...(isFormData && { "Content-Type": "multipart/form-data" }),
-          },
-        }
+        { headers }
       );
-
+  
       setParentProfile(response.data);
-
+  
       toastRef.current?.show({
         severity: "success",
         summary: "Success",
         detail: "Profile updated successfully.",
         life: 3000,
       });
-
+  
       return { success: true, data: response.data };
     } catch (err) {
       const errorMessage =
         err.response?.data?.detail || "Failed to update profile.";
-
+  
       toastRef.current?.show({
         severity: "error",
         summary: "Update Failed",
         detail: errorMessage,
         life: 3000,
       });
-
+  
       return { success: false, message: errorMessage };
     }
   };
@@ -104,7 +106,6 @@ export const ParentProvider = ({ children, user }) => {
   useEffect(() => {
     setLoading(true);
     fetchCurrentParent();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.id, location.pathname]);
 
   return (

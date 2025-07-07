@@ -1,12 +1,14 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { ParentContext } from "../../../APIContext/ParentContext";
 import PenIcon from "../../../Assets/Icons/PenIcon";
 import Avtar from "../../../Assets/Images/avtar.jpg";
 import PageTitle from "../../../Components/Layout/UserDashLyout/PageTitle";
+import { MEDIA_BASE_URL } from "../../../Config/Config";
 import "./profile.css";
 
 const Profile = () => {
-  const { parentProfile, loading, updateParentProfile, fetchCurrentParent } = useContext(ParentContext);
+  const { parentProfile, loading, updateParentProfile, fetchCurrentParent } =
+    useContext(ParentContext);
   const [profile, setProfile] = useState(null);
   const [editMode, setEditMode] = useState(false);
   const [formData, setFormData] = useState({
@@ -19,7 +21,10 @@ const Profile = () => {
     phone: "",
     address: "",
     is_self_pay: true,
+    profile_picture: null,
   });
+
+  const fileInputRef = useRef(null);
 
   useEffect(() => {
     if (parentProfile) {
@@ -34,6 +39,7 @@ const Profile = () => {
         phone: parentProfile.phone || "",
         address: parentProfile.address || "",
         is_self_pay: parentProfile.is_self_pay ?? true,
+        profile_picture: null,
       });
     }
   }, [parentProfile]);
@@ -56,18 +62,41 @@ const Profile = () => {
     }
   };
 
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFormData((prev) => ({ ...prev, profile_picture: file }));
+      setProfile((prev) => ({
+        ...prev,
+        profile_picture: URL.createObjectURL(file),
+      }));
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await updateParentProfile(formData);
+    const data = new FormData();
+
+    data.append("phone", formData.phone);
+    data.append("address", formData.address);
+    data.append("is_self_pay", formData.is_self_pay);
+
+    data.append("user.first_name", formData.user.first_name);
+    data.append("user.last_name", formData.user.last_name);
+
+    if (formData.profile_picture) {
+      data.append("profile_picture", formData.profile_picture);
+    }
+
+    const result = await updateParentProfile(data);
     if (result.success) {
       setEditMode(false);
-      await fetchCurrentParent(); // Refresh updated data
+      await fetchCurrentParent(); // refresh updated profile
     }
   };
 
   const handleToggleEdit = () => {
     if (editMode) {
-      // Cancel editing and reset form
       setFormData({
         user: {
           first_name: profile.user?.first_name || "",
@@ -78,9 +107,16 @@ const Profile = () => {
         phone: profile.phone || "",
         address: profile.address || "",
         is_self_pay: profile.is_self_pay ?? true,
+        profile_picture: null,
       });
     }
     setEditMode(!editMode);
+  };
+
+  const handlePenClick = () => {
+    if (editMode) {
+      fileInputRef.current.click();
+    }
   };
 
   if (loading) return <div>Loading...</div>;
@@ -99,9 +135,29 @@ const Profile = () => {
       <div className="profile-container">
         <div className="profile-ele">
           <div className="profile-image">
-            <div className="img-container">
-              <img src={Avtar} alt="Profile" />
-              {editMode && <span><PenIcon /></span>}
+            <div className="img-container" onClick={handlePenClick}>
+              <img
+                src={
+                  profile?.profile_picture
+                    ? profile.profile_picture.startsWith("blob:")
+                      ? profile.profile_picture
+                      : `${MEDIA_BASE_URL}${profile.profile_picture}`
+                    : Avtar
+                }
+                alt="Profile"
+              />
+              {editMode && (
+                <span className="pen-icon-overlay">
+                  <PenIcon />
+                </span>
+              )}
+              <input
+                type="file"
+                accept="image/*"
+                ref={fileInputRef}
+                onChange={handleImageChange}
+                style={{ display: "none" }}
+              />
             </div>
           </div>
 
@@ -142,7 +198,10 @@ const Profile = () => {
                     readOnly
                   />
                 </div>
-                <p>This will be how your name will be displayed in the account section and in reviews</p>
+                <p>
+                  This will be how your name will be displayed in the account
+                  section and in reviews
+                </p>
               </div>
 
               <div className="form-group">
