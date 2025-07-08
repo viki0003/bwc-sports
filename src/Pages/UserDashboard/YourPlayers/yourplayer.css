@@ -18,3 +18,16 @@
     border-radius: 27px;
     padding: 33px;
 }
+
+.form-group.pbtns,
+.form-group.pbtns .form-ftr-btns {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.form-group.pbtns {
+    display: flex;
+    justify-content: space-between;
+    width: 100% !important;
+}

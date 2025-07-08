@@ -76,9 +76,11 @@ const YourPlayers = () => {
     const formData = new FormData();
     if (playerForm.name) formData.append("name", playerForm.name);
     if (playerForm.grade) formData.append("grade", playerForm.grade);
-    if (playerForm.sports_enrolled) formData.append("sports_enrolled", playerForm.sports_enrolled);
+    if (playerForm.sports_enrolled)
+      formData.append("sports_enrolled", playerForm.sports_enrolled);
     if (playerForm.package) formData.append("package", playerForm.package);
-    if (playerForm.sessions_used) formData.append("sessions_used", playerForm.sessions_used);
+    if (playerForm.sessions_used)
+      formData.append("sessions_used", playerForm.sessions_used);
 
     if (playerForm.profile_picture instanceof File) {
       formData.append("profile_picture", playerForm.profile_picture);
@@ -124,14 +126,20 @@ const YourPlayers = () => {
               <div className="player-wrapper">
                 <div className="player-header">
                   <h2>{`Player ${index + 1}`}</h2> {/* ✅ Changed */}
-                  <span onClick={() => handleEditClick(player.id)} style={{ cursor: "pointer" }}>
+                  <span
+                    onClick={() => handleEditClick(player.id)}
+                    style={{ cursor: "pointer" }}
+                  >
                     <EditFillIcon />
                   </span>
                 </div>
 
                 <div className="profile-ele">
                   <div className="profile-image">
-                    <div className="img-container" onClick={() => handlePenClick(player.id)}>
+                    <div
+                      className="img-container"
+                      onClick={() => handlePenClick(player.id)}
+                    >
                       <img
                         src={formData.image_preview || DefaultImage}
                         alt="Profile"
@@ -153,14 +161,19 @@ const YourPlayers = () => {
                   </div>
 
                   <div className="profile-details">
-                    <form className="profile-form" onSubmit={(e) => e.preventDefault()}>
+                    <form
+                      className="profile-form"
+                      onSubmit={(e) => e.preventDefault()}
+                    >
                       <div className="form-group">
                         <label htmlFor={`name-${player.id}`}>Player Name</label>
                         <input
                           type="text"
                           id={`name-${player.id}`}
                           value={formData.name}
-                          onChange={(e) => handleInputChange(player.id, "name", e.target.value)}
+                          onChange={(e) =>
+                            handleInputChange(player.id, "name", e.target.value)
+                          }
                           readOnly={!isEditing}
                         />
                       </div>
@@ -171,19 +184,31 @@ const YourPlayers = () => {
                           type="text"
                           id={`grade-${player.id}`}
                           value={formData.grade}
-                          onChange={(e) => handleInputChange(player.id, "grade", e.target.value)}
+                          onChange={(e) =>
+                            handleInputChange(
+                              player.id,
+                              "grade",
+                              e.target.value
+                            )
+                          }
                           readOnly={!isEditing}
                         />
                       </div>
 
                       <div className="form-group w-full">
-                        <label htmlFor={`sports-${player.id}`}>Sports Enrolled</label>
+                        <label htmlFor={`sports-${player.id}`}>
+                          Sports Enrolled
+                        </label>
                         <input
                           type="text"
                           id={`sports-${player.id}`}
                           value={formData.sports_enrolled}
                           onChange={(e) =>
-                            handleInputChange(player.id, "sports_enrolled", e.target.value)
+                            handleInputChange(
+                              player.id,
+                              "sports_enrolled",
+                              e.target.value
+                            )
                           }
                           readOnly={!isEditing}
                         />
@@ -195,31 +220,55 @@ const YourPlayers = () => {
                           type="text"
                           id={`package-${player.id}`}
                           value={formData.package}
-                          onChange={(e) => handleInputChange(player.id, "package", e.target.value)}
+                          onChange={(e) =>
+                            handleInputChange(
+                              player.id,
+                              "package",
+                              e.target.value
+                            )
+                          }
                           readOnly={!isEditing}
                         />
                       </div>
 
                       <div className="form-group">
-                        <label htmlFor={`sessions-${player.id}`}>Sessions Used</label>
+                        <label htmlFor={`sessions-${player.id}`}>
+                          Sessions Used
+                        </label>
                         <input
                           type="text"
                           id={`sessions-${player.id}`}
                           value={formData.sessions_used}
-                          onChange={(e) => handleInputChange(player.id, "sessions_used", e.target.value)}
+                          onChange={(e) =>
+                            handleInputChange(
+                              player.id,
+                              "sessions_used",
+                              e.target.value
+                            )
+                          }
                           readOnly={!isEditing}
                         />
                       </div>
 
                       {isEditing && (
-                        <div className="form-group mt-4">
-                          <button
-                            type="button"
-                            className="btn btn-primary"
-                            onClick={() => handleSubmit(player.id)}
-                          >
-                            Save Changes
-                          </button>
+                        <div className="form-group mt-4 pbtns">
+                          <div className="form-ftr-btns">
+                            <button
+                              type="button"
+                              className="btn orange"
+                              onClick={() => handleSubmit(player.id)}
+                            >
+                              Save Changes
+                            </button>
+                            <button type="button" className="btn btn-primary">
+                              Cancel Editing
+                            </button>
+                          </div>
+                          <div className="remove-player">
+                            <button type="button" className="btn white">
+                              Remove Player
+                            </button>
+                          </div>
                         </div>
                       )}
                     </form>
