@@ -130,6 +130,14 @@ export const PlayerAccountProvider = ({ children }) => {
   
       await fetchPlayers();
   
+      // ✅ Show success toast here
+      toastRef.current?.show({
+        severity: "success",
+        summary: "Success",
+        detail: "Player updated successfully",
+        life: 3000,
+      });
+  
       return { success: true, data: response.data };
     } catch (err) {
       const errorDetail = err.response?.data || { detail: "Failed to update player" };
@@ -144,6 +152,7 @@ export const PlayerAccountProvider = ({ children }) => {
       return { success: false, error: errorDetail };
     }
   };
+  
 
   return (
     <PlayerAccountContext.Provider value={{ players, fetchPlayers, createPlayer, editPlayer }}>

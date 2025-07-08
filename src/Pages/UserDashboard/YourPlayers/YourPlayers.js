@@ -115,7 +115,7 @@ const YourPlayers = () => {
       {players.length === 0 ? (
         <p>No players found.</p>
       ) : (
-        players.map((player) => {
+        players.map((player, index) => {
           const isEditing = editablePlayerId === player.id;
           const formData = formStates[player.id] || {};
 
@@ -123,7 +123,7 @@ const YourPlayers = () => {
             <div className="profile-container player-container" key={player.id}>
               <div className="player-wrapper">
                 <div className="player-header">
-                  <h2>{`Player: ${player.name}`}</h2>
+                  <h2>{`Player ${index + 1}`}</h2> {/* ✅ Changed */}
                   <span onClick={() => handleEditClick(player.id)} style={{ cursor: "pointer" }}>
                     <EditFillIcon />
                   </span>

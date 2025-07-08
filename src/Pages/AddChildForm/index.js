@@ -9,6 +9,7 @@ import { usePlayerAccount } from "../../APIContext/PlayerAccountContext";
 import DefaultImage from "../../Assets/Images/child.png";
 import PenIcon from "../../Assets/Icons/PenIcon";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
 
 const jerseySizes = [
   { label: "Small", value: "S" },
@@ -22,6 +23,7 @@ const jerseySizes = [
 
 const AddChildForm = () => {
   const toast = useRef(null);
+  const navigate = useNavigate();
   const { createPlayer } = usePlayerAccount();
   const [profilePicture, setProfilePicture] = useState(null);
   const fileInputRef = useRef(null);
@@ -75,7 +77,7 @@ const AddChildForm = () => {
     
       payload.append("profile_picture", profilePicture);
     
-      // ✅ Log FormData contents
+      
       for (let pair of payload.entries()) {
         console.log(`${pair[0]}:`, pair[1]);
       }
@@ -96,8 +98,13 @@ const AddChildForm = () => {
         severity: "success",
         summary: "Success",
         detail: "Child account created successfully",
-        life: 3000,
+        life: 2000,
       });
+
+      setTimeout(() => {
+        navigate("/add-a-child");
+      }, 2000);
+
       setForm({
         name: "",
         date_of_birth: null,
