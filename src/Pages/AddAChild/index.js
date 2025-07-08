@@ -3,7 +3,6 @@ import { ChildImageContainer } from "../../Components/AddAChild/ChildImageContai
 import BackIcon from "../../Assets/Icons/BackIcon";
 import NavbarCustom from "../../Components/NavbarCustom";
 import AddIcon from "../../Assets/Icons/AddIcon";
-import child_image from "../../Assets/Images/child.png";
 import { Link } from "react-router-dom";
 import { usePlayerAccount } from "../../APIContext/PlayerAccountContext";
 import "./style.css";
@@ -34,7 +33,7 @@ export default function AddAChild() {
             players.map((child, index) => (
               <ChildImageContainer
                 key={index}
-                image={child.profile_image || child_image}
+                image={child.profile_picture}
                 name={child.name}
                 age={child.age}
               />

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import EditFillIcon from "../../../Assets/Icons/EditFillIcon";
 import PenIcon from "../../../Assets/Icons/PenIcon";
 import DefaultImage from "../../../Assets/Images/child.png";
+import { MEDIA_BASE_URL } from "../../../Config/Config";
 import PageTitle from "../../../Components/Layout/UserDashLyout/PageTitle";
 import { usePlayerAccount } from "../../../APIContext/PlayerAccountContext";
 import "./yourplayer.css";
@@ -11,13 +12,13 @@ const YourPlayers = () => {
 
   const [editablePlayerId, setEditablePlayerId] = useState(null);
   const [formStates, setFormStates] = useState({});
+  const fileInputRefs = useRef({});
 
   useEffect(() => {
     fetchPlayers();
   }, [fetchPlayers]);
 
   useEffect(() => {
-    // Set initial form states from player data
     const initialFormStates = {};
     players.forEach((player) => {
       initialFormStates[player.id] = {
@@ -26,6 +27,10 @@ const YourPlayers = () => {
         sports_enrolled: player.sports_enrolled || "",
         package: player.package || "",
         sessions_used: player.sessions_used || "",
+        profile_picture: null,
+        image_preview: player.profile_picture
+          ? `${MEDIA_BASE_URL}${player.profile_picture}`
+          : DefaultImage,
       };
     });
     setFormStates(initialFormStates);
@@ -41,19 +46,57 @@ const YourPlayers = () => {
     }));
   };
 
-  const handleEditClick = (id) => {
-    if (editablePlayerId === id) {
-      setEditablePlayerId(null); // Cancel editing
-    } else {
-      setEditablePlayerId(id);
+  const handleImageChange = (id, e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setFormStates((prev) => ({
+        ...prev,
+        [id]: {
+          ...prev[id],
+          profile_picture: file,
+          image_preview: URL.createObjectURL(file),
+        },
+      }));
     }
   };
 
+  const handlePenClick = (id) => {
+    if (editablePlayerId === id && fileInputRefs.current[id]) {
+      fileInputRefs.current[id].click();
+    }
+  };
+
+  const handleEditClick = (id) => {
+    setEditablePlayerId((prev) => (prev === id ? null : id));
+  };
+
   const handleSubmit = async (id) => {
-    const updatedData = formStates[id];
-    const result = await editPlayer(id, updatedData);
+    const playerForm = formStates[id];
+
+    const formData = new FormData();
+    if (playerForm.name) formData.append("name", playerForm.name);
+    if (playerForm.grade) formData.append("grade", playerForm.grade);
+    if (playerForm.sports_enrolled) formData.append("sports_enrolled", playerForm.sports_enrolled);
+    if (playerForm.package) formData.append("package", playerForm.package);
+    if (playerForm.sessions_used) formData.append("sessions_used", playerForm.sessions_used);
+
+    if (playerForm.profile_picture instanceof File) {
+      formData.append("profile_picture", playerForm.profile_picture);
+    }
+
+    const result = await editPlayer(id, formData);
     if (result.success) {
       setEditablePlayerId(null);
+      setFormStates((prev) => ({
+        ...prev,
+        [id]: {
+          ...prev[id],
+          profile_picture: null,
+        },
+      }));
+      if (fileInputRefs.current[id]) {
+        fileInputRefs.current[id].value = "";
+      }
       fetchPlayers();
     }
   };
@@ -88,11 +131,23 @@ const YourPlayers = () => {
 
                 <div className="profile-ele">
                   <div className="profile-image">
-                    <div className="img-container">
-                      <img src={player.image || DefaultImage} alt="Profile" />
-                      <span>
-                        <PenIcon />
-                      </span>
+                    <div className="img-container" onClick={() => handlePenClick(player.id)}>
+                      <img
+                        src={formData.image_preview || DefaultImage}
+                        alt="Profile"
+                      />
+                      {isEditing && (
+                        <span className="pen-icon-overlay">
+                          <PenIcon />
+                        </span>
+                      )}
+                      <input
+                        type="file"
+                        accept="image/*"
+                        ref={(el) => (fileInputRefs.current[player.id] = el)}
+                        onChange={(e) => handleImageChange(player.id, e)}
+                        style={{ display: "none" }}
+                      />
                     </div>
                     <button className="btn gray">View Session History</button>
                   </div>
@@ -127,7 +182,9 @@ const YourPlayers = () => {
                           type="text"
                           id={`sports-${player.id}`}
                           value={formData.sports_enrolled}
-                          onChange={(e) => handleInputChange(player.id, "sports_enrolled", e.target.value)}
+                          onChange={(e) =>
+                            handleInputChange(player.id, "sports_enrolled", e.target.value)
+                          }
                           readOnly={!isEditing}
                         />
                       </div>
