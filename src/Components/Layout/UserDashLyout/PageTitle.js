@@ -7,7 +7,8 @@ const PageTitle = ({
   showDescription = true,
   showButton = true,
   buttonText = "Edit Profile",
-  buttonLink = "#"
+  buttonLink = "#",
+  onButtonClick = null,
 }) => {
   return (
     <div className="app-content-breadcrumb p-4">
@@ -24,9 +25,15 @@ const PageTitle = ({
       </div>
       {showButton && (
         <div className="ud-heading-btn">
-          <Link to={buttonLink} className="btn orange">
-            {buttonText}
-          </Link>
+          {onButtonClick ? (
+            <button className="btn orange" onClick={onButtonClick}>
+              {buttonText}
+            </button>
+          ) : (
+            <Link to={buttonLink} className="btn orange">
+              {buttonText}
+            </Link>
+          )}
         </div>
       )}
     </div>

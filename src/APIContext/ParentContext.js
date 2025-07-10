@@ -13,6 +13,7 @@ export const ParentProvider = ({ children, user }) => {
 
   const fetchCurrentParent = async () => {
     const token = localStorage.getItem("accessToken");
+
     if (!token || !user?.id) {
       setParentProfile(null);
       setLoading(false);
@@ -46,14 +47,76 @@ export const ParentProvider = ({ children, user }) => {
     }
   };
 
+  const updateParentProfile = async (updatedData) => {
+    const token = localStorage.getItem("accessToken");
+  
+    if (!token || !user?.id) {
+      toastRef.current?.show({
+        severity: "error",
+        summary: "Unauthorized",
+        detail: "You must be logged in to update the profile.",
+        life: 3000,
+      });
+      return { success: false };
+    }
+  
+    let headers = {
+      Authorization: `Bearer ${token}`,
+    };
+  
+    // Check if updatedData is already FormData (from the component)
+    const isFormData = updatedData instanceof FormData;
+  
+    if (isFormData) {
+      headers["Content-Type"] = "multipart/form-data";
+    }
+  
+    try {
+      const response = await axiosInstance.patch(
+        "/customer/parent-account/",
+        updatedData,
+        { headers }
+      );
+  
+      setParentProfile(response.data);
+  
+      toastRef.current?.show({
+        severity: "success",
+        summary: "Success",
+        detail: "Profile updated successfully.",
+        life: 3000,
+      });
+  
+      return { success: true, data: response.data };
+    } catch (err) {
+      const errorMessage =
+        err.response?.data?.detail || "Failed to update profile.";
+  
+      toastRef.current?.show({
+        severity: "error",
+        summary: "Update Failed",
+        detail: errorMessage,
+        life: 3000,
+      });
+  
+      return { success: false, message: errorMessage };
+    }
+  };
+
   useEffect(() => {
     setLoading(true);
     fetchCurrentParent();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user?.id, location.pathname]);
 
   return (
-    <ParentContext.Provider value={{ parentProfile, loading }}>
+    <ParentContext.Provider
+      value={{
+        parentProfile,
+        loading,
+        fetchCurrentParent,
+        updateParentProfile,
+      }}
+    >
       <Toast ref={toastRef} />
       {children}
     </ParentContext.Provider>
