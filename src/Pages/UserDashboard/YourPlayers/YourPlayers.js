@@ -6,9 +6,11 @@ import { MEDIA_BASE_URL } from "../../../Config/Config";
 import PageTitle from "../../../Components/Layout/UserDashLyout/PageTitle";
 import { usePlayerAccount } from "../../../APIContext/PlayerAccountContext";
 import "./yourplayer.css";
+import NoPlayersFound from "./NoPlayersFound";
 
 const YourPlayers = () => {
-  const { players, fetchPlayers, editPlayer } = usePlayerAccount();
+  const { players, fetchPlayers, editPlayer, deletePlayer } =
+    usePlayerAccount();
 
   const [editablePlayerId, setEditablePlayerId] = useState(null);
   const [formStates, setFormStates] = useState({});
@@ -103,6 +105,18 @@ const YourPlayers = () => {
     }
   };
 
+  const handleDelete = async (id) => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this player?"
+    );
+    if (!confirmed) return;
+
+    const result = await deletePlayer(id);
+    if (result.success) {
+      console.log("Deleted successfully");
+    }
+  };
+
   return (
     <>
       <PageTitle
@@ -115,7 +129,9 @@ const YourPlayers = () => {
       />
 
       {players.length === 0 ? (
-        <p>No players found.</p>
+        <div className="no-play-ele">
+          <NoPlayersFound />
+        </div>
       ) : (
         players.map((player, index) => {
           const isEditing = editablePlayerId === player.id;
@@ -125,7 +141,9 @@ const YourPlayers = () => {
             <div className="profile-container player-container" key={player.id}>
               <div className="player-wrapper">
                 <div className="player-header">
-                  <h2>{`Player ${index + 1}`}</h2> {/* ✅ Changed */}
+                  <h2>
+                    {`Player ${index + 1}`}{" "}
+                  </h2>
                   <span
                     onClick={() => handleEditClick(player.id)}
                     style={{ cursor: "pointer" }}
@@ -265,7 +283,11 @@ const YourPlayers = () => {
                             </button>
                           </div>
                           <div className="remove-player">
-                            <button type="button" className="btn white">
+                            <button
+                              type="button"
+                              className="btn white"
+                              onClick={() => handleDelete(player.id)}
+                            >
                               Remove Player
                             </button>
                           </div>

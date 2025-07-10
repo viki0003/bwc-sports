@@ -67,12 +67,6 @@ export const PlayerAccountProvider = ({ children }) => {
       headers["Content-Type"] = "application/json";
     }
 
-    if (playerData instanceof FormData) {
-      for (let [key, value] of playerData.entries()) {
-        console.log(`FormData => ${key}:`, value);
-      }
-    }
-
     try {
       const response = await axiosInstance.post(
         "/customer/player-account/",
@@ -99,7 +93,7 @@ export const PlayerAccountProvider = ({ children }) => {
 
   const editPlayer = async (playerId, playerData) => {
     const accessToken = localStorage.getItem("accessToken");
-  
+
     if (!accessToken) {
       toastRef.current?.show({
         severity: "error",
@@ -112,50 +106,101 @@ export const PlayerAccountProvider = ({ children }) => {
       window.location.href = "/login";
       return { success: false, error: { detail: "Access token missing." } };
     }
-  
+
     const headers = {
       Authorization: `Bearer ${accessToken}`,
     };
-  
+
     if (!(playerData instanceof FormData)) {
       headers["Content-Type"] = "application/json";
     }
-  
+
     try {
       const response = await axiosInstance.patch(
         `/customer/player-account?id=${playerId}`,
         playerData,
         { headers }
       );
-  
+
       await fetchPlayers();
-  
-      // ✅ Show success toast here
+
       toastRef.current?.show({
         severity: "success",
         summary: "Success",
         detail: "Player updated successfully",
         life: 3000,
       });
-  
+
       return { success: true, data: response.data };
     } catch (err) {
       const errorDetail = err.response?.data || { detail: "Failed to update player" };
-  
+
       toastRef.current?.show({
         severity: "error",
         summary: "Error",
         detail: errorDetail.detail || "Failed to update player",
         life: 4000,
       });
-  
+
       return { success: false, error: errorDetail };
     }
   };
-  
+
+  const deletePlayer = async (playerId) => {
+    const accessToken = localStorage.getItem("accessToken");
+
+    if (!accessToken) {
+      toastRef.current?.show({
+        severity: "error",
+        summary: "Unauthorized",
+        detail: "Access token missing. Please log in again.",
+        life: 4000,
+      });
+      return { success: false };
+    }
+
+    try {
+      await axiosInstance.delete(`/customer/player-account/`, {
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
+        params: { id: playerId },
+      });
+
+      toastRef.current?.show({
+        severity: "success",
+        summary: "Deleted",
+        detail: "Player deleted successfully.",
+        life: 3000,
+      });
+
+      await fetchPlayers();
+
+      return { success: true };
+    } catch (err) {
+      const errorDetail = err.response?.data?.detail || "Failed to delete player";
+
+      toastRef.current?.show({
+        severity: "error",
+        summary: "Delete Failed",
+        detail: errorDetail,
+        life: 4000,
+      });
+
+      return { success: false };
+    }
+  };
 
   return (
-    <PlayerAccountContext.Provider value={{ players, fetchPlayers, createPlayer, editPlayer }}>
+    <PlayerAccountContext.Provider
+      value={{
+        players,
+        fetchPlayers,
+        createPlayer,
+        editPlayer,
+        deletePlayer,
+      }}
+    >
       <Toast ref={toastRef} />
       {children}
     </PlayerAccountContext.Provider>
